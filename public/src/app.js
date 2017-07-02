@@ -1,13 +1,11 @@
 import menu from './libs/menu'
 
-
 import React from 'react'
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom'
     // routes.
 import { Router, browserHistory } from 'react-router'
 import routes from './routes'
-
 
 
   // store.

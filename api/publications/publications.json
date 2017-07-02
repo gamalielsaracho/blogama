@@ -4,7 +4,6 @@
       "id":1,
       "title":"GraphQL",
       "namefolder":"graphql",
-      "havethemes":true,
       "description":"En este post aprenderas como usar GraphQL y su estructura",
       "cover_icon":"http://localhost:8080/api/icons/graphql.png",
       "author": {
@@ -21,7 +20,6 @@
       "id":2,
       "title":"reactjs",
       "namefolder":"reactjs",
-      "havethemes":true,
       "description":"En este post aprenderas reactjs para ",
       "cover_icon":"http://localhost:8080/api/icons/maxresdefault.jpg",
       "author": {
@@ -38,7 +36,6 @@
       "id":3,
       "title":"Creando una api json con rails",
       "namefolder":"creando-una-api-con-rails",
-      "havethemes":false,
       "description":"En este post aprenderas reactjs para ",
       "cover_icon":"http://localhost:8080/api/icons/react-webpack-babel-1.jpg",
       "author": {
@@ -55,7 +52,6 @@
       "id":4,
       "title":"Autenticacion jwt api listo para el frontend",
       "namefolder":"autenticacion-jwt-api-listo-para-el-frontend",
-      "havethemes":true,
       "description":"En este post aprenderas como autenticar usuario por medio de jwt en tu api rest",
       "cover_icon":"http://localhost:8080/api/icons/logo-nodejs.jpg",
       "author": {
