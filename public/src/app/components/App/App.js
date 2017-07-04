@@ -4,6 +4,7 @@ import React from 'react'
 import Footer from '../Footer'
 import Menu from '../Menu'
 import Activity from '../Activity'
+import LastProject from '../LastProject'
 
 class App extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class App extends React.Component {
       { this.props.children }
 
       <Activity/>
-
+      <LastProject/>
       <Footer/>
 
     </div>
