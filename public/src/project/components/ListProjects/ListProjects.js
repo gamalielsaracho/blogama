@@ -1,0 +1,59 @@
+import React, { Component } from 'react'
+	
+class ListProjects extends Component {
+	constructor(props) {
+		super(props)
+		this.renderProjects = this.renderProjects.bind(this)
+	}
+
+	componentWillMount() {
+		this.props.fetchProjectsL()
+	}
+
+	renderProjects(projects, loading) {
+		var styles = {
+			button: {
+				"backgroundColor": "#c9da21"
+			},
+			nameProject: {
+				"marginTop": "1em",
+				"marginBottom": "0.5em"
+			}
+		}
+
+		if(loading) {
+			return <div>
+				<h4>Cargandoo...</h4>
+			</div>
+		} else {
+			return <div className='row center-lg center-md center-sm center-xs'>
+				{
+					projects.map((project) => {
+						return <div className='col-xs-12 col-sm-6 col-md-4 col-lg-4' key={project.id}>
+							<div className='container-icon-post'>
+								<img className='icon-post' src={project.imageProject}/>
+							</div>
+							<h4 style={styles.nameProject} className='text-center'>{ project.name }</h4>
+							<a style={styles.button} className='button success'>Ver Detalles</a>
+							<br/>
+							<br/>
+						</div>
+					})
+				}
+			</div>
+		}
+	}
+
+	render() {
+		const { loading, projects } = this.props.fetchProjects
+
+		return <div className='container'>
+			<br/>
+			<br/>
+			<h1 className='text-center'>Trabajos</h1>
+			{ this.renderProjects(projects, loading) }
+		</div>
+	}
+}
+
+export default ListProjects
