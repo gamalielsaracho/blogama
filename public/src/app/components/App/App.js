@@ -6,6 +6,8 @@ import Menu from '../Menu'
 import Activity from '../Activity'
 import LastProject from '../LastProject'
 
+import ListProjects from '../../../project/components/ListProjects'
+
 class App extends React.Component {
   render() {
 
@@ -21,6 +23,9 @@ class App extends React.Component {
 
       <Activity/>
       <LastProject/>
+
+      <ListProjects/>
+
       <Footer/>
 
     </div>
