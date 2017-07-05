@@ -10,28 +10,32 @@ class LastProject extends Component {
 			containerImage: {
 				"width": "100%",
 				"height":"200px"
+			},
+			titleTecnologies: {
+				"marginTop": "1em"
 			}
 		}
 
 		return <div className='container'>
 			<br/>
 			<br/>
-			<h3 className='text-center name-freelance'>Ultimo Proyecto Desarrollado</h3>
+			<h3 className='text-center'></h3>
 
 			<div style={styles.lastProjectContainer} className='row center-lg center-md center-sm center-xs'>
 
-				<div className='col-xs-10 col-sm-7 col-md-7 col-lg-6'>
+				<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 					<a><h5 className='text-left'>Regalalgo</h5></a>
-					
-					<img src='https://www.hosteurope.es/blog/wp-content/uploads/2015/02/flatone.jpg'/>
+					<div className='container-icon-post'>
+						<img className='icon-post' src='https://www.hosteurope.es/blog/wp-content/uploads/2015/02/flatone.jpg'/>
+					</div>
 				</div>
 
-				<div className='col-xs-10 col-sm-7 col-md-7 col-lg-6'>
+				<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 					
-					<h4>Tecnologías Utilizadas</h4>
+					<h4 style={styles.titleTecnologies}>Tecnologías Utilizadas</h4>
 
 					<div className='row center-lg center-md center-sm center-xs'>
-						<div className='col-xs-10 col-sm-7 col-md-7 col-lg-6'>
+						<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 							<h5>Front-end</h5>
 							<ul className='text-left'>
 								<li>Html5.</li>
@@ -41,7 +45,7 @@ class LastProject extends Component {
 								<li>React-router.</li>
 							</ul>
 						</div>
-						<div className='col-xs-10 col-sm-7 col-md-7 col-lg-6'>
+						<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 							<h5>Back-end</h5>
 							<ul className='text-left'>
 								<li>Node.</li>
