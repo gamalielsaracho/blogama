@@ -45,7 +45,7 @@ class ShowPost extends Component {
 		
 		if(loading) {
   			return <div>
-  				<h3>Cargando...</h3>
+				<div className="spinner"></div>
   			</div>
   		} else {
 			return this.renderPost(post.content)			    

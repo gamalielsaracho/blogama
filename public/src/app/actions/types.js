@@ -1,0 +1,1 @@
+export const READY_APP = 'ready_app'

@@ -31,6 +31,8 @@ export default function (state = INITIAL_STATE, action) {
 			})
 
 		case FETCH_PROJECT_SUCCESS:
+			console.log(action.payload)
+
 			return Object.assign({}, state, {
 				fetchProject: { 
 					loading: false, 

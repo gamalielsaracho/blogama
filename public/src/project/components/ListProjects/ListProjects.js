@@ -4,11 +4,16 @@ class ListProjects extends Component {
 	constructor(props) {
 		super(props)
 		this.renderProjects = this.renderProjects.bind(this)
+		// this.showProject = this.showProject.bind(this)
 	}
 
 	componentWillMount() {
 		this.props.fetchProjectsL()
 	}
+
+	// showProject(projectId) {
+	// 	alert('El id es: '+projectId)
+	// }
 
 	renderProjects(projects, loading) {
 		var styles = {
@@ -23,7 +28,7 @@ class ListProjects extends Component {
 
 		if(loading) {
 			return <div>
-				<h4>Cargandoo...</h4>
+				<div className="spinner"></div>
 			</div>
 		} else {
 			return <div className='row center-lg center-md center-sm center-xs'>
@@ -34,7 +39,7 @@ class ListProjects extends Component {
 								<img className='icon-post' src={project.imageProject}/>
 							</div>
 							<h4 style={styles.nameProject} className='text-center'>{ project.name }</h4>
-							<a style={styles.button} className='button success'>Ver Detalles</a>
+							<a onClick={ () => {this.props.fetchProjectL(project.id) }} style={styles.button} className='button success'>Ver Detalles</a>
 							<br/>
 							<br/>
 						</div>

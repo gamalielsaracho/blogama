@@ -7,16 +7,36 @@
       "imageProject":"http://localhost:8080/api/icons/portafolio.png",
       "image_facebook":"regalalgo.jpg",
       "image_twitter":"regalalgo.jpg",
-      "image_google":"regalalgo.jpg"
+      "image_google":"regalalgo.jpg",
+      "frontEndList":[
+        { "id":1, "name": "react"},
+        { "id":2, "name": "html5"},
+        { "id":3, "name": "css3"}
+      ],
+      "backEndList":[
+        { "id":1, "name": "nodejs"},
+        { "id":2, "name": "mongodb"},
+        { "id":3, "name": "express"}
+      ]
     },
     {
       "id":2,
       "name":"Infocree",
       "description":"Descripción del proyecto realizado.",
-      "imageProject":"http://localhost:8080/api/icons/portafolio.png",
+      "imageProject":"http://localhost:8080/api/icons/infocree.png",
       "image_facebook":"infocree.jpg",
       "image_twitter":"infocree.jpg",
-      "image_google":"infocree.jpg"
+      "image_google":"infocree.jpg",
+      "frontEndList":[
+        { "id":1, "name": "react"},
+        { "id":2, "name": "html5"},
+        { "id":3, "name": "css3"}
+      ],
+      "backEndList":[
+        { "id":1, "name": "nodejs"},
+        { "id":2, "name": "mongodb"},
+        { "id":3, "name": "express"}
+      ]
     },
     {
       "id":3,
@@ -25,7 +45,17 @@
       "imageProject":"http://localhost:8080/api/icons/portafolio.png",
       "image_facebook":"infocree.jpg",
       "image_twitter":"infocree.jpg",
-      "image_google":"infocree.jpg"
+      "image_google":"infocree.jpg",
+      "frontEndList":[
+        { "id":1, "name": "react"},
+        { "id":2, "name": "html5"},
+        { "id":3, "name": "css3"}
+      ],
+      "backEndList":[
+        { "id":1, "name": "nodejs"},
+        { "id":2, "name": "mongodb"},
+        { "id":3, "name": "express"}
+      ]
     },
     {
       "id":4,
@@ -34,7 +64,17 @@
       "imageProject":"http://localhost:8080/api/icons/portafolio.png",
       "image_facebook":"infocree.jpg",
       "image_twitter":"infocree.jpg",
-      "image_google":"infocree.jpg"
+      "image_google":"infocree.jpg",
+      "frontEndList":[
+        { "id":1, "name": "react"},
+        { "id":2, "name": "html5"},
+        { "id":3, "name": "css3"}
+      ],
+      "backEndList":[
+        { "id":1, "name": "nodejs"},
+        { "id":2, "name": "mongodb"},
+        { "id":3, "name": "express"}
+      ]
     },
     {
       "id":5,
@@ -43,7 +83,17 @@
       "imageProject":"http://localhost:8080/api/icons/portafolio.png",
       "image_facebook":"infocree.jpg",
       "image_twitter":"infocree.jpg",
-      "image_google":"infocree.jpg"
+      "image_google":"infocree.jpg",
+      "frontEndList":[
+        { "id":1, "name": "react"},
+        { "id":2, "name": "html5"},
+        { "id":3, "name": "css3"}
+      ],
+      "backEndList":[
+        { "id":1, "name": "nodejs"},
+        { "id":2, "name": "mongodb"},
+        { "id":3, "name": "express"}
+      ]
     }
   ]
 }

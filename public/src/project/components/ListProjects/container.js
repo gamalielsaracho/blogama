@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 
 import {
-	fetchProjects
+	fetchProjects,
+	fetchProject
 } from '../../actions'
 
 import ListProjects from './ListProjects'
@@ -18,6 +19,9 @@ function mapDispatchToProps(dispatch) {
 	return {
 		fetchProjectsL: () => {
 			dispatch(fetchProjects())
+		},
+		fetchProjectL: (projectId) => {
+			dispatch(fetchProject(projectId))
 		}
 	}
 }

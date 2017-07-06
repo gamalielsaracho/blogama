@@ -18,12 +18,11 @@ class PostsList extends Component {
 
 	render() {
 		const { loading, posts } = this.props.fetchPosts
-		
 		console.log(this.props.fetchPosts)
 		
 		if(loading) {
 			return <div>
-				<h5>Cargando...</h5>
+				<div className="spinner"></div>
 			</div>
 		} else {
 			return <div className='posts-container'>

@@ -3,32 +3,39 @@ import React from 'react'
 
 import Footer from '../Footer'
 import Menu from '../Menu'
-import Activity from '../Activity'
-import LastProject from '../LastProject'
-
-import ListProjects from '../../../project/components/ListProjects'
 
 class App extends React.Component {
-  render() {
 
+  componentDidMount() {
+    setTimeout(() => this.props.readyApp(), 1500);
+  }
+
+  render() {
       // <HelmetShow title='Gamaliel Saracho Programador javascript tanto del backend como el frotend' 
       //     description='Me gusta enseñar a los de demás sobre lo que hago y como ayudarlos' 
       //     image_facebook='home.jpg' 
       //     image_twitter='home.jpg' 
       //     image_google='home.jpg'/>
-    return <div>
-      <Menu/>
 
-      { this.props.children }
+    const { loading } = this.props.page
 
-      <Activity/>
-      <LastProject/>
+    if(loading) {
+      return <div>
+        <br/>
+        <br/>
+        <div className="spinner"></div>
+      </div>
+    } else {
+      return <div>
+        <Menu/>
 
-      <ListProjects/>
+        { this.props.children }
 
-      <Footer/>
+        <Footer/>
 
-    </div>
+      </div>
+    }
+
   }
 }
 export default App

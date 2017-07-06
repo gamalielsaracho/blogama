@@ -1,11 +1,10 @@
 import { connect } from 'react-redux'
 
 import {
-	fetchProject
+	closeModalFetchProject
 } from '../../actions'
 
 import ShowProject from './ShowProject'
-
 
 function mapStateToProps(state) {
 	return {
@@ -16,8 +15,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		fetchProjectL: (projectId) => {
-			dispatch(fetchProject(projectId))
+		closeModalFetchProject: () => {
+			dispatch(closeModalFetchProject())
 		}
 	}
 }

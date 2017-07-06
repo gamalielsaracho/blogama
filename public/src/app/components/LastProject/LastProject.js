@@ -13,6 +13,9 @@ class LastProject extends Component {
 			},
 			titleTecnologies: {
 				"marginTop": "1em"
+			},
+			containerListTecnologies: {
+				"marginLeft": "2em"
 			}
 		}
 
@@ -37,7 +40,7 @@ class LastProject extends Component {
 					<div className='row center-lg center-md center-sm center-xs'>
 						<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 							<h5>Front-end</h5>
-							<ul className='text-left'>
+							<ul style={styles.containerListTecnologies} className='text-left'>
 								<li>Html5.</li>
 								<li>css3.</li>
 								<li>React.</li>
@@ -47,7 +50,7 @@ class LastProject extends Component {
 						</div>
 						<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 							<h5>Back-end</h5>
-							<ul className='text-left'>
+							<ul style={styles.containerListTecnologies} className='text-left'>
 								<li>Node.</li>
 								<li>Mongodb.</li>
 							</ul>

@@ -5,7 +5,9 @@ import  {
 	FETCH_PROJECTS_SUCCESS,
 
 	FETCH_PROJECT_REQUEST,
-	FETCH_PROJECT_SUCCESS
+	FETCH_PROJECT_SUCCESS,
+
+	CLOSE_MODAL_FETCH_PROJECT
 } from './types'
 
 const url = 'http://localhost:8080/api'
@@ -42,5 +44,11 @@ export function fetchProject(projectId) {
 		.catch((error) => {
 			console.log(error)
 		})
+	}
+}
+
+export function closeModalFetchProject() {
+	return (dispatch) => {
+		dispatch({ type: CLOSE_MODAL_FETCH_PROJECT })
 	}
 }
