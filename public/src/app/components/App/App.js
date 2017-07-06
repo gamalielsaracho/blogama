@@ -3,6 +3,12 @@ import React from 'react'
 
 import Footer from '../Footer'
 import Menu from '../Menu'
+import Author from '../Author'
+
+
+import LoadAnimation from '../LoadAnimation'
+
+// import PostsListContainer from '../../../post/components/PostsList'
 
 class App extends React.Component {
 
@@ -20,11 +26,7 @@ class App extends React.Component {
     const { loading } = this.props.page
 
     if(loading) {
-      return <div>
-        <br/>
-        <br/>
-        <div className="spinner"></div>
-      </div>
+      return <LoadAnimation/>
     } else {
       return <div>
         <Menu/>

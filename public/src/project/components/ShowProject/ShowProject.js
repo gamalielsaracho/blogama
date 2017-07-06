@@ -84,6 +84,18 @@ class ShowProject extends Component {
 			},
 			containerListTecnologies: {
 				"marginLeft": "2em"
+			},
+			button: {
+				"backgroundColor": "#03a9f4",
+				"paddingRight": "0em",
+				"paddingTop": "5px",
+				"paddingBottom": "5px"
+			},
+			containerButtonRepository: {
+				"minHeight": "226px"
+			},
+			linkDemo: {
+				"color": "#03a9f4"
 			}
 		}
 
@@ -100,7 +112,9 @@ class ShowProject extends Component {
 					<div className='row center-lg center-md center-sm center-xs'>
 
 						<div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
-							<a><h5 className='text-left'>{ project.name }</h5></a>
+							<strong>Detalle</strong>
+							<a style={styles.linkDemo}><h5 className='text-left'>{ project.name }</h5></a>
+							
 							<div className='container-icon-post'>
 								<img className='icon-post' src={ project.imageProject }/>
 							</div>
@@ -110,7 +124,7 @@ class ShowProject extends Component {
 							
 							<h4 style={styles.titleTecnologies}>Tecnologías Utilizadas</h4>
 
-							<div className='row center-lg center-md center-sm center-xs'>
+							<div style={styles.containerButtonRepository} className='row center-lg center-md center-sm center-xs'>
 								<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
 									<h5>Front-end</h5>
 									<ul style={styles.containerListTecnologies} className='text-left'>
@@ -127,7 +141,21 @@ class ShowProject extends Component {
 										}
 									</ul>
 								</div>
+
 							</div>
+
+							<a style={styles.button} className='button success'>
+								<div className='row middle-lg middle-md middle-sm middle-xs'>
+									<div className='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+										<span>Repositorio</span>
+									</div>
+
+									<div className='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+										<span><i className='fi-social-github'></i></span>
+									</div>
+								</div>
+							</a>
+
 						</div>
 					</div>
 				</div>

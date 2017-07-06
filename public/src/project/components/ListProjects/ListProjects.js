@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 	
+import LoadAnimation from '../../../app/components/LoadAnimation'
+
 class ListProjects extends Component {
 	constructor(props) {
 		super(props)
@@ -18,7 +20,7 @@ class ListProjects extends Component {
 	renderProjects(projects, loading) {
 		var styles = {
 			button: {
-				"backgroundColor": "#c9da21"
+				"backgroundColor": "#85ca38"
 			},
 			nameProject: {
 				"marginTop": "1em",
@@ -27,9 +29,7 @@ class ListProjects extends Component {
 		}
 
 		if(loading) {
-			return <div>
-				<div className="spinner"></div>
-			</div>
+			return <LoadAnimation/>
 		} else {
 			return <div className='row center-lg center-md center-sm center-xs'>
 				{

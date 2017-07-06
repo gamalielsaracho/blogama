@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+import HelmetShow from '../../../app/components/HelmetShow'
+import LoadAnimation from '../../../app/components/LoadAnimation'
+
 class PostsList extends Component {
 	constructor(props) {
     	super(props)
@@ -19,13 +22,21 @@ class PostsList extends Component {
 	render() {
 		const { loading, posts } = this.props.fetchPosts
 		console.log(this.props.fetchPosts)
+
 		
 		if(loading) {
-			return <div>
-				<div className="spinner"></div>
-			</div>
+			return <LoadAnimation/>
 		} else {
-			return <div className='posts-container'>
+			return <div className='container'>
+				
+				<HelmetShow title="Blog sobre programación"
+					description="aprender es querer"
+					image_facebook="image_facebook_blog.jpg"
+					image_twitter="image_twitter_blog.jpg"
+					image_google="image_google_blog.jpg"
+					urlData="/blog"/>
+
+				<br/>
 		    	<div className='row align-justify'>
 		        {
 		          posts.map((post) => {
@@ -34,9 +45,11 @@ class PostsList extends Component {
 		                <img className='icon-post' src={post.cover_icon} />
 		              </div>
 
-		              <Link to={`blog/${post.namefolder}`}>
-		                <h1 className='title-post'>{ post.title }</h1>
-		              </Link>
+		              <div className='post-container-title'>
+			              <Link to={`blog/${post.namefolder}`}>
+			                <h1 className='title-post'>{ post.title }</h1>
+			              </Link>
+			          </div>
 
 		              <p className='text-right'>{ post.date }</p>
 		            </div>

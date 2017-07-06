@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 import Author from '../../../app/components/Author'
 import Share from '../../../app/components/Share'
 
+import HelmetShow from '../../../app/components/HelmetShow'
+
+import LoadAnimation from '../../../app/components/LoadAnimation'
+
 var classy = require('markdown-it-classy')
 var highlightjs = require('markdown-it-highlightjs')
 var MarkdownIt = require('../../../libs/markdown-it')
@@ -22,13 +26,21 @@ class ShowPost extends Component {
       this.props.fetchPostList(this.props.nameFolder)
   	}
 
-  	renderPost(content) {
-  		// console.log(content)
+  	renderPost(post) {
+  		// console.log(post)
+  		const urlData = `/blog/${this.props.nameFolder}`
 
   		return <div>
+  			<HelmetShow title={post.title}
+				description={post.description}
+				image_facebook={post.image_facebook}
+				image_twitter={post.image_twitter}
+				image_google={post.image_google}
+				urlData={urlData}/>
+
 			<div className='row'>
 			    <div className='column small-12 medium-12 large-12'>
-			    	<article dangerouslySetInnerHTML={{ __html:md.render(content) }}>
+			    	<article dangerouslySetInnerHTML={{ __html:md.render(post.content) }}>
 			    	</article>
 			    </div>
 			</div>
@@ -41,14 +53,12 @@ class ShowPost extends Component {
 	render() {
 		const { loading, post } = this.props.fetchPost
 
-		console.log(this.props.fetchPost)
+		console.log(this.props)
 		
 		if(loading) {
-  			return <div>
-				<div className="spinner"></div>
-  			</div>
+  			return <LoadAnimation/>
   		} else {
-			return this.renderPost(post.content)			    
+			return this.renderPost(post)			    
   		}
 	}
 }
