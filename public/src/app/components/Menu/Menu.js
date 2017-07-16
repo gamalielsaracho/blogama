@@ -31,8 +31,8 @@ class Menu extends Component {
 	            </nav> 
 
 	            <ul className="menu show-for-medium">
-	              <li> 
-	                <Link to={`/`}>Inicio</Link>
+	              <li>
+	                <Link to={`/`}>IInicio</Link>
 	                  </li>
 	              <li>
 	                <a href="#">Proyectos</a>
