@@ -2,6 +2,7 @@ import React from 'react'
 
 class Author extends React.Component {
   render() {
+    
     return <div className='container'>
       <br/>
       <div className="row middle-lg center-md center-sm center-xs">
@@ -14,7 +15,7 @@ class Author extends React.Component {
           <div className="col-xs-10 col-sm-6 col-md-6 col-lg-6">
             <h3 className="text-left">Gamaliel Saracho</h3>
             <div className="row justify-lg justify-md justify-sm justify-xs">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+              <p className='text-history-seo'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
           </div>
 
