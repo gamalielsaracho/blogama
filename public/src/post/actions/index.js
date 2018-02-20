@@ -8,7 +8,9 @@ import {
   FETCH_POST_SUCCESS
 } from './types'
 
-const url = 'http://localhost:8080/api/publications'
+// const url = 'http://localhost:8080/api/publications'
+const url = 'https://gamalielsaracho.github.io/api/publications'
+
 
 var allPublications = []
 
@@ -16,7 +18,7 @@ export function fetchPosts() {
   return (dispatch) => {
     dispatch({ type: FETCH_POSTS_REQUEST })
 
-    $.get('http://localhost:8080/api/publications/publications.json')
+    $.get(`${url}/publications.json`)
       .then((response) => {
           response.publications.map((publication) => {
 
