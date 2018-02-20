@@ -11,7 +11,6 @@ import {
 // const url = 'http://localhost:8080/api/publications'
 const url = 'https://gamalielsaracho.github.io/api/publications'
 
-
 var allPublications = []
 
 export function fetchPosts() {

@@ -10,5 +10,6 @@ let createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
 export default function configureStore(initialState) {
   let store = createStoreWithMiddleware(rootReducer, initialState)
 
+
   return store
 }
