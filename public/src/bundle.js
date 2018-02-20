@@ -29783,7 +29783,7 @@
 						{ className: 'column small-12' },
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: '/', className: 'text-center' },
+							{ to: 'https://gamalielsaracho.github.io/', className: 'text-center' },
 							'Inicio'
 						)
 					),
@@ -29801,7 +29801,7 @@
 						{ className: 'column small-12' },
 						_react2.default.createElement(
 							_reactRouter.Link,
-							{ to: '/blog', className: 'text-center' },
+							{ to: 'https://gamalielsaracho.github.io/blog', className: 'text-center' },
 							'Blog'
 						)
 					),
@@ -29859,7 +29859,7 @@
 							null,
 							_react2.default.createElement(
 								_reactRouter.Link,
-								{ to: '/' },
+								{ to: 'https://gamalielsaracho.github.io/' },
 								'Inicio'
 							)
 						),
@@ -29877,7 +29877,7 @@
 							null,
 							_react2.default.createElement(
 								_reactRouter.Link,
-								{ to: '/blog' },
+								{ to: 'https://gamalielsaracho.github.io/blog' },
 								'Blog'
 							)
 						),
@@ -60768,7 +60768,7 @@
 /* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
