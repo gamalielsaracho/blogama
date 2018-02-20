@@ -25,13 +25,13 @@ class Menu extends Component {
 	navigationLinks() { // MOVIL MENU.
 		return <ul className="menu row">
 			<li className='column small-12'> 
-				<Link to='https://gamalielsaracho.github.io/' className='text-center'>Inicio</Link>
+				<Link to={`/`} className='text-center'>Inicio</Link>
 			</li>
 			<li className='column small-12'>
 				<a href="#" className='text-center'>Proyectos</a>
 			</li>
 			<li className='column small-12'>
-		      <Link to='https://gamalielsaracho.github.io/blog' className='text-center'>Blog</Link>
+		      <Link to={`/blog`} className='text-center'>Blog</Link>
 			</li>
 			<li className='column small-12'>
 		      <Link to={`/tienda`} className='text-center'>Tienda</Link>
@@ -68,13 +68,13 @@ class Menu extends Component {
 	  } else {
 	    return <ul className="menu">
 			<li>
-				<Link to='https://gamalielsaracho.github.io/'>Inicio</Link>
+				<Link to={`/`}>Inicio</Link>
 			</li>
 			<li>
 				<a href="#">Proyectos</a>
 			</li>
 			<li>
-				<Link to='https://gamalielsaracho.github.io/blog'>Blog</Link>
+				<Link to={`/blog`}>Blog</Link>
 			</li>
 			<li>
 				<Link to={`/tienda`}>Tienda</Link>
