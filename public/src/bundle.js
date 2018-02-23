@@ -31631,7 +31631,7 @@
 									_react2.default.createElement("img", { src: "http://www.jeremyzerr.com/sites/default/files/styles/large/public/field/image/react-logo-300-transparent.png?itok=y9pW9YEk" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"React"
 									)
 								),
@@ -31641,7 +31641,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/github.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								),
@@ -31651,7 +31651,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/nodejs.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								),
@@ -31661,7 +31661,7 @@
 									_react2.default.createElement("img", { src: "https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								),
@@ -31671,7 +31671,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/react.svg" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								),
@@ -31681,7 +31681,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/nodejs.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								),
@@ -31691,7 +31691,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/github.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								)
@@ -31710,7 +31710,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/nodejs.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Node"
 									)
 								),
@@ -31720,7 +31720,7 @@
 									_react2.default.createElement("img", { src: "https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Hola"
 									)
 								)
@@ -31739,7 +31739,7 @@
 									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/github.png" }),
 									_react2.default.createElement(
 										"p",
-										{ className: "text-icon-activity" },
+										{ className: "text-icon-activity text-center" },
 										"Github"
 									)
 								)
@@ -60921,7 +60921,7 @@
 /* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 

@@ -15,31 +15,31 @@ class Activity extends Component {
 					<div className='row center-lg center-md center-sm center-xs'>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='http://www.jeremyzerr.com/sites/default/files/styles/large/public/field/image/react-logo-300-transparent.png?itok=y9pW9YEk'/>
-							<p className='text-icon-activity'>React</p>
+							<p className='text-icon-activity text-center'>React</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/github.png'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/nodejs.png'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/react.svg'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/nodejs.png'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/github.png'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 					</div>
 
@@ -48,11 +48,11 @@ class Activity extends Component {
 					<div className='row center-lg center-md center-sm center-xs'>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/nodejs.png'/>
-							<p className='text-icon-activity'>Node</p>
+							<p className='text-icon-activity text-center'>Node</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png'/>
-							<p className='text-icon-activity'>Hola</p>
+							<p className='text-icon-activity text-center'>Hola</p>
 						</div>
 					</div>
 
@@ -61,7 +61,7 @@ class Activity extends Component {
 					<div className='row center-lg center-md center-sm center-xs'>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
 							<img src='https://gamalielsaracho.github.io/api/icons/github.png'/>
-							<p className='text-icon-activity'>Github</p>
+							<p className='text-icon-activity text-center'>Github</p>
 						</div>
 					</div>
 				</div>
