@@ -11,13 +11,13 @@ class HelmetShow extends React.Component {
             image_google,
             urlData } = this.props
 
-    const urlDetail = `http://localhost:8080${urlData}`
+    const urlDetail = `https://gamalielsaracho.github.io/${urlData}`
 
     return <Helmet
       title={title}
       titleTemplate={title}
       defaultTitle="Gamaliel Saracho Franco Programador."
-      base={{"target": "_blank", "href": "http://localhost:8080/"}}
+      base={{"target": "_blank", "href": "https://gamalielsaracho.github.io//"}}
       meta={[
         {"name": "description", "content": description},                
         {"name":"theme-color", "content":"#15210B"},
@@ -41,7 +41,7 @@ class HelmetShow extends React.Component {
         {"name":"twitter:description", "content": description},
         {"name":"twitter:creator", "content":"@gamalielsaracho"},
         {"name":"twitter:image:src", "content": image_twitter},
-        {"name":"twitter:domain", "content":"http://localhost:8080/"}
+        {"name":"twitter:domain", "content":"https://gamalielsaracho.github.io/"}
 
       ]}
       link={[
