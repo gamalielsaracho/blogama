@@ -62393,10 +62393,13 @@
 
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
+<<<<<<< HEAD
 	var _reduxPromise = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"redux-promise\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var _reduxPromise2 = _interopRequireDefault(_reduxPromise);
 
+=======
+>>>>>>> gh-pages
 	var _reducers = __webpack_require__(498);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
@@ -62404,6 +62407,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var createStoreWithMiddleware = (0, _redux.applyMiddleware)(_reduxThunk2.default)(_redux.createStore);
+	// import promise from 'redux-promise'
 
 	// todos los reductores.
 	function configureStore(initialState) {
