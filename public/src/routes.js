@@ -8,9 +8,9 @@ import PostsListPage from './post/pages/PostsListPage'
 import ShowPostPage from './post/pages/ShowPostPage'
 
 export default (
-  <Route path="/" component={AppContainer}> // la raiz principal.
+  <Route path={process.env.PUBLIC_URL + '/'} component={AppContainer}> // la raiz principal.
     <IndexRoute component={HomePage}/>
-    <Route path="/blog" component={PostsListPage}/>
-    <Route path="/blog/:namefolder" component={ShowPostPage}/>
+    <Route path="blog" component={PostsListPage}/>
+    <Route path="blog/:namefolder" component={ShowPostPage}/>
   </Route>
 )

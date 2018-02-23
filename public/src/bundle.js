@@ -29368,7 +29368,7 @@
 /* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -29400,12 +29400,13 @@
 
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: '/', component: _App2.default },
+	  { path: process.env.PUBLIC_URL + '/', component: _App2.default },
 	  ' // la raiz principal.',
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/blog', component: _PostsListPage2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/blog/:namefolder', component: _ShowPostPage2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: 'blog', component: _PostsListPage2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'blog/:namefolder', component: _ShowPostPage2.default })
 	);
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 /* 280 */
