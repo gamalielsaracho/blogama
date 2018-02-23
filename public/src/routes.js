@@ -10,7 +10,7 @@ import ShowPostPage from './post/pages/ShowPostPage'
 export default (
   <Route path="/" component={AppContainer}> // la raiz principal.
     <IndexRoute component={HomePage}/>
-    <Route path="blog" component={PostsListPage}/>
-    <Route path="blog/:namefolder" component={ShowPostPage}/>
+    <Route path="/blog" component={PostsListPage}/>
+    <Route path="/blog/:namefolder" component={ShowPostPage}/>
   </Route>
 )
