@@ -18,11 +18,11 @@ class Activity extends Component {
 							<p className='text-icon-activity'>React</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/github.png'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/github.png'/>
 							<p className='text-icon-activity'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/nodejs.png'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/nodejs.png'/>
 							<p className='text-icon-activity'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
@@ -30,15 +30,15 @@ class Activity extends Component {
 							<p className='text-icon-activity'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/react.svg'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/react.svg'/>
 							<p className='text-icon-activity'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/nodejs.png'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/nodejs.png'/>
 							<p className='text-icon-activity'>Hola</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/github.png'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/github.png'/>
 							<p className='text-icon-activity'>Hola</p>
 						</div>
 					</div>
@@ -47,7 +47,7 @@ class Activity extends Component {
 
 					<div className='row center-lg center-md center-sm center-xs'>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/nodejs.png'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/nodejs.png'/>
 							<p className='text-icon-activity'>Node</p>
 						</div>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
@@ -60,7 +60,7 @@ class Activity extends Component {
 
 					<div className='row center-lg center-md center-sm center-xs'>
 						<div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-							<img src='http://localhost:8080/api/icons/github.png'/>
+							<img src='https://gamalielsaracho.github.io/api/icons/github.png'/>
 							<p className='text-icon-activity'>Github</p>
 						</div>
 					</div>

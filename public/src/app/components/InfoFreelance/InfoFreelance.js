@@ -9,7 +9,7 @@ class InfoFreelance extends React.Component {
         
         <div className='row middle-lg middle-md middle-sm center-xs'>
           <div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-            <img src='http://localhost:8080/api/icons/DSC04875.JPG'/>
+            <img src='https://gamalielsaracho.github.io/api/icons/DSC04875.JPG'/>
           </div>
 
           <div className='col-xs-12 col-sm-8 col-md-9 col-lg-9'>

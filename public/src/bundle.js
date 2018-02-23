@@ -29999,7 +29999,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-xs-5 col-sm-2 col-md-2 col-lg-2' },
-	            _react2.default.createElement('img', { src: 'http://localhost:8080/api/icons/DSC04875.JPG' }),
+	            _react2.default.createElement('img', { src: 'https://gamalielsaracho.github.io/api/icons/DSC04875.JPG' }),
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement('br', null)
 	          ),
@@ -31638,7 +31638,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/github.png" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/github.png" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -31648,7 +31648,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/nodejs.png" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/nodejs.png" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -31668,7 +31668,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/react.svg" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/react.svg" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -31678,7 +31678,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/nodejs.png" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/nodejs.png" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -31688,7 +31688,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/github.png" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/github.png" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -31707,7 +31707,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/nodejs.png" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/nodejs.png" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -31736,7 +31736,7 @@
 								_react2.default.createElement(
 									"div",
 									{ className: "col-xs-6 col-sm-3 col-md-3 col-lg-3" },
-									_react2.default.createElement("img", { src: "http://localhost:8080/api/icons/github.png" }),
+									_react2.default.createElement("img", { src: "https://gamalielsaracho.github.io/api/icons/github.png" }),
 									_react2.default.createElement(
 										"p",
 										{ className: "text-icon-activity" },
@@ -44006,7 +44006,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-xs-6 col-sm-3 col-md-3 col-lg-3' },
-	              _react2.default.createElement('img', { src: 'http://localhost:8080/api/icons/DSC04875.JPG' })
+	              _react2.default.createElement('img', { src: 'https://gamalielsaracho.github.io/api/icons/DSC04875.JPG' })
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -60921,7 +60921,7 @@
 /* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -62393,13 +62393,6 @@
 
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-<<<<<<< HEAD
-	var _reduxPromise = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"redux-promise\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _reduxPromise2 = _interopRequireDefault(_reduxPromise);
-
-=======
->>>>>>> gh-pages
 	var _reducers = __webpack_require__(498);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
