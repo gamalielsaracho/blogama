@@ -5,7 +5,7 @@
       "title":"GraphQL",
       "namefolder":"graphql",
       "description":"En este post aprenderas como usar GraphQL y su estructura",
-      "cover_icon":"http://localhost:8080/api/icons/graphql.png",
+      "cover_icon":"/api/icons/graphql.png",
       "author": {
         "name":"Fabio Gamaliel Saracho",
         "email":"fabiogamaliel@gmail.com"
@@ -21,7 +21,7 @@
       "title":"reactjs",
       "namefolder":"reactjs",
       "description":"En este post aprenderas reactjs para ",
-      "cover_icon":"http://localhost:8080/api/icons/maxresdefault.jpg",
+      "cover_icon":"./api/icons/maxresdefault.jpg",
       "author": {
         "name":"Fabio Gamaliel Saracho",
         "email":"fabiogamaliel@gmail.com"
@@ -37,7 +37,7 @@
       "title":"Creando una api json con rails",
       "namefolder":"creando-una-api-con-rails",
       "description":"En este post aprenderas reactjs para ",
-      "cover_icon":"http://localhost:8080/api/icons/react-webpack-babel-1.jpg",
+      "cover_icon":"./api/icons/react-webpack-babel-1.jpg",
       "author": {
         "name":"Fabio Gamaliel Saracho",
         "email":"fabiogamaliel@gmail.com"
@@ -53,7 +53,7 @@
       "title":"Autenticacion jwt api listo para el frontend",
       "namefolder":"autenticacion-jwt-api-listo-para-el-frontend",
       "description":"En este post aprenderas como autenticar usuario por medio de jwt en tu api rest",
-      "cover_icon":"http://localhost:8080/api/icons/logo-nodejs.jpg",
+      "cover_icon":"./api/icons/logo-nodejs.jpg",
       "author": {
         "name":"Fabio Gamaliel Saracho",
         "email":"fabiogamaliel@gmail.com"

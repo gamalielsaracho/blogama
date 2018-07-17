@@ -4,7 +4,7 @@ class LastProject extends Component {
 	render() {
 		let styles = {
 			lastProjectContainer: {
-				"box-shadow":"0 0 15px #888",
+				"boxShadow":"0 0 15px #888",
 				"padding":"1em"
 			},
 			containerImage: {
@@ -43,7 +43,7 @@ class LastProject extends Component {
 					<a href='#' target='_blank' style={styles.linkDemo}><h5 className='text-left'>Regalalgo</h5></a>
 					
 					<div className='container-icon-post'>
-						<img className='icon-post' src='https://www.hosteurope.es/blog/wp-content/uploads/2015/02/flatone.jpg'/>
+						<img className='icon-post' src='./api/icons/landing-page.jpg'/>
 					</div>
 				</div>
 

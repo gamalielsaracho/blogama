@@ -43,13 +43,13 @@ class Menu extends Component {
 				<Link to={`/`} className='text-center'>Inicio</Link>
 			</li>
 			<li className='column small-12'>
-				<a href="#" className='text-center'>Proyectos</a>
+				<a href="" className='text-center'>Proyectos</a>
 			</li>
 			<li className='column small-12'>
 		      <Link to={`/blog`} className='text-center'>Blog</Link>
 			</li>
 			<li className='column small-12'>
-		      <Link to={`/tienda`} className='text-center'>Tienda</Link>
+				<a href="" className='text-center'>Contactame</a>
 			</li>
 		</ul>
 	}
@@ -92,7 +92,7 @@ class Menu extends Component {
 				<Link to={`/blog`}>Blog</Link>
 			</li>
 			<li>
-				<Link to={`/tienda`}>Tienda</Link>
+				<a href="#">Contactame</a>
 			</li>
 		</ul>
 	  }

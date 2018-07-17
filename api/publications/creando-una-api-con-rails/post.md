@@ -7,7 +7,7 @@ a json , para que usar los datos de tus aplicacion ya sea web o movile, de una m
 > Vamos a crear 2 controladores para manejar las vistas de nuestra api, creamos el archivo publications_controller.rb y controller2.rb como se muestra aquí {article-ph}
 
 
-![GitHub Logo](https://platzi.com/blog/wp-content/uploads/2016/09/OG-Cover-Growth-Marketing.jpg)
+![GitHub Logo]()
 
 > app/controllers/publications_controller.rb {folder-code}
 

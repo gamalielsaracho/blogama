@@ -29817,7 +29817,7 @@
 						{ className: 'column small-12' },
 						_react2.default.createElement(
 							'a',
-							{ href: '#', className: 'text-center' },
+							{ href: '', className: 'text-center' },
 							'Proyectos'
 						)
 					),
@@ -29834,9 +29834,9 @@
 						'li',
 						{ className: 'column small-12' },
 						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: '/tienda', className: 'text-center' },
-							'Tienda'
+							'a',
+							{ href: '', className: 'text-center' },
+							'Contactame'
 						)
 					)
 				);
@@ -29910,9 +29910,9 @@
 							'li',
 							null,
 							_react2.default.createElement(
-								_reactRouter.Link,
-								{ to: '/tienda' },
-								'Tienda'
+								'a',
+								{ href: '#' },
+								'Contactame'
 							)
 						)
 					);
@@ -40683,7 +40683,7 @@
 	        // twitter.
 	        { "property": "twitter:account_id", "content": "4503599630205252" }, { "name": "twitter:card", "content": "summary_large_image" }, { "name": "twitter:site", "content": "@gamalielsaracho" }, { "name": "twitter:title", "content": title }, { "name": "twitter:description", "content": description }, { "name": "twitter:creator", "content": "@gamalielsaracho" }, { "name": "twitter:image:src", "content": image_twitter }, { "name": "twitter:domain", "content": "http://localhost:8080/" }],
 	        link: [{ "rel": "canonical", "href": "http://mysite.com/example" }, { "rel": "apple-touch-icon", "href": "http://mysite.com/img/apple-touch-icon-57x57.png" }, { "rel": "apple-touch-icon", "sizes": "72x72", "href": "http://mysite.com/img/apple-touch-icon-72x72.png" }],
-	        script: [{ "src": "http://include.com/pathtojs.js", "type": "text/javascript" }, { "type": "application/ld+json", innerHTML: '{ "@context": "http://schema.org" }' }],
+	        script: [{ "src": "", "type": "text/javascript" }, { "type": "application/ld+json", innerHTML: '{ "@context": "http://schema.org" }' }],
 	        onChangeClientState: function onChangeClientState(newState) {
 	          return console.log(newState);
 	        }
@@ -42238,7 +42238,7 @@
 			value: function render() {
 				var styles = {
 					lastProjectContainer: {
-						"box-shadow": "0 0 15px #888",
+						"boxShadow": "0 0 15px #888",
 						"padding": "1em"
 					},
 					containerImage: {
@@ -42294,7 +42294,7 @@
 							_react2.default.createElement(
 								"div",
 								{ className: "container-icon-post" },
-								_react2.default.createElement("img", { className: "icon-post", src: "https://www.hosteurope.es/blog/wp-content/uploads/2015/02/flatone.jpg" })
+								_react2.default.createElement("img", { className: "icon-post", src: "./api/icons/landing-page.jpg" })
 							)
 						),
 						_react2.default.createElement(
@@ -60966,7 +60966,7 @@
 /* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
