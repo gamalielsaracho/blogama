@@ -29496,6 +29496,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _HelmetShow = __webpack_require__(294);
+
+	var _HelmetShow2 = _interopRequireDefault(_HelmetShow);
+
 	var _Footer = __webpack_require__(284);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
@@ -29519,7 +29523,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import HelmetShow from './HelmetShow'
 
 	// import PostsListContainer from '../../../post/components/PostsList'
 
@@ -29544,12 +29547,6 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      // <HelmetShow title='Gamaliel Saracho Programador javascript tanto del backend como el frotend' 
-	      //     description='Me gusta enseñar a los de demás sobre lo que hago y como ayudarlos' 
-	      //     image_facebook='home.jpg' 
-	      //     image_twitter='home.jpg' 
-	      //     image_google='home.jpg'/>
-
 	      var loading = this.props.page.loading;
 
 
@@ -29559,6 +29556,11 @@
 	        return _react2.default.createElement(
 	          'div',
 	          null,
+	          _react2.default.createElement(_HelmetShow2.default, { title: 'Gamaliel Saracho Programador javascript tanto del backend como el frotend',
+	            description: 'Me gusta ense\xF1ar a los de dem\xE1s sobre lo que hago y como ayudarlos',
+	            image_facebook: 'home.jpg',
+	            image_twitter: 'home.jpg',
+	            image_google: 'home.jpg' }),
 	          _react2.default.createElement(_Menu2.default, null),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
@@ -44208,6 +44210,8 @@
 
 	var allPublications = [];
 
+	var allPublicationsFechPost;
+
 	function fetchPosts() {
 	  return function (dispatch) {
 	    dispatch({ type: _types.FETCH_POSTS_REQUEST });
@@ -44231,14 +44235,23 @@
 
 	function fetchPost(name_folder) {
 	  return function (dispatch) {
+
 	    dispatch({ type: _types.FETCH_POST_REQUEST });
 
-	    allPublications.map(function (publication) {
-	      if (publication.namefolder == name_folder) {
+	    _jquery2.default.get(url + '/publications.json').then(function (response) {
+	      response.publications.map(function (publication) {
 
-	        // console.log(publication)
-	        dispatch({ type: _types.FETCH_POST_SUCCESS, payload: publication });
-	      }
+	        if (publication.namefolder == name_folder) {
+
+	          _jquery2.default.get(url + '/' + publication.namefolder + '/post.md').then(function (response) {
+	            publication.content = response;
+
+	            dispatch({ type: _types.FETCH_POST_SUCCESS, payload: publication });
+	          });
+	        }
+	      });
+	    }).catch(function (error) {
+	      console.log(error);
 	    });
 	  };
 	}
@@ -44476,7 +44489,7 @@
 
 	function mapDispatchToProps(dispatch) {
 		return {
-			fetchPostList: function fetchPostList(name_folder) {
+			fetchPostData: function fetchPostData(name_folder) {
 				dispatch((0, _actions.fetchPost)(name_folder));
 			}
 		};
@@ -44550,7 +44563,10 @@
 			key: 'componentWillMount',
 			value: function componentWillMount() {
 				// el componente Montará.
-				this.props.fetchPostList(this.props.nameFolder);
+
+				console.log('EL NOMBRE ES--->' + this.props.nameFolder);
+
+				this.props.fetchPostData(this.props.nameFolder);
 			}
 		}, {
 			key: 'renderPost',
@@ -60968,7 +60984,7 @@
 /* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 

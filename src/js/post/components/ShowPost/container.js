@@ -18,7 +18,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		fetchPostList: (name_folder) => {
+		fetchPostData: (name_folder) => {
 			dispatch(fetchPost(name_folder))
 		}
 	}

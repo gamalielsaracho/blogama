@@ -23,7 +23,10 @@ class ShowPost extends Component {
 	}	
 
 	componentWillMount() { // el componente Montará.
-      this.props.fetchPostList(this.props.nameFolder)
+
+	  console.log('EL NOMBRE ES--->'+this.props.nameFolder)
+		
+      this.props.fetchPostData(this.props.nameFolder)
   	}
 
   	renderPost(post) {

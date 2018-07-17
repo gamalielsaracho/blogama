@@ -13,6 +13,9 @@ const url = 'https://gamalielsaracho.github.io/api/publications'
 
 var allPublications = []
 
+var allPublicationsFechPost
+
+
 export function fetchPosts() {
   return (dispatch) => {
     dispatch({ type: FETCH_POSTS_REQUEST })
@@ -41,16 +44,31 @@ export function fetchPosts() {
 
 export function fetchPost(name_folder) {
   return (dispatch) => {
+
       dispatch({ type: FETCH_POST_REQUEST })
+      
 
-      allPublications.map((publication) => {
-        if(publication.namefolder == name_folder) {
+      $.get(`${url}/publications.json`)
+      .then((response) => {
+          response.publications.map((publication) => {
 
-          // console.log(publication)
-          dispatch({ type:FETCH_POST_SUCCESS, payload:publication })
-        }
-        
+            if(publication.namefolder == name_folder) {
+
+              $.get(`${url}/${publication.namefolder}/post.md`)
+              .then((response) => {
+                publication.content = response
+
+                dispatch({ type:FETCH_POST_SUCCESS, payload:publication })
+              })
+            }
+
+          })
+
       })
+      .catch((error) => {
+        console.log(error)
+      })
+
   }
 }
 
