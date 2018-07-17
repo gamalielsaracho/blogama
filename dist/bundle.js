@@ -29387,7 +29387,7 @@
 
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: 'https://gamalielsaracho.github.io/', component: _App2.default },
+	  { path: '/', component: _App2.default },
 	  ' // la raiz principal.',
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/blog', component: _PostsListPage2.default }),

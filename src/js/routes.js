@@ -8,7 +8,7 @@ import PostsListPage from './post/pages/PostsListPage'
 import ShowPostPage from './post/pages/ShowPostPage'
 
 export default (
-  <Route path='https://gamalielsaracho.github.io/' component={AppContainer}> // la raiz principal.
+  <Route path='/' component={AppContainer}> // la raiz principal.
     <IndexRoute component={HomePage}/>
     <Route path="/blog" component={PostsListPage}/>
     <Route path="/blog/:namefolder" component={ShowPostPage}/>
