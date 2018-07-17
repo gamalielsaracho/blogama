@@ -40665,7 +40665,9 @@
 	          urlData = _props.urlData;
 
 
-	      var urlDetail = 'http://localhost:8080/' + urlData;
+	      var urlDetail = 'https://gamalielsaracho.github.io/' + urlData;
+	      // const urlDetail = `http://localhost:8080/${urlData}`
+
 
 	      return _react2.default.createElement(_reactHelmet2.default, {
 	        title: title,

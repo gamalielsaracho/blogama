@@ -11,7 +11,9 @@ class HelmetShow extends React.Component {
             image_google,
             urlData } = this.props
 
-    const urlDetail = `http://localhost:8080/${urlData}`
+    const urlDetail = `https://gamalielsaracho.github.io/${urlData}`
+    // const urlDetail = `http://localhost:8080/${urlData}`
+
 
     return <Helmet
       title={title}
