@@ -42485,8 +42485,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// const url = 'https://gamalielsaracho.github.io/api'
-	var url = 'http://localhost:8080/api';
+	var url = 'https://gamalielsaracho.github.io/api';
+	// const url = 'http://localhost:8080/api'
+
 
 	function fetchProjects() {
 		return function (dispatch) {
@@ -44200,8 +44201,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var url = 'http://localhost:8080/api/publications';
-	// const url = 'https://gamalielsaracho.github.io/api/publications'
+	// const url = 'http://localhost:8080/api/publications'
+	var url = 'https://gamalielsaracho.github.io/api/publications';
 
 	var allPublications = [];
 

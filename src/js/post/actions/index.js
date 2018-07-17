@@ -8,8 +8,8 @@ import {
   FETCH_POST_SUCCESS
 } from './types'
 
-const url = 'http://localhost:8080/api/publications'
-// const url = 'https://gamalielsaracho.github.io/api/publications'
+// const url = 'http://localhost:8080/api/publications'
+const url = 'https://gamalielsaracho.github.io/api/publications'
 
 var allPublications = []
 
