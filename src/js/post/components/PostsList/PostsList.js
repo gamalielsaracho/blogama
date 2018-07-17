@@ -46,7 +46,7 @@ class PostsList extends Component {
 		              </div>
 
 		              <div className='post-container-title'>
-			              <Link to={`blog/${post.namefolder}`}>
+			              <Link to={`/blog/${post.namefolder}`}>
 			                <h1 className='title-post'>{ post.title }</h1>
 			              </Link>
 			          </div>
