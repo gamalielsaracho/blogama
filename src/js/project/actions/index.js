@@ -10,8 +10,8 @@ import  {
 	CLOSE_MODAL_FETCH_PROJECT
 } from './types'
 
-// const url = 'https://gamalielsaracho.github.io/api'
-const url = 'http://localhost:8080/api'
+// const url = 'http://localhost:8080/api'
+const url = 'https://gamalielsaracho.github.io/api'
 
 
 export function fetchProjects() {
