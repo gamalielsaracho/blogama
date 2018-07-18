@@ -29649,6 +29649,9 @@
 	      var urlBase = 'https://gamalielsaracho.github.io/';
 	      // var urlBase = `http://localhost:8080/`
 
+	      if (!urlData) {
+	        urlDetail = urlBase;
+	      }
 
 	      return _react2.default.createElement(_reactHelmet2.default, {
 	        title: title,
