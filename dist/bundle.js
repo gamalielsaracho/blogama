@@ -44344,9 +44344,9 @@
 						{ className: 'container' },
 						_react2.default.createElement(_HelmetShow2.default, { title: 'Blog sobre programaci\xF3n',
 							description: 'aprender es querer',
-							image_facebook: 'image_facebook_blog.jpg',
-							image_twitter: 'image_twitter_blog.jpg',
-							image_google: 'image_google_blog.jpg',
+							image_facebook: './api/icons/banner.jpg',
+							image_twitter: './api/icons/banner.jpg',
+							image_google: './api/icons/banner.jpg',
 							urlData: '/blog' }),
 						_react2.default.createElement('br', null),
 						_react2.default.createElement(
