@@ -40625,7 +40625,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	        value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -40647,55 +40647,55 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var HelmetShow = function (_React$Component) {
-	        _inherits(HelmetShow, _React$Component);
+	  _inherits(HelmetShow, _React$Component);
 
-	        function HelmetShow() {
-	                _classCallCheck(this, HelmetShow);
+	  function HelmetShow() {
+	    _classCallCheck(this, HelmetShow);
 
-	                return _possibleConstructorReturn(this, (HelmetShow.__proto__ || Object.getPrototypeOf(HelmetShow)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (HelmetShow.__proto__ || Object.getPrototypeOf(HelmetShow)).apply(this, arguments));
+	  }
+
+	  _createClass(HelmetShow, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props,
+	          title = _props.title,
+	          description = _props.description,
+	          image_facebook = _props.image_facebook,
+	          image_twitter = _props.image_twitter,
+	          image_google = _props.image_google,
+	          urlData = _props.urlData;
+
+
+	      var urlDetail = 'https://gamalielsaracho.github.io/' + urlData;
+	      // const urlDetail = `http://localhost:8080/${urlData}`
+
+
+	      return _react2.default.createElement(_reactHelmet2.default, {
+	        title: title,
+	        titleTemplate: title,
+	        defaultTitle: 'Gamaliel Saracho Franco Programador.',
+	        base: { "target": "_blank", "href": "http://localhost:8080/" },
+	        meta: [{ "name": "description", "content": description }, { "name": "theme-color", "content": "#15210B" },
+
+	        // facebook.
+	        { "property": "fb:admins", "content": "prueba" }, { "property": "og:title", "content": title }, { "property": "og:image", "content": image_facebook }, { "property": "og:description", "content": description }, { "property": "og:type", "content": "website" }, { "property": "og:url", "content": urlDetail }, { "property": "og:site_name", "content": "gamalielsaracho.com" },
+
+	        // google.
+	        { "itemprop": "description", "content": description },
+
+	        // twitter.
+	        { "property": "twitter:account_id", "content": "4503599630205252" }, { "name": "twitter:card", "content": "summary_large_image" }, { "name": "twitter:site", "content": "@gamalielsaracho" }, { "name": "twitter:title", "content": title }, { "name": "twitter:description", "content": description }, { "name": "twitter:creator", "content": "@gamalielsaracho" }, { "name": "twitter:image:src", "content": image_twitter }, { "name": "twitter:domain", "content": "http://localhost:8080/" }],
+	        link: [{ "rel": "canonical", "href": "http://mysite.com/example" }, { "rel": "apple-touch-icon", "href": "http://mysite.com/img/apple-touch-icon-57x57.png" }, { "rel": "apple-touch-icon", "sizes": "72x72", "href": "http://mysite.com/img/apple-touch-icon-72x72.png" }],
+	        script: [{ "src": "", "type": "text/javascript" }, { "type": "application/ld+json", innerHTML: '{ "@context": "http://schema.org" }' }],
+	        onChangeClientState: function onChangeClientState(newState) {
+	          return console.log(newState);
 	        }
+	      });
+	    }
+	  }]);
 
-	        _createClass(HelmetShow, [{
-	                key: 'render',
-	                value: function render() {
-	                        var _props = this.props,
-	                            title = _props.title,
-	                            description = _props.description,
-	                            image_facebook = _props.image_facebook,
-	                            image_twitter = _props.image_twitter,
-	                            image_google = _props.image_google,
-	                            urlData = _props.urlData;
-
-
-	                        var urlDetail = 'https://gamalielsaracho.github.io/' + urlData;
-	                        // const urlDetail = `http://localhost:8080/${urlData}`
-
-
-	                        return _react2.default.createElement(_reactHelmet2.default, {
-	                                title: title,
-	                                titleTemplate: title,
-	                                defaultTitle: 'Gamaliel Saracho Franco Programador.',
-	                                base: { "target": "_blank", "href": "http://localhost:8080/" },
-	                                meta: [{ "name": "description", "content": description }, { "name": "theme-color", "content": "#15210B" }, { "property": "og:image", "content": image_facebook },
-
-	                                // facebook.
-	                                { "property": "fb:admins", "content": "prueba" }, { "property": "fb:title", "content": title }, { "property": "fb:type", "content": "website" }, { "property": "fb:url", "content": urlDetail }, { "property": "fb:description", "content": description }, { "property": "fb:image", "content": image_facebook }, { "property": "fb:site_name", "content": "gamalielsaracho.com" },
-
-	                                // google.
-	                                { "itemprop": "description", "content": description },
-
-	                                // twitter.
-	                                { "property": "twitter:account_id", "content": "4503599630205252" }, { "name": "twitter:card", "content": "summary_large_image" }, { "name": "twitter:site", "content": "@gamalielsaracho" }, { "name": "twitter:title", "content": title }, { "name": "twitter:description", "content": description }, { "name": "twitter:creator", "content": "@gamalielsaracho" }, { "name": "twitter:image:src", "content": image_twitter }, { "name": "twitter:domain", "content": "http://localhost:8080/" }],
-	                                link: [{ "rel": "canonical", "href": "http://mysite.com/example" }, { "rel": "apple-touch-icon", "href": "http://mysite.com/img/apple-touch-icon-57x57.png" }, { "rel": "apple-touch-icon", "sizes": "72x72", "href": "http://mysite.com/img/apple-touch-icon-72x72.png" }],
-	                                script: [{ "src": "", "type": "text/javascript" }, { "type": "application/ld+json", innerHTML: '{ "@context": "http://schema.org" }' }],
-	                                onChangeClientState: function onChangeClientState(newState) {
-	                                        return console.log(newState);
-	                                }
-	                        });
-	                }
-	        }]);
-
-	        return HelmetShow;
+	  return HelmetShow;
 	}(_react2.default.Component);
 
 	exports.default = HelmetShow;

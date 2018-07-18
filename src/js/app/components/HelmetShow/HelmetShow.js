@@ -25,17 +25,15 @@ class HelmetShow extends React.Component {
         {"name":"theme-color", "content":"#15210B"},
         
 
-        {"property":"og:image", "content":image_facebook},
 
         // facebook.
         {"property":"fb:admins", "content":"prueba"},
-        {"property":"fb:title", "content": title},
-        {"property":"fb:type", "content":"website"},
-        {"property":"fb:url", "content": urlDetail},
-        {"property":"fb:description", "content": description},
-
-        {"property":"fb:image", "content": image_facebook},
-        {"property":"fb:site_name", "content":"gamalielsaracho.com"},
+        {"property":"og:title", "content": title},
+        {"property":"og:image", "content":image_facebook},
+        {"property":"og:description", "content": description},
+        {"property":"og:type", "content":"website"},
+        {"property":"og:url", "content": urlDetail},
+        {"property":"og:site_name", "content":"gamalielsaracho.com"},
 
         // google.
         {"itemprop":"description", "content": description},
