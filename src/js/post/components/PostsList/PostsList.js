@@ -34,7 +34,7 @@ class PostsList extends Component {
 					image_facebook="./api/icons/banner.jpg"
 					image_twitter="./api/icons/banner.jpg"
 					image_google="./api/icons/banner.jpg"
-					urlData="/blog"/>
+					urlData="blog"/>
 
 				<br/>
 		    	<div className='row align-justify'>
