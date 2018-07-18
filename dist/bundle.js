@@ -40679,7 +40679,7 @@
 	                                meta: [{ "name": "description", "content": description }, { "name": "theme-color", "content": "#15210B" }, { "property": "og:image", "content": image_facebook },
 
 	                                // facebook.
-	                                { "property": "fb:admins", "content": "prueba" }, { "property": "fb:title", "content": title }, { "property": "fb:type", "content": "website" }, { "property": "fb:url", "content": urlDetail }, { "property": "fb:image", "content": image_facebook }, { "property": "fb:site_name", "content": "gamalielsaracho.com" },
+	                                { "property": "fb:admins", "content": "prueba" }, { "property": "fb:title", "content": title }, { "property": "fb:type", "content": "website" }, { "property": "fb:url", "content": urlDetail }, { "property": "fb:description", "content": description }, { "property": "fb:image", "content": image_facebook }, { "property": "fb:site_name", "content": "gamalielsaracho.com" },
 
 	                                // google.
 	                                { "itemprop": "description", "content": description },
@@ -60984,7 +60984,7 @@
 /* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 

@@ -32,6 +32,8 @@ class HelmetShow extends React.Component {
         {"property":"fb:title", "content": title},
         {"property":"fb:type", "content":"website"},
         {"property":"fb:url", "content": urlDetail},
+        {"property":"fb:description", "content": description},
+
         {"property":"fb:image", "content": image_facebook},
         {"property":"fb:site_name", "content":"gamalielsaracho.com"},
 
