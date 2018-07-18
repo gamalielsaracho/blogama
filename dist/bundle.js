@@ -29558,9 +29558,9 @@
 	          null,
 	          _react2.default.createElement(_HelmetShow2.default, { title: 'Gamaliel Saracho Programador javascript tanto del backend como el frotend',
 	            description: 'Me gusta ense\xF1ar a los de dem\xE1s sobre lo que hago y como ayudarlos',
-	            image_facebook: 'home.jpg',
-	            image_twitter: 'home.jpg',
-	            image_google: 'home.jpg' }),
+	            image_facebook: './api/icons/banner.png',
+	            image_twitter: './api/icons/banner.png',
+	            image_google: './api/icons/banner.png' }),
 	          _react2.default.createElement(_Menu2.default, null),
 	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null),
@@ -60984,7 +60984,7 @@
 /* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var require;var require;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var require;var require;/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
