@@ -23,6 +23,9 @@ class HelmetShow extends React.Component {
       meta={[
         {"name": "description", "content": description},                
         {"name":"theme-color", "content":"#15210B"},
+        
+
+        {"property":"og:image", "content":image_facebook},
 
         // facebook.
         {"property":"fb:admins", "content":"prueba"},
