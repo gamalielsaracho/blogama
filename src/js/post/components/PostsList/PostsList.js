@@ -31,9 +31,9 @@ class PostsList extends Component {
 				
 				<HelmetShow title="Blog sobre programación"
 					description="aprender es querer"
-					image_facebook="./api/icons/banner.jpg"
-					image_twitter="./api/icons/banner.jpg"
-					image_google="./api/icons/banner.jpg"
+					image_facebook="./api/icons/banner.png"
+					image_twitter="./api/icons/banner.png"
+					image_google="./api/icons/banner.png"
 					urlData="blog"/>
 
 				<br/>
