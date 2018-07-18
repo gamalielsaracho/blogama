@@ -11,15 +11,18 @@ class HelmetShow extends React.Component {
             image_google,
             urlData } = this.props
 
-    const urlDetail = `https://gamalielsaracho.github.io/#/${urlData}`
+    var urlDetail = `https://gamalielsaracho.github.io/#/${urlData}`
     // const urlDetail = `http://localhost:8080/${urlData}`
+
+    var urlBase = `https://gamalielsaracho.github.io/`
+    // var urlBase = `http://localhost:8080/`
 
 
     return <Helmet
       title={title}
       titleTemplate={title}
       defaultTitle="Gamaliel Saracho Franco Programador."
-      base={{"target": "_blank", "href": "http://localhost:8080/"}}
+      base={{"target": "_blank", "href": urlBase}}
       meta={[
         {"name": "description", "content": description},                
         {"name":"theme-color", "content":"#15210B"},
@@ -27,7 +30,7 @@ class HelmetShow extends React.Component {
 
 
         // facebook.
-        {"property":"fb:admins", "content":"prueba"},
+        // {"property":"fb:admins", "content":"prueba"},
         {"property":"og:title", "content": title},
         {"property":"og:image", "content":image_facebook},
         {"property":"og:description", "content": description},
@@ -46,7 +49,7 @@ class HelmetShow extends React.Component {
         {"name":"twitter:description", "content": description},
         {"name":"twitter:creator", "content":"@gamalielsaracho"},
         {"name":"twitter:image:src", "content": image_twitter},
-        {"name":"twitter:domain", "content":"http://localhost:8080/"}
+        {"name":"twitter:domain", "content":"https://gamalielsaracho.github.io/"}
 
       ]}
       link={[
