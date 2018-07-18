@@ -7,7 +7,7 @@ class Author extends React.Component {
       <br/>
       <div className="row middle-lg center-md center-sm center-xs">
           <div className="col-xs-5 col-sm-2 col-md-2 col-lg-2">
-            <img src="http://localhost:8080/api/icons/DSC04875.JPG"/>
+            <img src="./api/icons/DSC04875.JPG"/>
             <br/>
             <br/>
           </div>
