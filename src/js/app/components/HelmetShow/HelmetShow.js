@@ -11,7 +11,7 @@ class HelmetShow extends React.Component {
             image_google,
             urlData } = this.props
 
-    const urlDetail = `https://gamalielsaracho.github.io/${urlData}`
+    const urlDetail = `https://gamalielsaracho.github.io/#/${urlData}`
     // const urlDetail = `http://localhost:8080/${urlData}`
 
 
@@ -33,7 +33,7 @@ class HelmetShow extends React.Component {
         {"property":"og:description", "content": description},
         {"property":"og:type", "content":"website"},
         {"property":"og:url", "content": urlDetail},
-        {"property":"og:site_name", "content":"gamalielsaracho.com"},
+        {"property":"og:site_name", "content":"gamalielsaracho.github.io"},
 
         // google.
         {"itemprop":"description", "content": description},

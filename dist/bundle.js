@@ -29643,7 +29643,7 @@
 	          urlData = _props.urlData;
 
 
-	      var urlDetail = 'https://gamalielsaracho.github.io/' + urlData;
+	      var urlDetail = 'https://gamalielsaracho.github.io/#/' + urlData;
 	      // const urlDetail = `http://localhost:8080/${urlData}`
 
 
@@ -29655,7 +29655,7 @@
 	        meta: [{ "name": "description", "content": description }, { "name": "theme-color", "content": "#15210B" },
 
 	        // facebook.
-	        { "property": "fb:admins", "content": "prueba" }, { "property": "og:title", "content": title }, { "property": "og:image", "content": image_facebook }, { "property": "og:description", "content": description }, { "property": "og:type", "content": "website" }, { "property": "og:url", "content": urlDetail }, { "property": "og:site_name", "content": "gamalielsaracho.com" },
+	        { "property": "fb:admins", "content": "prueba" }, { "property": "og:title", "content": title }, { "property": "og:image", "content": image_facebook }, { "property": "og:description", "content": description }, { "property": "og:type", "content": "website" }, { "property": "og:url", "content": urlDetail }, { "property": "og:site_name", "content": "gamalielsaracho.github.io" },
 
 	        // google.
 	        { "itemprop": "description", "content": description },
