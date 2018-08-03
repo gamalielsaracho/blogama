@@ -1,40 +1,57 @@
 var webpack = require('webpack')
 var path = require('path')
+var nodeExternals = require('webpack-node-externals')
 
 
-module.exports = {
-	entry: './src/js/app.js',
+var browserConfig = {
+	entry: './public/src/js/app.js',
 	output: {
-		path: './dist/', 
-		filename:'bundle.js'
+		path: path.resolve(__dirname, 'public/dist'), 
+		filename:'bundle.js',
+		publicPath: '/'
 	},
 
 	module: {
-		loaders: [
+		rules: [
 			{
-				test:/.jsx?$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-				query: {
-					presets: [
-						'es2015',
-						'react'
-					]
-				}
-				
-			},
-			{
-				test: /\.(png|jpg|gif)$/,
-				use: [
-					{
-						loader: 'url-loader',
-						options: {
-							limit: 8192
-						}
-					}
-				]
+				test:/\.(js)$/,
+				loader: 'babel-loader'				
 			}
 		]
 
-	}
+	},
+	plugins: [
+		new webpack.DefinePlugin({
+			__isBrowser__: 'true'
+		})
+	]
 }
+
+
+var serverConfig = {
+	entry: './server.js',
+	target: 'node',
+	externals: [nodeExternals()],
+	output: {
+		path: __dirname, 
+		filename:'index.js',
+		publicPath: '/'
+	},
+
+	module: {
+		rules: [
+			{
+				test:/\.(js)$/,
+				loader: 'babel-loader' 
+			}
+		]
+
+	},
+	plugins: [
+		new webpack.DefinePlugin({
+			__isBrowser__: 'false'
+		})
+	]
+}
+
+module.exports = [browserConfig, serverConfig]

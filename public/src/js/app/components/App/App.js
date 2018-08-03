@@ -19,11 +19,11 @@ class App extends React.Component {
   render() {
       
 
-    const { loading } = this.props.page
+    // const { loading } = this.props.page
 
-    if(loading) {
-      return <LoadAnimation/>
-    } else {
+    // if(loading) {
+    //   return <LoadAnimation/>
+    // } else {
       return <div>
         <HelmetShow title='Gamaliel Saracho Programador javascript tanto del backend como el frotend' 
           description='Me gusta enseñar a los de demás sobre lo que hago y como ayudarlos' 
@@ -31,8 +31,10 @@ class App extends React.Component {
           image_twitter='./api/icons/banner.png' 
           image_google='./api/icons/banner.png'/>
 
+        {/* 
+        */}
         <Menu/>
-        
+
         <br/>
         <br/>
         
@@ -42,7 +44,7 @@ class App extends React.Component {
         <Footer/>
 
       </div>
-    }
+    // }
 
   }
 }

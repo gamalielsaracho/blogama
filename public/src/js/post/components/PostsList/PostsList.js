@@ -1,31 +1,30 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 import HelmetShow from '../../../app/components/HelmetShow'
 import LoadAnimation from '../../../app/components/LoadAnimation'
 
 class PostsList extends Component {
-	constructor(props) {
-    	super(props)
-    	// this.renderPosts = this.renderPosts.bind(this)
-    	// this.renderComponent = this.renderComponent.bind(this)
-	}
-
-	componentWillMount() { // el componente se montará.
-    	this.props.fetchPostsList()
-	}
-
-	// renderComponent(loading, posts) {
-		
+	
+	// constructor(props) {
+ //    	super(props)
+    	
 	// }
+
+
+	componentDidMount() {
+	    if (!this.props.fetchPosts.posts) {
+	    	this.props.fetchPostsList()
+	    }
+ 	}
 
 	render() {
 		const { loading, posts } = this.props.fetchPosts
 		console.log(this.props.fetchPosts)
 
-		
-		if(loading) {
-			return <LoadAnimation/>
+		var s = 2
+		if(loading === true) {
+			return <h1>cargando...</h1>
 		} else {
 			return <div className='container'>
 				

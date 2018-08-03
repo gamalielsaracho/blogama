@@ -7,8 +7,9 @@ import rootReducer from '../reducers'
 
 let createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
 
-export default function configureStore(initialState) {
-  let store = createStoreWithMiddleware(rootReducer, initialState)
+// initialState replaced by preloadedState.
+export default function configureStore(preloadedState) {
+  let store = createStoreWithMiddleware(rootReducer, preloadedState)
 
 
   return store
