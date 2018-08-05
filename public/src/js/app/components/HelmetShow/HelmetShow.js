@@ -11,11 +11,11 @@ class HelmetShow extends React.Component {
             image_google,
             urlData } = this.props
 
-    var urlDetail = `https://gamalielsaracho.github.io/#/${urlData}`
-    // const urlDetail = `http://localhost:8080/${urlData}`
+    // var urlDetail = `https://gamalielsaracho.github.io/#/${urlData}`
+    var urlDetail = `http://localhost:3000/${urlData}`
 
-    var urlBase = `https://gamalielsaracho.github.io/`
-    // var urlBase = `http://localhost:8080/`
+    // var urlBase = `https://gamalielsaracho.github.io/`
+    var urlBase = `http://localhost:3000/`
 
     if(!urlData) {
       urlDetail = urlBase

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import $ from 'jquery'
+// import $ from 'jquery'
 
 class Menu extends Component {
-	constructor(props) {
-		super(props);
-		// this.state = {
-		//     windowWidth: window.innerWidth,
-		//     mobileNavVisible: false
-	 //  	}
-	}
+	// constructor(props) {
+	// 	super(props);
+	// 	// this.state = {
+	// 	//     windowWidth: window.innerWidth,
+	// 	//     mobileNavVisible: false
+	//  //  	}
+	// }
 
 	// componentDidMount
 
@@ -99,33 +99,36 @@ class Menu extends Component {
 	// }
 
 	render() {
-		// container max-width
-			// console.log(this.state)
-			return <section id='menu-container'>
-
-		  	<div className='row end-lg end-md end-sm end-xs'>
-
-		    	<div className='col-xs-12 col-sm-8 col-md-6 col-lg-6'>
-
-		      	<ul className="menu">
-					<li>
-						<Link to={`/`}>Inicio</Link>
-					</li>
-					<li>
-						<a href="#">Proyectos</a>
-					</li>
-					<li>
-						<Link to={`/blog`}>Blog</Link>
-					</li>
-					<li>
-						<a href="#">Contactame</a>
-					</li>
-				</ul>
-
-		    	</div>
+		return <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header className="mdl-layout__header">
+		    <div className="mdl-layout__header-row">
+		      <span className="mdl-layout-title">Title</span>
+		      <div className="mdl-layout-spacer"></div>
+		      <nav className="mdl-navigation mdl-layout--large-screen-only">
+		      	<Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
+		      	<Link className="mdl-navigation__link" to={`blog`}>Blog</Link>
+		        
+		        <a className="mdl-navigation__link" href="">Link</a>
+		        <a className="mdl-navigation__link" href="">Link</a>
+		        <a className="mdl-navigation__link" href="">Link</a>
+		        <a className="mdl-navigation__link" href="">Link</a>
+		      </nav>
 		    </div>
+		  </header>
+		  <div className="mdl-layout__drawer mdl-layout--small-screen-only">
+		    <span className="mdl-layout-title">Title</span>
+		    <nav className="mdl-navigation">
+		      <a className="mdl-navigation__link" href="">Link</a>
+		      <a className="mdl-navigation__link" href="">Link</a>
+		      <a className="mdl-navigation__link" href="">Link</a>
+		      <a className="mdl-navigation__link" href="">Link</a>
+		    </nav>
+		  </div>
 
-			</section>
+		  <main className="mdl-layout__content">
+		  	{ this.props.children }
+		  </main>
+		</div>
 	}
 
 	// render() {

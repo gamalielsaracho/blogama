@@ -1,13 +1,6 @@
 import axios from 'axios'
 import 'isomorphic-fetch';
 
-import {
-  FETCH_POSTS_REQUEST,
-  FETCH_POSTS_SUCCESS,
-
-  FETCH_POST_REQUEST,
-  FETCH_POST_SUCCESS
-} from './types'
 
 // const url = 'http://localhost:8080/api/publications'
 const url = 'https://gamalielsaracho.github.io/api/publications'
@@ -17,18 +10,12 @@ var allPublications = []
 var allPublicationsFechPost
 
 
-// Action Creators
-const requestPosts = () => ({ type: FETCH_POSTS_REQUEST });
-const receivedPosts = posts => ({ type: FETCH_POSTS_SUCCESS, payload: posts });
-// const postsError = () => ({ type:  });
-
-export const fetchPosts = () => (dispatch, getState) => {
-  dispatch(requestPosts());
-  return fetch(`${url}/publications.json`)
+export function fetchPosts() {
+  // body...
+  return fetch('http://localhost:3000/api/news')
     .then(response => response.json())
-    .then(posts => dispatch(receivedPosts(posts)))
     .catch(err => console.log(err));
-};
+}
 
 // const requestNews = () => ({ type: FETCH_POSTS_REQUEST });
 

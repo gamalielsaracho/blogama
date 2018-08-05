@@ -1,2 +1,2 @@
-import ListProjectsContainer from './container'
-export default ListProjectsContainer
+import ListProjects from './ListProjects'
+export default ListProjects

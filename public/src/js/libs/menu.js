@@ -1,7 +1,11 @@
-$(document).ready(main)
+// import $ from 'jquery'
 
-function main() {
-	$('.btn-menu').click(function() {
-		$('.showMyMenu').toggle()
-	})
-}
+// if(__isBrowser__) {
+// 	$(document).ready(main)
+
+// 	function main() {
+// 		$('.btn-menu').click(function() {
+// 			$('.showMyMenu').toggle()
+// 		})
+// 	}
+// }

@@ -1,2 +1,2 @@
-import ShowPostContainer from './container'
-export default ShowPostContainer
+import ShowPost from './ShowPost'
+export default ShowPost

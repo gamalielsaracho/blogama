@@ -1,7 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
 var nodeExternals = require('webpack-node-externals')
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var browserConfig = {
 	entry: './public/src/js/app.js',
@@ -16,7 +16,20 @@ var browserConfig = {
 			{
 				test:/\.(js)$/,
 				loader: 'babel-loader'				
-			}
+			},
+		    {
+		    	test: /\.css$/,
+		        use: ExtractTextPlugin.extract({
+		          use: [
+		            {
+		              loader: "css-loader"
+		            },
+		            {
+		              loader: "style-loader"
+		            }
+		          ]
+		    	})
+		    }
 		]
 
 	},

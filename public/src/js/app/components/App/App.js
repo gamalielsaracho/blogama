@@ -1,20 +1,20 @@
-import React from 'react'
 import HelmetShow from '../HelmetShow'
 
 import Footer from '../Footer'
 import Menu from '../Menu'
-import Author from '../Author'
+
+import React, { Component } from 'react'
+import { Switch, Route, Link } from 'react-router-dom'
+import routes from '../../../routes'
 
 
 import LoadAnimation from '../LoadAnimation'
 
-// import PostsListContainer from '../../../post/components/PostsList'
-
 class App extends React.Component {
 
-  componentDidMount() {
-    setTimeout(() => this.props.readyApp(), 1500);
-  }
+  // componentDidMount() {
+  //   setTimeout(() => this.props.readyApp(), 1500);
+  // }
 
   render() {
       
@@ -22,28 +22,56 @@ class App extends React.Component {
     // const { loading } = this.props.page
 
     // if(loading) {
-    //   return <LoadAnimation/>
+    //   return <h1>Cargando...</h1>
     // } else {
-      return <div>
-        <HelmetShow title='Gamaliel Saracho Programador javascript tanto del backend como el frotend' 
-          description='Me gusta enseñar a los de demás sobre lo que hago y como ayudarlos' 
-          image_facebook='./api/icons/banner.png' 
-          image_twitter='./api/icons/banner.png' 
-          image_google='./api/icons/banner.png'/>
-
-        {/* 
-        */}
-        <Menu/>
-
-        <br/>
-        <br/>
+      return <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
+        <header className="mdl-layout__header">
+          <div className="mdl-layout__header-row">
+            <span className="mdl-layout-title"></span>
+            <div className="mdl-layout-spacer"></div>
+            <nav className="mdl-navigation mdl-layout--large-screen-only">
+              <Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
+              <Link className="mdl-navigation__link" to={`/blog`}>Proyectos</Link>
+              <Link className="mdl-navigation__link" to={`/blog`}>Blog</Link>
 
-        { this.props.children }
+            </nav>
+            <div className="mdl-layout-spacer"></div>
 
-        <Footer/>
+          </div>
+        </header>
+        <div className="mdl-layout__drawer mdl-layout--small-screen-only">
+          <span className="mdl-layout-title"></span>
+          <br/>
+          <nav className="mdl-navigation">
+              <Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
+              <Link className="mdl-navigation__link" to={`/blog`}>Proyectos</Link>
+              <Link className="mdl-navigation__link" to={`/blog`}>Blog</Link>
+             
+          </nav>
+        </div>
 
-      </div>
+
+        <main className="mdl-layout__content">
+          <Switch>
+          { 
+            routes.map(({path, exact, component: C, ...rest}) => {
+              return <Route 
+                key={path}
+                path={path}
+                exact={exact}
+                render={(props) => (
+                  <C {...props} {...rest} />
+                )}
+              />
+            })
+          }
+          </Switch>
+
+          <Footer/>
+        </main>
+    </div>
+      
     // }
 
   }

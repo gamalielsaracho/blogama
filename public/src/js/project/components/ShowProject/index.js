@@ -1,2 +1,2 @@
-import ShowProjectContainer from './container'
-export default ShowProjectContainer
+import ShowProject from './ShowProject'
+export default ShowProject

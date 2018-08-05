@@ -1,27 +1,59 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 
 class InfoFreelance extends React.Component {
 
   render() {
+    // 
     // data-aos='flip-left'
-    return <div className='row center-lg center-md center-sm center-xs' >
-      <div className='col-xs-11 col-sm-10 col-md-9 col-lg-9' id='information-seo-container'>
-        
-        <div className='row middle-lg middle-md middle-sm center-xs'>
-          <div className='col-xs-6 col-sm-3 col-md-3 col-lg-3'>
-            <img src='/api/icons/DSC04875.JPG'/>
+    return <div className="mdl-grid">
+        <div className="mdl-layout-spacer"></div>
+
+        <div className="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--12-col-phone">
+          
+          <div className="mdl-grid">
+            <div className="photo-freelance">
+            </div>
+          </div>
+          
+          
+          <div className="mdl-card__title">
+            <h2 className="mdl-card__title-text">Gamaliel Saracho</h2>
           </div>
 
-          <div className='col-xs-12 col-sm-8 col-md-9 col-lg-9'>
-            <h1 className='name-freelance text-center'>Gamaliel Saracho</h1>
-            <p className='text-history-seo'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+          <div className="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque.
+          </div>
+
+          <div className="mdl-card__actions mdl-card--border">
+            <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <span className="icon-facebook"></span>
+            </button>
+            <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <span className="icon-twitter"></span>
+            </button>
+            <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <span className="icon-github"></span>
+            </button>
+            <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <span className="icon-whatsapp"></span>
+            </button>
+          </div>
+
+          <div className="mdl-card__menu">
+            <button className="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i className="material-icons">share</i>
+            </button>
           </div>
         </div>
-
-      </div>
+        
+        <div className="mdl-layout-spacer"></div>
     </div>
   }
 }

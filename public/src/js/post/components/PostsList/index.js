@@ -1,2 +1,2 @@
-import PostsListContainer from './container'
-export default PostsListContainer
+import PostsList from './PostsList'
+export default PostsList
