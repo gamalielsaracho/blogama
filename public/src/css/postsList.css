@@ -1,0 +1,56 @@
+.container-projects-list {
+	/*border: 1px solid;*/
+	padding: 1em;
+}
+
+.container-projects-list h1 {
+	text-align: center;
+}
+
+.container-projects-list__max-container {
+	/*border: 1px solid red;*/
+	max-width: 1300px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.container-projects-list__project {
+	/*border: 1px solid blue;*/
+	width: 405px;
+	margin-bottom: 3em;
+}
+
+.container-projects-list__image-container {
+	/*border: 1px solid green;*/
+}
+
+.container-projects-list__image {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+.container-projects-list__project h4 {
+	text-align: center;
+}
+
+.container-projects-list__button-container {
+	/*border: 1px solid green;*/
+
+	display: flex;
+	justify-content: flex-end;
+}
+
+.container-projects-list__button {
+	background-color: #8BC34A;
+	padding: 1em;
+	cursor: pointer;
+	color: #fff;
+	border-bottom: 3px solid #4e880a;
+}
+
+/*img {
+}*/

@@ -1,23 +1,36 @@
 import React, { Component } from 'react'
-	
+import $ from 'jquery'
+
 import LoadAnimation from '../../../app/components/LoadAnimation'
 
 class ListProjects extends Component {
 	constructor(props) {
 		super(props)
-		this.renderProjects = this.renderProjects.bind(this)
-		// this.showProject = this.showProject.bind(this)
+
+		this.state = {
+			loading: false,
+			projects: null
+		}
+
 	}
 
 	componentWillMount() {
-		this.props.fetchProjectsL()
-	}
+		this.setState({ loading: true })
 
-	// showProject(projectId) {
-	// 	alert('El id es: '+projectId)
-	// }
+		if (__isBrowser__) {
+		 $.get('http://localhost:3000/api/projects')
+		  .then((response) => {
+		  	this.setState({ loading:false, projects: response })
+		  })
+		  .catch(err => console.log(err));
+		}
 
-	renderProjects(projects, loading) {
+ 	}
+
+
+	render() {
+		const { loading, projects } = this.state
+
 		var styles = {
 			button: {
 				"backgroundColor": "#85ca38"
@@ -29,35 +42,29 @@ class ListProjects extends Component {
 		}
 
 		if(loading) {
-			return <LoadAnimation/>
+			return <h1>Cargando....</h1>
 		} else {
-			return <div className='row center-lg center-md center-sm center-xs'>
+			return <div className='container-projects-list'>
+				<h1>Proyectos</h1>
+				<div className='container-projects-list__max-container'>
 				{
 					projects.map((project) => {
-						return <div className='col-xs-12 col-sm-6 col-md-4 col-lg-4' key={project.id}>
-							<div className='container-icon-post'>
-								<img className='icon-post' src={project.imageProject}/>
+						return <div className='container-projects-list__project' key={project.id}>
+							<div className='container-projects-list__image-container'>
+								<img className='container-projects-list__image' src={project.imageProject}/>
 							</div>
-							<h4 style={styles.nameProject} className='text-center'>{ project.name }</h4>
-							<a onClick={ () => {this.props.fetchProjectL(project.id) }} style={styles.button} className='button success'>Ver Detalles</a>
-							<br/>
-							<br/>
+							<h4>{ project.name }</h4>
+							
+							<div className='container-projects-list__button-container'>
+								<a onClick={ () => {this.props.fetchProjectL(project.id) }} className='container-projects-list__button'>Ver Detalles</a>
+							</div>
 						</div>
 					})
 				}
+				</div>
 			</div>
 		}
-	}
 
-	render() {
-		const { loading, projects } = this.props.fetchProjects
-
-		return <div className='container'>
-			<br/>
-			<br/>
-			<h1 className='text-center'>Trabajos</h1>
-			{ this.renderProjects(projects, loading) }
-		</div>
 	}
 }
 

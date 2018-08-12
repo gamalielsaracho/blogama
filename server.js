@@ -15,11 +15,15 @@ import routes from './public/src/js/routes'
 
 import 'isomorphic-fetch';
 
+// Backend.
+import routesServer from './app/routes'
 
 var app = express()
 
-app.use(cors())
+routesServer(app)
 
+
+app.use(cors())
 app.use(express.static('public')) 
 
 app.get("/api/news", (req, res) => {
@@ -112,6 +116,8 @@ app.get("/api/news", (req, res) => {
 });
 
 
+
+
 app.get('*', function(req, res, next) {
 
 	const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
@@ -123,6 +129,8 @@ app.get('*', function(req, res, next) {
 
 	Promise.resolve(requestInitialData)
 	.then((initialData) => {
+    // console.log(initialData)
+    
 		const context = {initialData}
 		
 		// console.log('solicitud de dato inicial segun la ruta.')

@@ -3,34 +3,43 @@ import React, { Component } from 'react'
     const year = d.getFullYear()
 
 class Footer extends Component {
+	// <a href='#' target='_blank'>
+	// 	<i className='fi-social-github'></i>
+	// </a>
+
+
 
 	render() {
-		return <div className='contact-container'>
-        	<div className='row center-lg center-md center-sm center-xs'>
+		return <footer className='container-footer'>
+        	<div className='container-footer__max'>
+        		<div className='container-footer__max__content'>
+	        		<div className='container-footer__max__content__description'>
+			        	<p>Un blog hecho con Mucho Amor y Tiempo<span><i className='fi-heart'></i></span></p> 
+	        		</div>
 
-	          <div className='col-xs-5 col-sm-5 col-md-5 col-lg-5'>
-	            <div className='row justify-lg justify-md justify-sm center-xs'>
-	                <div className='col-xs-3 col-sm-2 col-md-1 col-lg-1'>
-	                  <a href='#' target='_blank'>
-	                    <i className='fi-social-github'></i>
-	                  </a>
-	                </div>
-	                <div className='col-xs-3 col-sm-2 col-md-1 col-lg-1'>
-	                  <a href='#' target='_blank'>
-	                    <i className='fi-social-facebook'></i>
-	                  </a>
-	                </div>
-	                <div className='col-xs-3 col-sm-2 col-md-1 col-lg-1'>
-	                  <a href='#' target='_blank'>
-	                    <i className='fi-social-twitter'></i>
-	                  </a>
-	                </div>
-	            </div>
-	          </div>
-	        </div>
-	        <p className='contact-description'>Un blog hecho con Mucho<span><i className='fi-heart'></i></span> Y <span><i className='fi-clock'></i></span></p> 
-	        <p className='blog-year'>© { year }</p>
-      </div>
+	        		<div className='container-footer__max__content__socials__buttons'>
+						<div className='container-footer__max__content__socials__buttons__button'>
+							<a href='#' target='_blank'>
+				            	<span className="icon-facebook"></span>
+							</a>
+						</div>
+						<div className='container-footer__max__content__socials__buttons__button'>
+							<a href='#' target='_blank'>
+				            	<span className="icon-twitter"></span>
+							</a>
+						</div>
+						<div className='container-footer__max__content__socials__buttons__button'>
+							<a href='#' target='_blank'>
+					            <span className="icon-github"></span>
+							</a>
+						</div>
+						
+	        		</div>
+        		</div>
+        		
+
+        	</div>
+      	</footer>
 	}
 }
 

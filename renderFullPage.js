@@ -15,9 +15,18 @@ export default function renderFullPage(html, preloadedState, helmet) {
 
 
 			<script src='/src/js/libs/material.min.js'></script>
-			
+
+
+			<link rel="stylesheet" href="/src/css/activity.css">
+			<link rel="stylesheet" href="/src/css/footer.css">
+			<link rel="stylesheet" href="/src/css/postsList.css">
+
+
+
 			<link rel="stylesheet" href="/src/css/material.min.css">
 			<link rel="stylesheet" href="/src/css/icons/style.css">
+			
+			<link rel="stylesheet" href="/src/css/flexboxgrid.css">
 
 			<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.lime-red.min.css" />
 			<style>

@@ -1,0 +1,26 @@
+.container-max {
+	/*border:1px solid;*/
+	max-width: 1150px;
+	height: auto;
+	padding: 1em;
+	margin:0 auto;
+	margin-top: 7em;
+	margin-bottom: 2em;	
+}
+
+.container-max__activities {
+	/*border:1px solid red;*/
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	/*align-content:space-between;*/
+}
+
+.container-max__activities__activity {
+	/*border:1px solid;*/
+	width: 210px;
+	/*height:5em;*/
+	/*margin:0.5em;*/
+
+}

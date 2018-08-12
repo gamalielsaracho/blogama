@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 import HelmetShow from '../components/HelmetShow'
 
 import Activity from '../components/Activity'
@@ -22,14 +23,14 @@ class HomePage extends Component {
 				
 			<br/>
 			<InfoFreelance/>
-			
-			<h1>HomePage</h1>
+						
+			<Activity/>
+
+			<ListProjects/>
 			
 			{/*
-				<Activity/>
 			    <LastProject/>
 			    <ShowProjectContainer/>
-			    <ListProjects/>
 			*/}
 			
 		</div>
