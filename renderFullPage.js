@@ -19,7 +19,9 @@ export default function renderFullPage(html, preloadedState, helmet) {
 
 			<link rel="stylesheet" href="/src/css/activity.css">
 			<link rel="stylesheet" href="/src/css/footer.css">
-			<link rel="stylesheet" href="/src/css/postsList.css">
+			<link rel="stylesheet" href="/src/css/projectsList.css">
+			<link rel="stylesheet" href="/src/css/projectShow.css">
+
 
 
 
@@ -41,6 +43,9 @@ export default function renderFullPage(html, preloadedState, helmet) {
 				   background-size: cover;
 				   background-position: center;
 				}
+				// ......................
+				
+
 			</style>
 			<script>
 				window.__initialData__ = ${JSON.stringify(preloadedState)}

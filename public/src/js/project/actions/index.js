@@ -3,22 +3,22 @@ import $ from 'jquery'
 
 
 // const url = 'https://gamalielsaracho.github.io/api'
-const url = 'http://localhost:3000/api/projects'
+// const url = 'http://localhost:3000/api/projects'
 
-export function fetchProjects() {
+// export function fetchProjects() {
   // body...
   // return fetch(url)
   //   .then(response => response.json())
   //   .catch(err => console.log(err));
 
   // if(__isBrowser__) {
-	  $.get(url)
-	  .then((response) => {
-	  	response.json
-	  })
-	  .catch(err => console.log(err));
+	  // $.get(url)
+	  // .then((response) => {
+	  // 	response.json
+	  // })
+	  // .catch(err => console.log(err));
   // }
-}
+// }
 
 
 // export function fetchProject(projectId) {
