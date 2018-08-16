@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import $ from 'jquery'
+
 
 import HelmetShow from '../../../app/components/HelmetShow'
 import LoadAnimation from '../../../app/components/LoadAnimation'
@@ -9,40 +11,51 @@ class PostsList extends Component {
 	constructor(props) {
     	super(props)
 
-    	let initialData
-		if(props.staticContext) {
-			initialData = props.staticContext.initialData
-		} else {
-			initialData = window.__initialData__;
-			delete window.__initialData__;
-		}
+  //   	let initialData
+		// if(props.staticContext) {
+		// 	initialData = props.staticContext.initialData
+		// } else {
+		// 	initialData = window.__initialData__;
+		// 	delete window.__initialData__;
+		// }
 
-		console.log('props.staticContext')
-		console.log(props.staticContext)
+		// console.log('props.staticContext')
+		// console.log(props.staticContext)
 
 		this.state = {
-			loading: initialData ? false : true,
-			posts: initialData
+			loading: false,
+			posts: null
 		}
 
-		this.fetchPosts = this.fetchPosts.bind(this)
+		// this.fetchPosts = this.fetchPosts.bind(this)
 	}
 
 
-	fetchPosts() {
-		this.setState({ loading:true })
+	// fetchPosts() {
+	// 	this.setState({ loading:true })
 
-		// función desde la url.
-		this.props.fetchInitialData()
-		.then((data) => this.setState({ loading:false, posts: data }))
+	// 	// función desde la url.
+	// 	this.props.fetchInitialData()
+	// 	.then((data) => this.setState({ loading:false, posts: data.publications }))
+	// }
+
+	componentWillMount() {
+		
+		this.setState({ loading: true })
+
+		if (__isBrowser__) {
+		 $.get('https://gamalielsaracho.github.io/api/publications/publications.json')
+		  .then((response) => {
+		  		// console.log('el id es---->')
+		  		// console.log(this.props.modal.idProject)
+
+		  		this.setState({ loading:false, posts: response.publications })
+
+		  })
+		  .catch(err => console.log(err));
+		}
 	}
 
-
-	componentDidMount() {
-	    if (!this.state.posts) {
-	    	this.fetchPosts()
-	    }
- 	}
 
 	render() {
 		const { loading, posts } = this.state
@@ -50,7 +63,7 @@ class PostsList extends Component {
 		if(loading === true) {
 			return <h1>Cargando...</h1>
 		} else {
-			return <div className='container'>
+			return <div className='posts-list'>
 				
 				{/*
 					<HelmetShow title="Blog sobre programación"
@@ -61,20 +74,20 @@ class PostsList extends Component {
 						urlData="blog"/>
 				*/}
 
-				<br/>
-		    	<div className='row align-justify'>
+		    	<div className='posts-list__container-max'>
 		        {
 		          posts.map((post) => {
-		            return <div key={post.id} className='column small-12 medium-6 large-4'>
-		              
+		            return <div key={post.id} className='posts-list__post-container'>
+		    			<div className='posts-list__container-image'>
+		              		<img className='posts-list__image' src='https://flaviocopes.com/nodejs/banner.png'/>
+		    			</div>
 
-		              <div className='post-container-title'>
-			              <Link to={`blog/${post.namefolder}`}>
-			                <h1 className='title-post'>{ post.title }</h1>
-			              </Link>
-			          </div>
+				        <Link to={`blog/${post.namefolder}`}>
+				            <h1>{ post.title }</h1>
+				        </Link>
 
-		              <p className='text-right'>{ post.date }</p>
+			           	<p>{ post.date }</p>
+		            
 		            </div>
 		          })     
 		        }

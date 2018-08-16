@@ -35,19 +35,26 @@ class ShowProject extends Component {
 			}
 		})
 
+
 		if (__isBrowser__) {
 		 $.get('http://localhost:3000/api/projects')
 		  .then((response) => {
 		  		console.log('el id es---->')
 		  		console.log(this.props.modal.idProject)
 
-		  		console.log(response)
-		  	this.setState({ 
-		  		show: {
-					loading: false,
-					project: response
-				}
-		  	})
+		  		response.map((project) => {
+		  			if(project.id == this.props.modal.idProject) {
+		  				this.setState({ 
+					  		show: {
+								loading: false,
+								project: project
+							}
+					  	})
+
+		  				console.log(project)
+		  			}
+		  		})
+
 		  })
 		  .catch(err => console.log(err));
 		}
@@ -55,7 +62,7 @@ class ShowProject extends Component {
 
 	renderFrontEnd(tecnologies) {
 		if(tecnologies) {
-			return <div>
+			return <ul>
 				{
 					tecnologies.map((tecnology) => {
 						return <li key={tecnology.id}>
@@ -63,7 +70,7 @@ class ShowProject extends Component {
 						</li>
 					})
 				}
-			</div>
+			</ul>
 		}else {
 			return <span></span>
 		}
@@ -71,7 +78,7 @@ class ShowProject extends Component {
 
 	renderBackEnd(tecnologies) {
 		if(tecnologies) {
-			return <div>
+			return <ul>
 				{
 					tecnologies.map((tecnology) => {
 						return <li key={tecnology.id}>
@@ -79,7 +86,7 @@ class ShowProject extends Component {
 						</li>
 					})
 				}
-			</div>
+			</ul>
 		}else {
 			return <span></span>
 		}
@@ -87,79 +94,65 @@ class ShowProject extends Component {
 
 	render() {
 		const { isOpen } = this.props.modal
+		const { loading, project } = this.state.show 
 
 		// console.log(this.props.modal)
 
-		const customStyles = {
-			// overlay : {
-			//     position: '',
-			//     // top: 0,
-			//     // left: 0,
-			//     // right: 0,
-			//     // bottom: 0,
-			//     // backgroundColor: 'rgba(255, 255, 255, 0.75)'
-			// },
-		    content : {
-			    top: '51%',
-			    left: '50%',
-			    right: 'auto',
-			    bottom: 'auto',
-			    height: '100vh',
-			    marginRight: '-50%',
-			    transform: 'translate(-50%, -50%)',
-			    border: 'none',
-			    background: 'none'
-		  	}
+
+
+		if(loading) {
+			return <h1>Cargando...</h1>
+		} else {
+			return <div id="myModal" className="show-project-modal">
+
+			  <div className="show-project-modal__content">
+			    
+			    <div className="show-project-modal__container-max">
+
+				    <div className="show-project-modal__btn-close-container">
+				      <span onClick={ () => { this.props.closeModalShowProject() } } className="close">&times;</span>
+				    </div>
+
+
+				    <div className="show-project-modal__images-description-container">
+				   		<div className="show-project-modal__images-slider-container">
+				   			<img className='container-projects-list__image' src='http://www.onextrapixel.com/wp-content/uploads/2016/01/9-StudioMeta.jpg'/>
+				   		</div>
+
+				   		<div className="show-project-modal__desciption-container">
+				   			<h3>Nombre proyecto</h3>
+
+				   			<a href='#' target='_blank'>
+						    	<span className="icon-twitter"></span> 
+						    	gamalielsaracho.com
+							</a>
+
+							{/*  */}
+							<h4>Tecnologías utilizadas</h4>
+					   		<div className="show-project-modal__tecnologies-container">
+						   		<div className="show-project-modal__frontend-description">
+						   			<h5>Front-end</h5>
+									{
+										this.renderFrontEnd(project.frontEndList)
+									}	
+						    	</div>
+
+						    	<div className="show-project-modal__backend-description">
+						   			<h5>Back-end</h5>
+						   			{
+										this.renderBackEnd(project.backEndList)
+									}
+						    	</div>
+					    	</div>
+				    	</div>
+				    </div>
+			    
+			 	</div>
+
+			  </div>
+			</div>
 		}
 
-		let styles = {
-			lastProjectContainer: {
-				"box-shadow":"0 0 10px #888",
-				"padding":"1em",
-				"background": "#fff"
-			},
-			containerImage: {
-				"width": "100%",
-				"height":"200px"
-			},
-			titleTecnologies: {
-				"marginTop": "1em"
-			},
-			containerListTecnologies: {
-				"marginLeft": "2em"
-			},
-			button: {
-				"backgroundColor": "#03a9f4",
-				"paddingRight": "0em",
-				"paddingTop": "5px",
-				"paddingBottom": "5px"
-			},
-			containerButtonRepository: {
-				"minHeight": "226px"
-			},
-			linkDemo: {
-				"color": "#03a9f4"
-			}
-		}
-				// <h1 onClick={ () => { this.props.closeModalShowProject() } }>cerrar</h1>
-
-		return <div id="myModal" className="mi-modal">
-
-		  <div className="modal-content">
-		    <div className="modal-header">
-		      <span onClick={ () => { this.props.closeModalShowProject() } } className="close">&times;</span>
-		      <h2>Modal Header</h2>
-		    </div>
-		    <div className="modal-body">
-		      <p>Some text in the Modal Body</p>
-		      <p>Some other text...</p>
-		    </div>
-		    <div className="modal-footer">
-		      <h3>Modal Footer</h3>
-		    </div>
-		  </div>
-
-		</div>
 		
 
 		// if(loading && !project) {

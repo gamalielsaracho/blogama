@@ -1,30 +1,54 @@
 /* The Modal (background) */
-.mi-modal {
+.show-project-modal {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+   
+    height: 100vh;
+    width: 100vw;
+    
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+    padding-top: 3em;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Modal Content/Box */
-.modal-content {
+.show-project-modal__content {
+
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    /*margin: 15% auto;  15% from the top and centered */
+    /*margin-top: 12em;*/
+    padding: 1em;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: auto;
+    height: auto;
+    /*width: 80%;  Could be more or less, depending on screen size */
+}
+
+.show-project-modal__container-max {
+    /*border: 1px solid;*/
+    max-width: 1290px;
+    /*margin: 0 auto;*/
+    margin-right: 1em;
+}
+
+.show-project-modal__btn-close-container {
+	display: flex;
+	justify-content: flex-end;
 }
 
 /* The Close Button */
 .close {
     color: #aaa;
-    float: right;
+    /*float: right;*/
     font-size: 28px;
     font-weight: bold;
 }
@@ -35,3 +59,50 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* */
+.show-project-modal__images-description-container {
+    /*border: 1px solid;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.show-project-modal__images-slider-container {
+    border: 1px solid;
+    width: 725px;
+}
+
+.show-project-modal__desciption-container {
+    /*border: 1px solid;*/
+    width: 474px;
+}
+
+.show-project-modal__desciption-container a {
+    color: #03a9f4;
+    font-size: 1.3em;
+}
+
+
+.show-project-modal__desciption-container h4 {
+    text-align: center;
+}
+
+.show-project-modal__tecnologies-container {
+    /*border: 1px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.show-project-modal__frontend-description {
+    /*border: 1px solid;*/
+    width: 220px;
+}
+
+.show-project-modal__backend-description {
+    /*border: 1px solid;*/
+    width: 220px;
+}
+

@@ -7,6 +7,7 @@ import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import routes from '../../../routes'
 
+import MainRoutes from '../MainRoutes'
 
 import LoadAnimation from '../LoadAnimation'
 
@@ -53,20 +54,8 @@ class App extends React.Component {
 
 
         <main className="mdl-layout__content">
-          <Switch>
-          { 
-            routes.map(({path, exact, component: C, ...rest}) => {
-              return <Route 
-                key={path}
-                path={path}
-                exact={exact}
-                render={(props) => (
-                  <C {...props} {...rest} />
-                )}
-              />
-            })
-          }
-          </Switch>
+          <MainRoutes/>
+
 
           <Footer/>
         </main>

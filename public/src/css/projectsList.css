@@ -45,11 +45,12 @@
 }
 
 .container-projects-list__button {
-	background-color: #8BC34A;
+	background-color: #F44336;
 	padding: 1em;
 	cursor: pointer;
 	color: #fff;
-	border-bottom: 3px solid #4e880a;
+	border-bottom: 3px solid #4e2320;
+	border-radius: 0.5em;
 }
 
 /*img {

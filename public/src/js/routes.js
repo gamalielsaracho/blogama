@@ -1,9 +1,10 @@
 import HomePage from './app/pages/HomePage'
 
 import PostsList from './post/components/PostsList'
+import ShowPost from './post/components/ShowPost'
 
 // allRoutes configuration.
-import { fetchPosts } from './post/actions'
+import { fetchPosts, fetchPost } from './post/actions'
 
 
 const routes = [
@@ -14,9 +15,17 @@ const routes = [
 	}, 
 	{
 		path:'/blog',
+		exact: true,
 		component: PostsList,
 		fetchInitialData: () => {
 			return fetchPosts()
+		}	
+	},
+	{
+		path:'/blog/:namefolderPost',
+		component: ShowPost,
+		fetchInitialData: (name_folder) => {
+			return fetchPost(name_folder)
 		}	
 	}
 ]

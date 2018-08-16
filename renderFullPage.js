@@ -22,7 +22,10 @@ export default function renderFullPage(html, preloadedState, helmet) {
 			<link rel="stylesheet" href="/src/css/projectsList.css">
 			<link rel="stylesheet" href="/src/css/projectShow.css">
 
+			<link rel="stylesheet" href="/src/css/postsList.css">
 
+
+			<link rel="stylesheet" href="/src/css/libs/code.css">
 
 
 			<link rel="stylesheet" href="/src/css/material.min.css">
@@ -49,6 +52,7 @@ export default function renderFullPage(html, preloadedState, helmet) {
 			</style>
 			<script>
 				window.__initialData__ = ${JSON.stringify(preloadedState)}
+
 			</script>
 		</head>
 		<body ${helmet.bodyAttributes.toString()}>
@@ -56,6 +60,12 @@ export default function renderFullPage(html, preloadedState, helmet) {
 		<div id='app'>${html}</div>
 		
 		<script src='/dist/bundle.js'></script>
+    	<script src='/src/js/libs/highlight.min.js'></script>
+    	
+    	<script>
+    		hljs.initHighlightingOnLoad();
+    	</script>
+
 	</body>
 	</html>`
 }

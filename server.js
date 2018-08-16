@@ -131,7 +131,7 @@ app.get('*', function(req, res, next) {
 	.then((initialData) => {
     // console.log(initialData)
     
-		const context = {initialData}
+		const context = { initialData }
 		
 		// console.log('solicitud de dato inicial segun la ruta.')
 		// console.log(initialData)
