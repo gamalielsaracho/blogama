@@ -1,4 +1,4 @@
-import projectCtrl from './project.controllers'
+import projectCtrl from './project.controller'
 
 export default (app) => {
 	app.route('/api/projects')

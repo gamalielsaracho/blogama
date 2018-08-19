@@ -23,77 +23,70 @@ class ShowPost extends Component {
 		super(props)
 		this.renderPost = this.renderPost.bind(this)
 
+		let initialData
+		if(props.staticContext) {
+			initialData = props.staticContext.initialData
+		} else {
+			initialData = window.__initialData__;
+			delete window.__initialData__;
+		}
+
 		this.state = {
 			show: {
-				loading: false,
-				post: null
+				loading: initialData ? false : true,
+				post: initialData
 			}
 		}
+
+		this.fetchPost = this.fetchPost.bind(this)
+
 	}	
 
-	componentWillMount() { // el componente Montará.
+	fetchPost() {
+	  // console.log('EL NOMBRE ES--->'+this.props.match.params.namefolderPost)
 
-	  console.log('EL NOMBRE ES--->'+this.props.match.params.namefolderPost)
+	  	let namefolder = this.props.match.params.namefolderPost
 
-	  let namefolder = this.props.match.params.namefolderPost
-      // this.props.fetchPostData(this.props.nameFolder)
+		this.setState({
+	       	show: { 
+	            loading: true
+	       	}
+		})
+
+		this.props.fetchInitialData(namefolder)
+		.then((data) =>  this.setState({
+	        show: { 
+				loading: false,
+				post: data 
+	        }
+	    }))
+	}
 
 
-
-		if(__isBrowser__) {
-	  		const url = 'https://gamalielsaracho.github.io/api/publications'
-
-			this.setState({
-	       		show: { 
-	            	loading: true
-	       		}
-	        })
-
-	      $.get(`${url}/publications.json`)
-	      .then((response) => {
-	        let publications = response.publications
-
-	          publications.map((publication) => {
-
-	            if(publication.namefolder == namefolder) {
-
-	              $.get(`${url}/${publication.namefolder}/post.md`)
-	              .then((response) => {
-	                publication.content = response
-
-	                this.setState({
-	                	show: { 
-	                		loading: false,
-	                		post: publication 
-	                	}
-	                })
-
-	              })
-	            }
-	          })
-	      })
-	      .catch((error) => {
-	        console.log(error)
-	      })
+	componentDidMount() { // el componente Montará.
+		if (!this.state.show.post) {
+			this.fetchPost()
 		}
-
   	}
+
+
 
   	renderPost(post) {
   		// console.log(post)
-  		const urlData = `/blog/${this.props.namefolderPost}`
+  		const urlData = `/blog/${this.props.match.params.namefolderPost}`
 
-  		// 	<HelmetShow title={post.title}
-				// description={post.description}
-				// image_facebook={post.image_facebook}
-				// image_twitter={post.image_twitter}
-				// image_google={post.image_google}
-				// urlData={urlData}/>
 
   		return <div>
+  			<HelmetShow title={post.title}
+				description={post.description}
+				image_facebook={post.image_facebook}
+				image_twitter={post.image_twitter}
+				image_google={post.image_google}
+				urlData={urlData}/>
+
 			<div className='row'>
 			    <div className='column small-12 medium-12 large-12'>
-			    	<article dangerouslySetInnerHTML={{ __html:md.render(post.content) }}>
+			    	<article dangerouslySetInnerHTML={{ __html:md.render( post.content) }}>
 			    	</article>
 			    </div>
 			</div>
@@ -104,11 +97,33 @@ class ShowPost extends Component {
 		const { loading, post } = this.state.show
 
 		
-		if(loading && post == null) {
-  			return <h1>Cargando...</h1>
+		// 
+		if(loading === true) {
+
+  			return <div>
+
+  				<h1>Cargando...</h1>
+  			</div>
   		} else {
-			console.log(post)
-			return this.renderPost(post)	
+
+  			const urlData = `/blog/${this.props.match.params.namefolderPost}`
+
+			return <div className='post-show'>
+
+				<HelmetShow title={post.title}
+					description={post.description}
+					image_facebook={post.image_facebook}
+					image_twitter={post.image_twitter}
+					image_google={post.image_google}
+					urlData={urlData}/>
+
+				<div className='post-show-container-max'>
+				    <div className='post-show-container-post'>
+				    	<article dangerouslySetInnerHTML={{ __html:md.render(post.content) }}>
+				    	</article>
+				    </div>
+				</div>
+			</div>	
   		}
 	}
 }

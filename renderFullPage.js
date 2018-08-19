@@ -3,8 +3,8 @@ export default function renderFullPage(html, preloadedState, helmet) {
 	return `<!DOCTYPE html>
 		<html>
 		<head>
-			${helmet.title.toString()}
             ${helmet.meta.toString()}
+			${helmet.title.toString()}
             ${helmet.link.toString()}
 
 			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">

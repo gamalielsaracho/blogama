@@ -11,67 +11,81 @@ class PostsList extends Component {
 	constructor(props) {
     	super(props)
 
-  //   	let initialData
-		// if(props.staticContext) {
-		// 	initialData = props.staticContext.initialData
-		// } else {
-		// 	initialData = window.__initialData__;
-		// 	delete window.__initialData__;
-		// }
+    	let initialData
+		if(props.staticContext) {
+			initialData = props.staticContext.initialData
+		} else {
+			initialData = window.__initialData__;
+			delete window.__initialData__;
+		}
 
 		// console.log('props.staticContext')
 		// console.log(props.staticContext)
 
 		this.state = {
-			loading: false,
-			posts: null
+			loading: initialData ? false : true,
+			posts: initialData
 		}
 
-		// this.fetchPosts = this.fetchPosts.bind(this)
+		this.fetchPosts = this.fetchPosts.bind(this)
 	}
 
 
-	// fetchPosts() {
-	// 	this.setState({ loading:true })
+	fetchPosts() {
+		this.setState({ loading:true })
 
-	// 	// función desde la url.
-	// 	this.props.fetchInitialData()
-	// 	.then((data) => this.setState({ loading:false, posts: data.publications }))
-	// }
+		// función desde la url.
+		this.props.fetchInitialData()
+		.then((data) => this.setState({ loading:false, posts: data }))
+	}
 
-	componentWillMount() {
+
+	componentDidMount() {
+		if (!this.state.posts) {
+			// console.log('this.props.match.params')
+			// console.log(this.props.match.params)
+
+			this.fetchPosts()
+		}
+	}
+
+	// componentWillMount() {
 		
-		this.setState({ loading: true })
+	// 	this.setState({ loading: true })
 
-		if (__isBrowser__) {
-		 $.get('https://gamalielsaracho.github.io/api/publications/publications.json')
-		  .then((response) => {
-		  		// console.log('el id es---->')
-		  		// console.log(this.props.modal.idProject)
+	// 	if (__isBrowser__) {
+	// 	 $.get('https://gamalielsaracho.github.io/api/publications/publications.json')
+	// 	  .then((response) => {
+	// 	  		// console.log('el id es---->')
+	// 	  		// console.log(this.props.modal.idProject)
 
-		  		this.setState({ loading:false, posts: response.publications })
+	// 	  		this.setState({ loading:false, posts: response.publications })
 
-		  })
-		  .catch(err => console.log(err));
-		}
-	}
+	// 	  })
+	// 	  .catch(err => console.log(err));
+	// 	}
+	// }
 
 
 	render() {
 		const { loading, posts } = this.state
 
-		if(loading === true) {
+		// console.log('posts ------------')
+		// console.log(posts)
+
+
+		if(loading == true) {
 			return <h1>Cargando...</h1>
 		} else {
 			return <div className='posts-list'>
 				
+				<HelmetShow title="Blog sobre programación"
+					description="aprender es querer"
+					image_facebook="./api/icons/banner.png"
+					image_twitter="./api/icons/banner.png"
+					image_google="./api/icons/banner.png"
+					urlData="blog"/>
 				{/*
-					<HelmetShow title="Blog sobre programación"
-						description="aprender es querer"
-						image_facebook="./api/icons/banner.png"
-						image_twitter="./api/icons/banner.png"
-						image_google="./api/icons/banner.png"
-						urlData="blog"/>
 				*/}
 
 		    	<div className='posts-list__container-max'>
@@ -82,11 +96,11 @@ class PostsList extends Component {
 		              		<img className='posts-list__image' src='https://flaviocopes.com/nodejs/banner.png'/>
 		    			</div>
 
-				        <Link to={`blog/${post.namefolder}`}>
+		    			<Link to={`blog/${post.namefolder}`}>
 				            <h1>{ post.title }</h1>
 				        </Link>
 
-			           	<p>{ post.date }</p>
+			           	<p>{ post.content }</p>
 		            
 		            </div>
 		          })     

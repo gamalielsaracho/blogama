@@ -117,18 +117,21 @@ app.get("/api/news", (req, res) => {
 
 
 
-
 app.get('*', function(req, res, next) {
+  let requestInitialData
 
-	const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
+  const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
+
+  requestInitialData = activeRoute.fetchInitialData && activeRoute.fetchInitialData(req.path)
 
 
-	const requestInitialData = 
-	activeRoute.fetchInitialData && activeRoute.fetchInitialData(req.path)
+  // console.log('activeRoute ooooooooooo')
+  // console.log(req.path)
 
 
-	Promise.resolve(requestInitialData)
+Promise.resolve(requestInitialData)
 	.then((initialData) => {
+    // console.log('initialData')
     // console.log(initialData)
     
 		const context = { initialData }
@@ -151,6 +154,9 @@ app.get('*', function(req, res, next) {
 			link: helmet.link.toString(),
 			bodyAttributes: helmet.bodyAttributes.toString()
 		}
+
+    // console.log('seoContent')
+    // console.log(helmet.base.toComponent)
 
 		res.send(renderFullPage(markup, initialData, seoContent))
 	})

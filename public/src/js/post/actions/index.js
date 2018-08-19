@@ -12,7 +12,7 @@ var allPublicationsFechPost
 
 export function fetchPosts() {
   // body...
-  return fetch(`${url}/publications.json`)
+  return fetch(`http://localhost:3000/api/posts`)
     .then(response => response.json())
     .catch(err => console.log(err));
 }
@@ -51,31 +51,14 @@ export function fetchPosts() {
 // }
 
 
-export function fetchPost(name_folder) {
+export function fetchPost(params) {
+  console.log('params actions kkkkkkkkkkk')
+
+  console.log(params)
+
   // response.json()
-    return fetch(`${url}/publications.json`)
-    .then()
+    return fetch(`http://localhost:3000/api/posts/${params}`)
+    .then(response => response.json())
     .catch(err => console.log(err));
-
-
-      axios.get(`${url}/publications.json`)
-      .then((response) => {
-        let publications = response.data.publications
-
-          publications.map((publication) => {
-
-            if(publication.namefolder == name_folder) {
-
-              axios.get(`${url}/${publication.namefolder}/post.md`)
-              .then((response) => {
-                publication.content = response.data
-              })
-            }
-
-          })
-      })
-      .catch((error) => {
-        console.log(error)
-      })
 }
 
