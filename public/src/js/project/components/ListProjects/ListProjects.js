@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
 
+import './style.css'
+
 import LoadAnimation from '../../../app/components/LoadAnimation'
 import ShowProject from '../ShowProject'
 

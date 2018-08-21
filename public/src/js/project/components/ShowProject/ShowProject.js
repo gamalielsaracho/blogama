@@ -3,6 +3,8 @@ import ReactModal from 'react-modal'
 
 import $ from 'jquery'
 
+import './style.css'
+
 class ShowProject extends Component {
 	constructor(props) {
 		super(props)

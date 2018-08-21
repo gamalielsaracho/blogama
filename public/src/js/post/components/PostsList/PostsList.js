@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import $ from 'jquery'
 
+import './style.css'
 
 import HelmetShow from '../../../app/components/HelmetShow'
 import LoadAnimation from '../../../app/components/LoadAnimation'
@@ -49,23 +50,6 @@ class PostsList extends Component {
 		}
 	}
 
-	// componentWillMount() {
-		
-	// 	this.setState({ loading: true })
-
-	// 	if (__isBrowser__) {
-	// 	 $.get('https://gamalielsaracho.github.io/api/publications/publications.json')
-	// 	  .then((response) => {
-	// 	  		// console.log('el id es---->')
-	// 	  		// console.log(this.props.modal.idProject)
-
-	// 	  		this.setState({ loading:false, posts: response.publications })
-
-	// 	  })
-	// 	  .catch(err => console.log(err));
-	// 	}
-	// }
-
 
 	render() {
 		const { loading, posts } = this.state
@@ -99,9 +83,8 @@ class PostsList extends Component {
 		    			<Link to={`blog/${post.namefolder}`}>
 				            <h1>{ post.title }</h1>
 				        </Link>
-
-			           	<p>{ post.content }</p>
 		            
+		            	<p>{ post.date }</p>
 		            </div>
 		          })     
 		        }

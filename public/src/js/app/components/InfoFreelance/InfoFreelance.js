@@ -1,12 +1,17 @@
 import React from 'react'
 // import Helmet from 'react-helmet'
 
+import './style.css'
+
+import imageFreelance from './gama2.jpg'
+
+
 class InfoFreelance extends React.Component {
 
   render() {
     // 
     // data-aos='flip-left'
-    return <div className="mdl-grid">
+    return <div className="mdl-grid responsive">
         <div className="mdl-layout-spacer"></div>
 
         <div className="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--12-col-phone">
@@ -15,6 +20,7 @@ class InfoFreelance extends React.Component {
             <div className="photo-freelance">
             </div>
           </div>
+
           
           
           <div className="mdl-card__title">

@@ -51,13 +51,12 @@ export function fetchPosts() {
 // }
 
 
-export function fetchPost(params) {
+export function fetchPost(paramsUrl) {
   console.log('params actions kkkkkkkkkkk')
-
-  console.log(params)
+  console.log(paramsUrl)
 
   // response.json()
-    return fetch(`http://localhost:3000/api/posts/${params}`)
+    return fetch(`http://localhost:3000/api/posts/${paramsUrl.namefolderPost}`)
     .then(response => response.json())
     .catch(err => console.log(err));
 }

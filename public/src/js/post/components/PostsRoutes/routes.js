@@ -23,7 +23,7 @@ const routes = [
 	{
 		path:'/blog/:namefolderPost',
 		component: ShowPost,
-		fetchInitialData: (namefolder) => fetchPost(namefolder)
+		fetchInitialData: (paramsUrl) => fetchPost(paramsUrl)
 	}
 ]
 

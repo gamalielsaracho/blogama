@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+import './style.css'
+
 import $ from 'jquery'
 
 import Author from '../../../app/components/Author'
@@ -45,7 +47,7 @@ class ShowPost extends Component {
 	fetchPost() {
 	  // console.log('EL NOMBRE ES--->'+this.props.match.params.namefolderPost)
 
-	  	let namefolder = this.props.match.params.namefolderPost
+	  	let paramsUrl = this.props.match.params
 
 		this.setState({
 	       	show: { 
@@ -53,7 +55,7 @@ class ShowPost extends Component {
 	       	}
 		})
 
-		this.props.fetchInitialData(namefolder)
+		this.props.fetchInitialData(paramsUrl)
 		.then((data) =>  this.setState({
 	        show: { 
 				loading: false,

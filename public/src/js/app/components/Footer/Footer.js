@@ -2,6 +2,8 @@ import React, { Component } from 'react'
     const d = new Date()
     const year = d.getFullYear()
 
+import './style.css' 
+
 class Footer extends Component {
 	// <a href='#' target='_blank'>
 	// 	<i className='fi-social-github'></i>

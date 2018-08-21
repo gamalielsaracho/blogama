@@ -25,41 +25,20 @@ class App extends React.Component {
     // if(loading) {
     //   return <h1>Cargando...</h1>
     // } else {
-      return <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      return <div className="">
         
-        <header className="mdl-layout__header">
-          <div className="mdl-layout__header-row">
-            <span className="mdl-layout-title"></span>
-            <div className="mdl-layout-spacer"></div>
-            <nav className="mdl-navigation mdl-layout--large-screen-only">
-              <Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
-              <Link className="mdl-navigation__link" to={`/blog`}>Proyectos</Link>
-              <Link className="mdl-navigation__link" to={`/blog`}>Blog</Link>
-
-            </nav>
-            <div className="mdl-layout-spacer"></div>
-
-          </div>
-        </header>
-        <div className="mdl-layout__drawer mdl-layout--small-screen-only">
-          <span className="mdl-layout-title"></span>
-          <br/>
-          <nav className="mdl-navigation">
-              <Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
-              <Link className="mdl-navigation__link" to={`/blog`}>Proyectos</Link>
-              <Link className="mdl-navigation__link" to={`/blog`}>Blog</Link>
-             
-          </nav>
-        </div>
+        <nav className="mdl-navigation mdl-layout--large-screen-only">
+          <Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
+          <Link className="mdl-navigation__link" to={`/blog`}>Proyectos</Link>
+          <Link className="mdl-navigation__link" to={`/blog`}>Blog</Link>
+        </nav>
 
 
-        <main className="mdl-layout__content">
-          <MainRoutes/>
+        <MainRoutes/>
 
 
-          <Footer/>
-        </main>
-    </div>
+        <Footer/>
+      </div>
       
     // }
 

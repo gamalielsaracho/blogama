@@ -1,4 +1,9 @@
-/*.responsive {
-    max-width: 100%;
-    height: auto;
-}*/
+.photo-freelance {
+	width: 190px;
+	height: 190px;
+	display: inline-block;
+	border-radius: 50%;
+	background-image: url('./src/images/gama2.jpg');
+	background-size: cover;
+	background-position: center;
+}

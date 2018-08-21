@@ -1,0 +1,47 @@
+    /* Show publication */
+  
+    /* titulo para markdown, posts como themes */
+.title-ph {
+  /*font-weight  200*/
+  padding:1em 0 0 0;
+  color:#524f4f;
+  font-family:'Roboto', sans-serif;
+  font-size:2em;
+}
+
+blockquote {
+  margin:0;
+}
+
+.sub-title-ph {
+  /*font-weight  200*/
+  color:#524f4f;
+  font-family:'Roboto', sans-serif;
+  font-size:1.6em;
+  padding-left:1em;
+  padding-top:1em;
+}
+
+.article-ph {
+  font-family: initial;
+  text-align: justify;
+  color: #524f4f;
+  font-size: 1.5em;
+}
+
+.center {
+  text-align: center;
+}
+
+.folder-code {
+  text-align: center;
+  color: #3a3131;
+  font-family:  'Roboto', sans-serif;
+  font-size: 1.2em;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+}

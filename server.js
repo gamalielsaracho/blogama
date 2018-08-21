@@ -119,14 +119,22 @@ app.get("/api/news", (req, res) => {
 
 app.get('*', function(req, res, next) {
   let requestInitialData
+  let match
+
+  routes.find((route) => {
+    match = matchPath(req.url, route)
+  })
+
+  let paramsData = match ? match.params : {}
+
+  console.log('....MATCH.....')
+  console.log(paramsData)
 
   const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
 
-  requestInitialData = activeRoute.fetchInitialData && activeRoute.fetchInitialData(req.path)
+  requestInitialData = activeRoute.fetchInitialData && activeRoute.fetchInitialData(paramsData)
 
 
-  // console.log('activeRoute ooooooooooo')
-  // console.log(req.path)
 
 
 Promise.resolve(requestInitialData)
