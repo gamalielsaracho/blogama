@@ -11,7 +11,7 @@ class Activity extends Component {
 		}
 		// /api/icons/react.svg
 		return <div className='container-max'>
-			<h2>Habilidades</h2>
+			<h1>Habilidades</h1>
 
 			<div className='container-max__activities'>
 				<ul className='container-max__activities__activity'>

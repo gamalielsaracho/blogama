@@ -29,12 +29,16 @@
 }
 
 .posts-list__post-container a h1 {
-	font-size: 2em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1.7em;
 	color: black;
 	text-align:center;
 }
 
-.posts-list__container-date p {
+.posts-list__post-container p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 }
 
 

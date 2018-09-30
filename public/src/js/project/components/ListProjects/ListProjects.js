@@ -112,7 +112,7 @@ class ListProjects extends Component {
 							<div className='container-projects-list__image-container'>
 								<img className='container-projects-list__image' src={project.imageProject}/>
 							</div>
-							<h4>{ project.name }</h4>
+							<h2>{ project.name }</h2>
 							<div className='container-projects-list__button-container'>
 								<a onClick={ () => { this.openModalShowProject(project.id) }} className='container-projects-list__button'>Ver Detalles</a>
 							</div>

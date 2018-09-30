@@ -4,8 +4,9 @@
 .title-ph {
   /*font-weight  200*/
   padding:1em 0 0 0;
-  color:#524f4f;
-  font-family:'Roboto', sans-serif;
+  color:#000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size:2em;
 }
 
@@ -15,18 +16,22 @@ blockquote {
 
 .sub-title-ph {
   /*font-weight  200*/
-  color:#524f4f;
-  font-family:'Roboto', sans-serif;
+  color:#000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size:1.6em;
   padding-left:1em;
   padding-top:1em;
 }
 
 .article-ph {
-  font-family: initial;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+
+  /*font-family: initial;*/
   text-align: justify;
-  color: #524f4f;
-  font-size: 1.5em;
+  color: #000;
+  font-size: 1.3em;
 }
 
 .center {
@@ -35,8 +40,9 @@ blockquote {
 
 .folder-code {
   text-align: center;
-  color: #3a3131;
-  font-family:  'Roboto', sans-serif;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
 }
 

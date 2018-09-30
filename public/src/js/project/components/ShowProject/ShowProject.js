@@ -122,7 +122,7 @@ class ShowProject extends Component {
 				   		</div>
 
 				   		<div className="show-project-modal__desciption-container">
-				   			<h3>Nombre proyecto</h3>
+				   			<h1>Nombre proyecto</h1>
 
 				   			<a href='#' target='_blank'>
 						    	<span className="icon-twitter"></span> 
@@ -130,17 +130,17 @@ class ShowProject extends Component {
 							</a>
 
 							{/*  */}
-							<h4>Tecnologías utilizadas</h4>
+							<h2>Tecnologías utilizadas</h2>
 					   		<div className="show-project-modal__tecnologies-container">
 						   		<div className="show-project-modal__frontend-description">
-						   			<h5>Front-end</h5>
+						   			<h3>Front-end</h3>
 									{
 										this.renderFrontEnd(project.frontEndList)
 									}	
 						    	</div>
 
 						    	<div className="show-project-modal__backend-description">
-						   			<h5>Back-end</h5>
+						   			<h3>Back-end</h3>
 						   			{
 										this.renderBackEnd(project.backEndList)
 									}

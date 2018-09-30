@@ -11,6 +11,8 @@ import MainRoutes from '../MainRoutes'
 
 import LoadAnimation from '../LoadAnimation'
 
+import './style.css'
+
 class App extends React.Component {
 
   // componentDidMount() {
@@ -31,7 +33,7 @@ class App extends React.Component {
         <br/>
         <br/>
         <br/>
-        
+
         <MainRoutes/>
 
 

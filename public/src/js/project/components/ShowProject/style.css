@@ -96,13 +96,22 @@
 }
 
 .show-project-modal__desciption-container a {
+        font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: #03a9f4;
     font-size: 1.3em;
 }
 
 
-.show-project-modal__desciption-container h4 {
+.show-project-modal__desciption-container h1 {
+        font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     text-align: center;
+}
+
+.show-project-modal__desciption-container h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .show-project-modal__tecnologies-container {
@@ -117,7 +126,29 @@
     width: 220px;
 }
 
+.show-project-modal__frontend-description h3, li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.show-project-modal__frontend-description li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+
 .show-project-modal__backend-description {
     /*border: 1px solid;*/
     width: 220px;
+}
+
+.show-project-modal__backend-description h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.show-project-modal__backend-description li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.2em;
 }

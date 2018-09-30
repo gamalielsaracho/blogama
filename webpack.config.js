@@ -33,6 +33,11 @@ var browserConfig = {
 		    {
 		    	test: /\.css$/,
 		    	use: ['style-loader', 'css-loader?url=false']
+		    },
+		    {
+		    	test: /\.sass$/,
+		    	use: ['style-loader', 'css-loader', 'sass-loader'],
+		    	exclude: /node_modules/
 		    }
 		]
 
@@ -69,6 +74,11 @@ var serverConfig = {
 		          }
 		        ]
 	      	},
+	      	{
+		    	test: /\.sass$/,
+		    	use: ['style-loader', 'css-loader', 'sass-loader'],
+		    	exclude: /node_modules/
+		    },
 	      	{
 				test: /\.(png|jpg|gif)$/,
 				use: [

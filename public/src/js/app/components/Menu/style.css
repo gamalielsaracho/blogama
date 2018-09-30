@@ -3,7 +3,7 @@
 }*/
 .menu {
 	/*border: 1px solid;*/
-	background-color: #cddc39;
+	background-color: #00BCD4;
 	/*padding:.5em;*/
 	position: fixed;
 	left: 0;
@@ -42,8 +42,10 @@
 }
 
 .menu__container-buttons a {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 	text-decoration:none;
-	color: #4c5154;
+	color: #000;
 }
 
 .menu__container-buttons a:hover {
@@ -52,7 +54,7 @@
 
 .menu__button {
 	/*border: 1px solid;*/
-	font-size: 1.3em;
+	font-size: 1.1em;
 	padding: .5em;
 	margin-left: .5em;
 }
@@ -67,6 +69,7 @@
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
+		border-top:1px solid;
 		/*flex-wrap: wrap;*/
 		align-items: flex-start;
 	}

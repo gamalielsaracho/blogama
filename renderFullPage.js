@@ -9,23 +9,13 @@ export default function renderFullPage(html, preloadedState, helmet) {
 
 			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 			
-			
-			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-
-
-			<script src='/src/js/libs/material.min.js'></script>
-
-
+		
 			<link rel="stylesheet" href="/src/css/libs/code.css">
 
-
-			<link rel="stylesheet" href="/src/css/material.min.css">
 			<link rel="stylesheet" href="/src/css/icons/style.css">
 			
-			<link rel="stylesheet" href="/src/css/flexboxgrid.css">
+			<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
-			<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.lime-red.min.css" />
 			
 			<script>
 				window.__initialData__ = ${JSON.stringify(preloadedState)}

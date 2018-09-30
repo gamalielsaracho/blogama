@@ -8,6 +8,11 @@
 	margin-bottom: 2em;	
 }
 
+.container-max h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
 .container-max__activities {
 	/*border:1px solid red;*/
 	width: auto;
@@ -23,4 +28,10 @@
 	/*height:5em;*/
 	/*margin:0.5em;*/
 
+}
+
+.container-max__activities__activity li {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	padding: 0.3em;
 }

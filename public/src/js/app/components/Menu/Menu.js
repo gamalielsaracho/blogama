@@ -8,7 +8,7 @@ class Menu extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-		    windowWidth: window.innerWidth,
+		    windowWidth: __isBrowser__ ? window.innerWidth : null,
 		    mobileNavVisible: false
 	  	}
 	}
@@ -16,11 +16,17 @@ class Menu extends Component {
 	// componentDidMount
 
 	handleResize() {
+		if (__isBrowser__) {
+
 	  this.setState({ windowWidth: window.innerWidth });
+		}
 	}
 
 	componentDidMount() {
+		if (__isBrowser__) {
 	  window.addEventListener('resize', this.handleResize.bind(this));
+			
+		}
 
 	//   $(document).ready(mainMenu)
 
@@ -36,7 +42,10 @@ class Menu extends Component {
 	}
 
 	componentWillUnmount() {
+		if (__isBrowser__) {
+
 	  window.removeEventListener('resize', this.handleResize.bind(this));
+		}
 	}
 
 	navigationLinks() { // MOVIL MENU.
