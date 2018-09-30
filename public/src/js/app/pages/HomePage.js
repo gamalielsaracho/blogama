@@ -20,7 +20,6 @@ class HomePage extends Component {
 				image_google="image_google_home.jpg"
 				urlData={this.props.location.pathname}/>
 				
-			<br/>
 			<InfoFreelance/>
 						
 			<Activity/>

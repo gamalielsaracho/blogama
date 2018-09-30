@@ -11,23 +11,13 @@ class InfoFreelance extends React.Component {
   render() {
     // 
     // data-aos='flip-left'
-    return <div className="mdl-grid responsive">
-        <div className="mdl-layout-spacer"></div>
+    return <div className="infoFreelance">
+        <div className="photo-freelance">
+        </div>
 
-        <div className="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col mdl-cell--8-col-tablet mdl-cell--12-col-phone">
-          
-          <div className="mdl-grid">
-            <div className="photo-freelance">
-            </div>
-          </div>
+        <h2>Gamaliel Saracho</h2>
 
-          
-          
-          <div className="mdl-card__title">
-            <h2 className="mdl-card__title-text">Gamaliel Saracho</h2>
-          </div>
-
-          <div className="mdl-card__supporting-text">
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris sagittis pellentesque lacus eleifend lacinia ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
@@ -35,11 +25,7 @@ class InfoFreelance extends React.Component {
             Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris sagittis pellentesque ipsum dolor sit amet, consectetur adipiscing elit.
             Mauris sagittis pellentesque.
-          </div>
-                   
-        </div>
-        
-        <div className="mdl-layout-spacer"></div>
+        </p>
     </div>
   }
 }

@@ -2,23 +2,25 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 // import $ from 'jquery'
 
+import './style.css'
+
 class Menu extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	// this.state = {
-	// 	//     windowWidth: window.innerWidth,
-	// 	//     mobileNavVisible: false
-	//  //  	}
-	// }
+	constructor(props) {
+		super(props);
+		this.state = {
+		    windowWidth: window.innerWidth,
+		    mobileNavVisible: false
+	  	}
+	}
 
 	// componentDidMount
 
-	// handleResize() {
-	//   this.setState({ windowWidth: window.innerWidth });
-	// }
+	handleResize() {
+	  this.setState({ windowWidth: window.innerWidth });
+	}
 
-	// componentDidMount() {
-	//   window.addEventListener('resize', this.handleResize.bind(this));
+	componentDidMount() {
+	  window.addEventListener('resize', this.handleResize.bind(this));
 
 	//   $(document).ready(mainMenu)
 
@@ -31,104 +33,57 @@ class Menu extends Component {
 	//   // $('#btn-menu').click(() => {
 	//   // 	alert('Hola.')
 	//   // })
-	// }
+	}
 
-	// componentWillUnmount() {
-	//   window.removeEventListener('resize', this.handleResize.bind(this));
-	// }
+	componentWillUnmount() {
+	  window.removeEventListener('resize', this.handleResize.bind(this));
+	}
 
-	// navigationLinks() { // MOVIL MENU.
-	// 	return <ul className="menu row">
-	// 		<li className='column small-12'>
-	// 			<Link to={`/`} className='text-center'>Inicio</Link>
-	// 		</li>
-	// 		<li className='column small-12'>
-	// 			<a href="" className='text-center'>Proyectos</a>
-	// 		</li>
-	// 		<li className='column small-12'>
-	// 	      <Link to={`/blog`} className='text-center'>Blog</Link>
-	// 		</li>
-	// 		<li className='column small-12'>
-	// 			<a href="" className='text-center'>Contactame</a>
-	// 		</li>
-	// 	</ul>
-	// }
+	navigationLinks() { // MOVIL MENU.
+		return <nav className='menu__container-max'>
+			<ul className='menu__container-buttons'>
+				<Link onClick={this.handleNavClick.bind(this)} className="menu__button" to={`/`}>Inicio</Link>
+				<Link onClick={this.handleNavClick.bind(this)} className="menu__button" to={`/blog`}>Proyectos</Link>
+				<Link onClick={this.handleNavClick.bind(this)} className="menu__button" to={`/blog`}>Blog</Link>
+			</ul>
+		</nav>
+	}
 
-	// renderMobileNav() {
-	//   if(this.state.mobileNavVisible) {
-	//     return this.navigationLinks();
-	//   }
-	// }
+	renderMobileNav() {
+	  if(this.state.mobileNavVisible) {
+	    return this.navigationLinks();
+	  }
+	}
 
-	// handleNavClick() {
-	//   if(!this.state.mobileNavVisible) {
-	//     this.setState({ mobileNavVisible: true });
-	//   } else {
-	//     this.setState({ mobileNavVisible: false });
-	//   }
-	// }
+	handleNavClick() {
+	  if(!this.state.mobileNavVisible) {
+	    this.setState({ mobileNavVisible: true });
+	  } else {
+	    this.setState({ mobileNavVisible: false });
+	  }
+	}
 
-	// renderNavigation() {
-	//   if(this.state.windowWidth <= 631) {
-	//     return <div>
-	//         <ul className="menu align-right">
-	//             <a className='btn-menu' onClick={this.handleNavClick.bind(this)}>
-	// 				<i className="fi-list"></i>
-	//             </a>
-	// 		</ul>
+	renderNavigation() {
+	  if(this.state.windowWidth <= 635) {
+	    return <div className='menu'>
+	    	<div className='menu__btn-icon-container'>
+	    		<span onClick={this.handleNavClick.bind(this)} className="icon-github"></span>
+	    	</div>
 
-	//         { this.renderMobileNav() }
-	//     </div>
+	        { this.renderMobileNav() }
+	    </div>
 
-	//   } else {
-	//     return <ul className="menu">
-	// 		<li>
-	// 			<Link to={`/`}>Inicio</Link>
-	// 		</li>
-	// 		<li>
-	// 			<a href="#">Proyectos</a>
-	// 		</li>
-	// 		<li>
-	// 			<Link to={`/blog`}>Blog</Link>
-	// 		</li>
-	// 		<li>
-	// 			<a href="#">Contactame</a>
-	// 		</li>
-	// 	</ul>
-	//   }
-	// }
+	  } else {
+	    return <div className='menu'>
+	    	{ this.navigationLinks() }
+	    </div>
+	  }
+	}
 
 	render() {
-		return <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		  <header className="mdl-layout__header">
-		    <div className="mdl-layout__header-row">
-		      <span className="mdl-layout-title">Title</span>
-		      <div className="mdl-layout-spacer"></div>
-		      <nav className="mdl-navigation mdl-layout--large-screen-only">
-		      	<Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
-		      	<Link className="mdl-navigation__link" to={`blog`}>Blog</Link>
-		        
-		        <a className="mdl-navigation__link" href="">Link</a>
-		        <a className="mdl-navigation__link" href="">Link</a>
-		        <a className="mdl-navigation__link" href="">Link</a>
-		        <a className="mdl-navigation__link" href="">Link</a>
-		      </nav>
-		    </div>
-		  </header>
-		  <div className="mdl-layout__drawer mdl-layout--small-screen-only">
-		    <span className="mdl-layout-title">Title</span>
-		    <nav className="mdl-navigation">
-		      <a className="mdl-navigation__link" href="">Link</a>
-		      <a className="mdl-navigation__link" href="">Link</a>
-		      <a className="mdl-navigation__link" href="">Link</a>
-		      <a className="mdl-navigation__link" href="">Link</a>
-		    </nav>
-		  </div>
+		console.log(this.state.windowWidth)
 
-		  <main className="mdl-layout__content">
-		  	{ this.props.children }
-		  </main>
-		</div>
+		return this.renderNavigation()
 	}
 
 	// render() {

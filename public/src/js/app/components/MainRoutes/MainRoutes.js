@@ -4,14 +4,9 @@ import { Switch, Route } from 'react-router-dom'
 
 import routes from '../../../routes'
 
-
 class MainRoutes extends Component {
 	// ver.
 	render() {
-		// <Switch>
-		// 	<Route exact path='/' component={HomePage}/>
-		// 	<Route path='/blog' component={PostsRoutes}/>
-		// </Switch>
 
 		return <main>
 			<Switch>

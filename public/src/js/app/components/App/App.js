@@ -27,13 +27,11 @@ class App extends React.Component {
     // } else {
       return <div className="">
         
-        <nav className="mdl-navigation mdl-layout--large-screen-only">
-          <Link className="mdl-navigation__link" to={`/`}>Inicio</Link>
-          <Link className="mdl-navigation__link" to={`/blog`}>Proyectos</Link>
-          <Link className="mdl-navigation__link" to={`/blog`}>Blog</Link>
-        </nav>
-
-
+        <Menu/>
+        <br/>
+        <br/>
+        <br/>
+        
         <MainRoutes/>
 
 
