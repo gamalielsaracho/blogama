@@ -76,7 +76,7 @@ class Menu extends Component {
 	  if(this.state.windowWidth <= 635) {
 	    return <div className='menu'>
 	    	<div className='menu__btn-icon-container'>
-	    		<span onClick={this.handleNavClick.bind(this)} className="icon-github"></span>
+	    		<span onClick={this.handleNavClick.bind(this)} className="icon-paragraph-justify"></span>
 	    	</div>
 
 	        { this.renderMobileNav() }

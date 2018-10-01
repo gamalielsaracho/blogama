@@ -124,9 +124,8 @@ class ShowProject extends Component {
 				   		<div className="show-project-modal__desciption-container">
 				   			<h1>Nombre proyecto</h1>
 
-				   			<a href='#' target='_blank'>
-						    	<span className="icon-twitter"></span> 
-						    	gamalielsaracho.com
+				   			<a href='/' target='_blank'>
+						    	<span className='icon-new-tab'></span> gamalielsaracho.com
 							</a>
 
 							{/*  */}

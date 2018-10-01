@@ -35,3 +35,19 @@
 	font-weight: 400;
 	padding: 0.3em;
 }
+
+@media screen and (max-width: 635px) {
+	.container-max__activities {
+		/*border:1px solid red;*/
+		width: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:flex-start;
+		/*align-content:space-between;*/
+	}
+
+	.container-max__activities__activity {
+		/*border:1px solid;*/
+		width: 210px;
+	}
+}

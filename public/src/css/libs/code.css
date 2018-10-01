@@ -2,6 +2,12 @@
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 
+/* custom */
+code {
+  overflow: auto;
+  font-size: 1.3em;
+}
+
 /* Tomorrow Comment */
 .hljs-comment,
 .hljs-quote {
@@ -60,7 +66,7 @@
 .hljs {
   display: block;
   font-size 1.2em
-  overflow-x: auto;
+  overflow: auto;
   background: #2d2d2d;
   color: #cccccc;
   padding: 0.5em;

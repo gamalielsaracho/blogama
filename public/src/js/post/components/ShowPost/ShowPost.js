@@ -120,10 +120,8 @@ class ShowPost extends Component {
 					urlData={urlData}/>
 
 				<div className='post-show-container-max'>
-				    <div className='post-show-container-post'>
-				    	<article dangerouslySetInnerHTML={{ __html:md.render(post.content) }}>
-				    	</article>
-				    </div>
+					<article dangerouslySetInnerHTML={{ __html:md.render(post.content) }}>
+					</article>
 				</div>
 			</div>	
   		}

@@ -22,6 +22,14 @@
 	/*border:1px solid green;*/
 }
 
+.icon-heart {
+	color: #d61406;
+}
+
+.icon-alarm {
+	color: #89be2b;
+}
+
 .container-footer__max__content__description p {
 	text-align: center;
 	font-size: 1.4em;
