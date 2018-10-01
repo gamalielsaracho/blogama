@@ -100,12 +100,8 @@ class ShowPost extends Component {
 
 		
 		// 
-		if(loading === true) {
-
-  			return <div>
-
-  				<h1>Cargando...</h1>
-  			</div>
+		if(loading) {
+  			return <LoadAnimation/>
   		} else {
 
   			const urlData = `/blog/${this.props.match.params.namefolderPost}`

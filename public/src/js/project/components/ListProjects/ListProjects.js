@@ -98,7 +98,7 @@ class ListProjects extends Component {
 		}
 
 		if(loading) {
-			return <h1>Cargando....</h1>
+			return <LoadAnimation/>
 		} else {
 			return <div className='container-projects-list'>
 

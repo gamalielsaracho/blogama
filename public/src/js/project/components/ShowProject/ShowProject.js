@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ReactModal from 'react-modal'
 
+import LoadAnimation from '../../../app/components/LoadAnimation'
+
 import $ from 'jquery'
 
 import './style.css'
@@ -103,7 +105,7 @@ class ShowProject extends Component {
 
 
 		if(loading) {
-			return <h1>Cargando...</h1>
+			return <LoadAnimation/>
 		} else {
 			return <div id="myModal" className="show-project-modal">
 
@@ -153,72 +155,6 @@ class ShowProject extends Component {
 			  </div>
 			</div>
 		}
-
-		
-
-		// if(loading && !project) {
-			// return <div>
-			
-			// </div>
-		// } else {
-		// 	 //    <div style={styles.lastProjectContainer}>
-		// 		// 	<div className='row end-lg end-md end-sm end-xs'>
-		// 		// 		<span onClick={() => { this.props.closeModalFetchProject() }}><i className='fi-x'></i></span>
-		// 		// 	</div>
-
-		// 		// 	<div className='row center-lg center-md center-sm center-xs'>
-
-		// 		// 		<div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
-		// 		// 			<strong>Detalle</strong>
-		// 		// 			<a style={styles.linkDemo}><h5 className='text-left'>{ project.name }</h5></a>
-							
-		// 		// 			<div className='container-icon-post'>
-		// 		// 				<img className='icon-post' src={ project.imageProject }/>
-		// 		// 			</div>
-		// 		// 		</div>
-
-		// 		// 		<div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
-							
-		// 		// 			<h4 style={styles.titleTecnologies}>Tecnologías Utilizadas</h4>
-
-		// 		// 			<div style={styles.containerButtonRepository} className='row center-lg center-md center-sm center-xs'>
-		// 		// 				<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
-		// 		// 					<h5>Front-end</h5>
-		// 		// 					<ul style={styles.containerListTecnologies} className='text-left'>
-		// 		// 						{
-		// 		// 							this.renderFrontEnd(project.frontEndList)	
-		// 		// 						}
-		// 		// 					</ul>
-		// 		// 				</div>
-		// 		// 				<div className='col-xs-10 col-sm-6 col-md-6 col-lg-6'>
-		// 		// 					<h5>Back-end</h5>
-		// 		// 					<ul style={styles.containerListTecnologies} className='text-left'>
-		// 		// 						{
-		// 		// 							this.renderBackEnd(project.backEndList)
-		// 		// 						}
-		// 		// 					</ul>
-		// 		// 				</div>
-
-		// 		// 			</div>
-
-		// 		// 			<a style={styles.button} className='button success'>
-		// 		// 				<div className='row middle-lg middle-md middle-sm middle-xs'>
-		// 		// 					<div className='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-		// 		// 						<span>Repositorio</span>
-		// 		// 					</div>
-
-		// 		// 					<div className='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-		// 		// 						<span><i className='fi-social-github'></i></span>
-		// 		// 					</div>
-		// 		// 				</div>
-		// 		// 			</a>
-
-		// 		// 		</div>
-		// 		// 	</div>
-		// 		// </div>
-		// 	return <span></span>
-		// }
-
 	}
 }
 

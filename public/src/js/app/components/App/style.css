@@ -1,5 +1,19 @@
+/*html {
+	position: relative;
+}*/
+
+/** {
+    margin: 0;
+	padding: 0;
+}
+
+html, body {
+    height: 100%;
+}*/
+
 body {
 	/*color: #2f363a;*/
-	padding: 0px;
 	margin: 0px;
+	padding: 0px;
+    /*height: 100%;*/
 }

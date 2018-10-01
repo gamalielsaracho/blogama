@@ -59,7 +59,7 @@ class PostsList extends Component {
 
 
 		if(loading == true) {
-			return <h1>Cargando...</h1>
+			return <LoadAnimation/>
 		} else {
 			return <div className='posts-list'>
 				

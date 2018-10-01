@@ -15,18 +15,21 @@ import './style.css'
 
 class App extends React.Component {
 
-  // componentDidMount() {
-  //   setTimeout(() => this.props.readyApp(), 1500);
-  // }
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 2000);
+  }
 
   render() {
-      
-
-    // const { loading } = this.props.page
-
-    // if(loading) {
-    //   return <h1>Cargando...</h1>
-    // } else {
+    if(this.state.loading) {
+      return <LoadAnimation/>
+    } else {
       return <div className="">
         
         <Menu/>
@@ -36,11 +39,10 @@ class App extends React.Component {
 
         <MainRoutes/>
 
-
         <Footer/>
       </div>
       
-    // }
+    }
 
   }
 }
