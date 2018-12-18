@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 
 import routes from './routes'
 
-
 class PostsRoutes extends Component {
 
 	render() {

@@ -1,179 +1,97 @@
 import express from 'express'
-
+import axios from 'axios'
 import cors from 'cors'
-import Helmet from 'react-helmet';
+
 import config from './config/config'
 
-import { renderToString } from 'react-dom/server'
-import renderFullPage from './renderFullPage'
-import React from 'react'
-
-import { StaticRouter, matchPath } from 'react-router-dom'
-import App from './public/src/js/app/components/App'
-
-import routes from './public/src/js/routes'
-
-import 'isomorphic-fetch';
-
-// Backend.
-import routesServer from './app/routes'
+const path = require('path');
+const fs = require('fs')
 
 var app = express()
 
-routesServer(app)
-
-
 app.use(cors())
-app.use(express.static('public')) 
 
-app.get("/api/news", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      upvotes: 130,
-      title: "Fianto Duri, the complete tutorial",
-      author: "RubeusH",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 2,
-      upvotes: 126,
-      title: "Ordinary Wizarding Levels study guide",
-      author: "BathBabb",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 3,
-      upvotes: 114,
-      title: "Is muggle-baiting ever acceptable?",
-      author: "Falco",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 4,
-      upvotes: 97,
-      title: "Untransfiguration classes to become compulsory at Hogwarts",
-      author: "Baddock",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 5,
-      upvotes: 85,
-      title: "Cracking the Aurologist Interview ",
-      author: "Hetty",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 6,
-      upvotes: 74,
-      title: "Conserving waterplants cheatsheet.",
-      author: "Otto",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 7,
-      upvotes: 66,
-      title: "The Pragmatic Dragon Feeder",
-      author: "Baruffio",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 8,
-      upvotes: 50,
-      title: "The complete quidditch statistics",
-      author: "Hbeery",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 9,
-      upvotes: 34,
-      title: "Cracking the Aurologist Interview ",
-      author: "Marcusb",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 10,
-      upvotes: 29,
-      title: "Could wizards prevent WW3?",
-      author: "Cuthbert",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 11,
-      upvotes: 20,
-      title: "ASK WN: What do you use to digitalize your scrolls?",
-      author: "Alphard",
-      date: new Date("2017-04-14T15:30:00.000Z")
-    },
-    {
-      id: 12,
-      upvotes: 16,
-      title: "Show WN: Wand-Extinguishing Protection",
-      author: "Humphrey22",
-      date: new Date("2017-04-14T15:30:00.000Z")
+// for my satatic files.
+app.use(express.static('public'))
+
+var filePath = './index.html'
+
+
+app.get('/', function(req, res, next) {
+
+  fs.readFile(filePath, 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
     }
-  ]);
+    
+    // replace the special strings with server generated strings
+    data = data.replace(/\$OG_TITLE/g, 'Home Page');
+    data = data.replace(/\$OG_DESCRIPTION/g, "Home page description");
+    var result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+    res.send(result);
+  });
 });
 
 
+app.get('/blog', function(req, res, next) {
 
-app.get('*', function(req, res, next) {
-  let requestInitialData
-  let match
-
-  routes.find((route) => {
-    match = matchPath(req.url, route)
-  })
-
-  let paramsData = match ? match.params : {}
-
-  console.log('....MATCH.....')
-  console.log(paramsData)
-
-  const activeRoute = routes.find(route => matchPath(req.url, route)) || {}
-
-  requestInitialData = activeRoute.fetchInitialData && activeRoute.fetchInitialData(paramsData)
-
-
-
-
-Promise.resolve(requestInitialData)
-	.then((initialData) => {
-    // console.log('initialData')
-    // console.log(initialData)
+  fs.readFile(filePath, 'utf8', function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
     
-		const context = { initialData }
-		
-		// console.log('solicitud de dato inicial segun la ruta.')
-		// console.log(initialData)
+    // replace the special strings with server generated strings
+    data = data.replace(/\$OG_TITLE/g, 'el blog rural.!');
+    data = data.replace(/\$OG_DESCRIPTION/g, "haso este blog, pero ya da.");
+    var result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+    res.send(result);
+  });
+});
 
-		var markup = renderToString(
-	    	<StaticRouter location={req.url} context={context}>
-	      		<App/>
-	    	</StaticRouter>
-		)
 
-		const helmet = Helmet.renderStatic();
+app.get('/blog/:nameFolder', function(req, res, next) {
 
-		// var initialData = []
-		var seoContent = {
-			title: helmet.title.toString(),
-			meta: helmet.meta.toString(),
-			link: helmet.link.toString(),
-			bodyAttributes: helmet.bodyAttributes.toString()
-		}
+  fs.readFile(filePath, 'utf8', function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
 
-    // console.log('seoContent')
-    // console.log(helmet.base.toComponent)
+    axios.get(`http://localhost:3000/api/publications/publications.json`)
+    .then((content) => {
+      var publications = eval(content.data)
 
-		res.send(renderFullPage(markup, initialData, seoContent))
-	})
-	.catch((error) => {
-		console.log(error)
-	})
-})
+      publications.map((i) => {
+        if(i.namefolder == req.params.nameFolder) {
+          axios.get(`http://localhost:3000/api/publications/${req.params.nameFolder}/post.md`)
+          .then((content) => {
 
-app.listen(config.server.port, function() {
+            i.content = content.data
+
+            // console.log(i)
+
+            // replace the special strings with server generated strings
+            data = data.replace(/\$OG_TITLE/g, i.title);
+            data = data.replace(/\$OG_DESCRIPTION/g, i.description);
+            var result = data.replace(/\$OG_IMAGE/g, i.image_facebook);
+            res.send(result);
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+        }
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  });
+});
+
+
+app.listen(config.server.port, function(err) {
+  if (err) {
+    console.log(err)
+  }
 
 	console.log('Server is listening on port 3000')
 })

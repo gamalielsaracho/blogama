@@ -1,63 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-    <title>Gamaliel Saracho || Desarrollador</title>
-
-    <!-- Google+ -->
-    <meta name="description" content="Portafolio y blog personal en donde te enseñaré sobre programación web y otras cosas más." />
-
-    <!-- Facebook -->
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="web" />
-    <meta property="og:title" content="Fabio Gamaliel Saracho Franco." />
-    <meta property="og:description" content="Portafolio y blog personal en donde te enseñaré sobre programación web y otras cosas más." />
-    <meta property="og:image" content="" />
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@anunciante">
-    <meta name="twitter:title" content="Fabio Gamaliel Saracho Franco">
-    <meta name="twitter:description" content="Portafolio y blog personal en donde te enseñaré sobre programación web y otras cosas más.">
-    <meta name="twitter:creator" content="@autor">
-    <!-- Twitter Summary card images must be at least 200x200px -->
-    <meta name="twitter:image" content="http://www.example.com/image.jpg">
-
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Título de la página aquí" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.ejemplo.com/" />
-    <meta property="og:image" content="http://ejemplo.com/imagen.jpg" />
-    <meta property="og:description" content="Descripción de la página" />
-    <meta property="og:site_name" content="Nombre de la página web" />
-    <meta property="fb:admins" content="ID numérico de Facebook" />
-
-    <link rel="stylesheet" href="/src/css/bundle.css">
-    <link rel='stylesheet' href='/src/css/flexboxgrid.css'>
-    <link rel="stylesheet" href="/src/css/foundation.min.css">
-    <link rel='stylesheet' href='/src/icons/foundation-icons.css'>
-
-
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>$OG_TITLE</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.4/aos.css">
+            
+        
+    <link rel="stylesheet" href="/src/css/icons/style.css">
+            
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/libs/code.css">
+
+    <meta name="description"        content="$OG_DESCRIPTION" />
+    <meta property="og:title"       content="$OG_TITLE" />
+    <meta property="og:description" content="$OG_DESCRIPTION" />
+    <meta property="og:image"       content="$OG_IMAGE" />
 
   </head>
   <body>
-    
-    <div id="container-blog">
-    </div>
+    <noscript>
+      Debes habilitar javaScript en tu navegador :)
+    </noscript>
 
-    <script src='/src/js/libs/jquery.js'></script>
-    <script src='/src/js/libs/what-input.js'></script>
-    <script src='/src/js/libs/foundation.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.4/aos.js'></script>
-    <script src='/dist/bundle.js'></script>
+    <div id='app'></div>
+
     <script src='/src/js/libs/highlight.min.js'></script>
+    <script src='/dist/bundle.js'></script>
+        
     <script>
-      AOS.init();
-    	hljs.initHighlightingOnLoad();
+        hljs.initHighlightingOnLoad();
     </script>
   </body>
 </html>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import $ from 'jquery'
+import axios from 'axios'
 
 import './style.css'
 
 import LoadAnimation from '../../../app/components/LoadAnimation'
 import ShowProject from '../ShowProject'
 
+import { urlApi } from '../../../middleware'
 
 class ListProjects extends Component {
 	constructor(props) {
@@ -37,11 +38,13 @@ class ListProjects extends Component {
 		})
 
 		if (__isBrowser__) {
-		 $.get('http://localhost:3000/api/projects')
+		 axios.get(`${urlApi}/projects/projects.json`)
 		  .then((response) => {
+		  	response.data = eval(response.data)
+
 		  	this.setState({ 
 		  		list: {
-		  			loading:false, projects: response
+		  			loading:false, projects: response.data
 		  		}
 		  	})
 		  })

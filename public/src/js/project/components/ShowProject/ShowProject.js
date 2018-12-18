@@ -5,6 +5,8 @@ import LoadAnimation from '../../../app/components/LoadAnimation'
 
 import $ from 'jquery'
 
+import { urlApi } from '../../../middleware'
+
 import './style.css'
 
 class ShowProject extends Component {
@@ -12,9 +14,7 @@ class ShowProject extends Component {
 		super(props)
 		this.renderFrontEnd = this.renderFrontEnd.bind(this)
 		this.renderBackEnd = this.renderBackEnd.bind(this)
-
-		// this.openModal = this.openModal.bind(this)
-
+		
 		this.state = {
 			show: {
 				loading: false,
@@ -22,15 +22,6 @@ class ShowProject extends Component {
 			}
 		}
 	}
-
-
-	// openModal() {
-	// 	this.setState({ isOpen: true })
-	// }
-
-	// componentDidMount() {
- 		
- // 	}
 
 	componentWillMount() {
 		this.setState({ 
@@ -41,11 +32,8 @@ class ShowProject extends Component {
 
 
 		if (__isBrowser__) {
-		 $.get('http://localhost:3000/api/projects')
+		 $.get(`${urlApi}/projects/projects.json`)
 		  .then((response) => {
-		  		console.log('el id es---->')
-		  		console.log(this.props.modal.idProject)
-
 		  		response.map((project) => {
 		  			if(project.id == this.props.modal.idProject) {
 		  				this.setState({ 
@@ -58,7 +46,6 @@ class ShowProject extends Component {
 		  				console.log(project)
 		  			}
 		  		})
-
 		  })
 		  .catch(err => console.log(err));
 		}
@@ -101,8 +88,6 @@ class ShowProject extends Component {
 		const { loading, project } = this.state.show 
 
 		// console.log(this.props.modal)
-
-
 
 		if(loading) {
 			return <LoadAnimation/>

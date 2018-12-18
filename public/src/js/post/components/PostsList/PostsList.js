@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import $ from 'jquery'
+import axios from 'axios'
+
+import { urlApi } from '../../../middleware'
 
 import './style.css'
 
@@ -12,65 +15,38 @@ class PostsList extends Component {
 	constructor(props) {
     	super(props)
 
-    	let initialData
-		if(props.staticContext) {
-			initialData = props.staticContext.initialData
-		} else {
-			initialData = window.__initialData__;
-			delete window.__initialData__;
-		}
-
-		// console.log('props.staticContext')
-		// console.log(props.staticContext)
-
 		this.state = {
-			loading: initialData ? false : true,
-			posts: initialData
-		}
-
-		this.fetchPosts = this.fetchPosts.bind(this)
-	}
-
-
-	fetchPosts() {
-		this.setState({ loading:true })
-
-		// función desde la url.
-		this.props.fetchInitialData()
-		.then((data) => this.setState({ loading:false, posts: data }))
-	}
-
-
-	componentDidMount() {
-		if (!this.state.posts) {
-			// console.log('this.props.match.params')
-			// console.log(this.props.match.params)
-
-			this.fetchPosts()
+			list: {
+				loading: false,
+				posts: null
+			}
 		}
 	}
+
+	componentWillMount() {
+		this.setState({ list: { loading:true } })
+
+		if (__isBrowser__) {
+		 axios.get(`${urlApi}/publications/publications.json`)
+		  .then((response) => {
+		  	response.data = eval(response.data)
+
+		  	// console.log(response.data)
+		  	this.setState({ list:{ loading:false, posts: response.data } })
+		  })
+		  .catch(err => console.log(err));
+		}
+		
+ 	}
 
 
 	render() {
-		const { loading, posts } = this.state
+		const { loading, posts } = this.state.list
 
-		// console.log('posts ------------')
-		// console.log(posts)
-
-
-		if(loading == true) {
+		if(loading) {
 			return <LoadAnimation/>
 		} else {
 			return <div className='posts-list'>
-				
-				<HelmetShow title="Blog sobre programación"
-					description="aprender es querer"
-					image_facebook="./api/icons/banner.png"
-					image_twitter="./api/icons/banner.png"
-					image_google="./api/icons/banner.png"
-					urlData="blog"/>
-				{/*
-				*/}
 
 		    	<div className='posts-list__container-max'>
 		        {

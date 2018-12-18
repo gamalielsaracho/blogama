@@ -12,18 +12,17 @@ import ShowPost from '../ShowPost'
 // allRoutes configuration.
 import { fetchPosts, fetchPost } from '../../actions'
 
-
 const routes = [
 	{
 		path:'/blog',
 		exact: true,
 		component: PostsList,
-		fetchInitialData: () =>  fetchPosts() 
+		// fetchInitialData: () =>  fetchPosts() 
 	},
 	{
 		path:'/blog/:namefolderPost',
 		component: ShowPost,
-		fetchInitialData: (paramsUrl) => fetchPost(paramsUrl)
+		// fetchInitialData: (paramsUrl) => fetchPost(paramsUrl)
 	}
 ]
 

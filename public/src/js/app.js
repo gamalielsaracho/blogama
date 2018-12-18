@@ -1,13 +1,10 @@
 import React from 'react'
-import { hydrate } from 'react-dom'
+import { render } from 'react-dom'
 
-    // routes.
 import { BrowserRouter } from "react-router-dom";
 import App from './app/components/App'
-import routes from './routes'
+// window.location.reload()
 
-
-hydrate(<BrowserRouter>
+render(<BrowserRouter>
         	<App/>
-		</BrowserRouter>, document.getElementById('app')
-)
+		</BrowserRouter>, document.getElementById('app'))
