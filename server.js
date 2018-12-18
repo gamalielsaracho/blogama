@@ -16,6 +16,7 @@ app.use(express.static('public'))
 
 var filePath = './index.html'
 
+import { urlApi } from './././public/src/js/middleware'
 
 app.get('/', function(req, res, next) {
 
@@ -43,7 +44,7 @@ app.get('/blog', function(req, res, next) {
     // replace the special strings with server generated strings
     data = data.replace(/\$OG_TITLE/g, 'el blog rural.!');
     data = data.replace(/\$OG_DESCRIPTION/g, "haso este blog, pero ya da.");
-    var result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+    var result = data.replace(/\$OG_IMAGE/g, 'https://www.djangoproject.com/s/img/logos/django-logo-negative.png');
     res.send(result);
   });
 });
@@ -56,13 +57,13 @@ app.get('/blog/:nameFolder', function(req, res, next) {
       return console.log(err);
     }
 
-    axios.get(`http://localhost:3000/api/publications/publications.json`)
+    axios.get(`${urlApi}/publications/publications.json`)
     .then((content) => {
       var publications = eval(content.data)
 
       publications.map((i) => {
         if(i.namefolder == req.params.nameFolder) {
-          axios.get(`http://localhost:3000/api/publications/${req.params.nameFolder}/post.md`)
+          axios.get(`${urlApi}/publications/${req.params.nameFolder}/post.md`)
           .then((content) => {
 
             i.content = content.data

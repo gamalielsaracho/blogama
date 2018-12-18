@@ -3867,7 +3867,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FAC
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar urlApi = exports.urlApi = \"http://localhost:3000/api\";\n// export const urlApi = `https://gamalielsaracho.github.io/api`\n\n//# sourceURL=webpack:///./public/src/js/middleware/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar urlApi = exports.urlApi = \"http://localhost:3000/api\";\n// export const urlApi = `https://gamalielsaracho.github.io/public/api`\n\n//# sourceURL=webpack:///./public/src/js/middleware/index.js?");
 
 /***/ }),
 

@@ -2,7 +2,7 @@ export default {
 
 	server: {
 		host: 'localhost',
-		port: 3000 || process.env.PORT
+		port: process.env.PORT || 5000
 	},
 	database: {
 		host: 'localhost',
