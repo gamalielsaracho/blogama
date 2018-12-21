@@ -1,38 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope itemtype="http://schema.org/Article" lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>$OG_TITLE</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-            
-        
-    <link rel="stylesheet" href="/src/css/icons/style.css">
-            
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <!-- Estandar -->
+    <meta name="description" content="$STRD_DESCRIPTION" />
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="/src/images/icons/favicon.png">
 
-    <link rel="stylesheet" href="/src/css/libs/code.css">
+    <!-- Google Authorship y Marcado de Anunciante -->
+    <link rel="author" href="<a "="">https://plus.google.com/[Perfil_Google+]/posts"/>
+    <link rel="publisher" href="https://plus.google.com/[Página_Google+]"/>  
+      
+    <!-- makup Schema.org for Google+ -->
+    <meta itemprop="name" content="$ITEMPROP_NAMESITE">
+    <meta itemprop="description" content="$ITEMPROP_DESCRIPTION">
+    <meta itemprop="image" content="$ITEMPROP_IMAGE">
 
-    <meta name="description"        content="$OG_DESCRIPTION" />
-    <meta property="og:title"       content="$OG_TITLE" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="$TW_SITE"> <!-- @anunciante -->
+    <meta name="twitter:title" content="$TW_TITLE">
+    <meta name="twitter:description" content="$TW_DESCRIPTION">
+    <meta name="twitter:creator" content="$TW_AUTOR"><!-- @autor -->
+    <!-- Twitter Summary card images must be at least 200x200px -->
+    <meta name="twitter:image" content="$TW_IMAGE200x200PX">
+    <meta name="twitter:image:src" content="$TW_IMAGE280X150PX">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="$OG_TITLE" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="$OG_URL" />
+    <meta property="og:image" content="$OG_IMAGE" />
     <meta property="og:description" content="$OG_DESCRIPTION" />
-    <meta property="og:image"       content="$OG_IMAGE" />
+    <meta property="og:site_name" content="Nombre de la página web" />
+    <meta property="fb:admins" content="ID numérico de Facebook" />
+
+    <!-- 2013-09-17T05:59:00+01:00 -->
+    <meta property="article:published_time" content="$OG_PUBLISHED_TIME"/>
+    <!-- 2013-09-16T19:08:47+01:00 -->
+    <meta property="article:modified_time" content="$OG_MODIFIED_TIME"/>
+    <meta property="article:section" content="$OG_ARTICLE_SECTION"/>
+    <meta property="article:tag" content="$OG_TAG"/>
+
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Files of aplication  -->
+    <link rel="manifest" href="/src/js/manifest.json">
+    <link rel="stylesheet" href="/src/css/icons/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/libs/code.css">
 
   </head>
   <body>
