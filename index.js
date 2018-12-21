@@ -106,7 +106,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar urlApi = exports.urlApi = \"http://localhost:5000/api\";\n// export const urlApi = `https://gamalielsaracho.github.io/public/api`\n\n//# sourceURL=webpack:///./public/src/js/middleware/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\n// export const urlApi = `http://localhost:5000/api`\nvar urlApi = exports.urlApi = \"https://gamalielsaracho.github.io/public/api\";\n\n//# sourceURL=webpack:///./public/src/js/middleware/index.js?");
 
 /***/ }),
 

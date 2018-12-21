@@ -56,11 +56,11 @@
 .container-footer__max__content__socials__buttons__button a {
 	text-decoration: none;
 	font-size: 1.7em;
-	color: #fff;
+	color: #000;
 }
 
 .container-footer__max__content__socials__buttons__button a:hover {
-	color: #000;
+	color: #fff;
 }
 
 
