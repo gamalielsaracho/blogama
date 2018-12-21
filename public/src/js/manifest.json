@@ -4,7 +4,7 @@
   "start_url": "/?home=true",
   "icons": [
     {
-      "src": "/icons/icon36.png",
+      "src": "/src/images/icons/icon36.png",
       "sizes": "36x36",
       "type": "image/png"
     },
