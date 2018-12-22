@@ -54,11 +54,6 @@
       "type": "image/png"
     },
     {
-      "src": "/src/images/icons/icon300.png",
-      "sizes": "300x300",
-      "type": "image/png"
-    },
-    {
       "src": "/src/images/icons/icon512.png",
       "sizes": "512x512",
       "type": "image/png"
