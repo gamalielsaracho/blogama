@@ -5,15 +5,22 @@
     "namefolder":"graphql",
     "description":"En este post aprenderas como usar GraphQL y su estructura",
     "cover_icon":"/api/icons/graphql.png",
-      "author": {
-        "name":"Fabio Gamaliel Saracho",
-        "email":"fabiogamaliel@gmail.com"
-      },
+    "author": {
+      "name":"Fabio Gamaliel Saracho",
+      "email":"fabiogamaliel@gmail.com"
+    },
     "tags":["javascript", "graphql"],
     "date":"21-12-2016",
+    "update": false,
     "image_facebook":"graphql.jpg",
     "image_twitter":"graphql.jpg",
-    "image_google":"graphql.jpg"
+    "image_google":"graphql.jpg",
+    "urlContent": "https://landingama.herokuapp.com/blog/graphql",
+    "published_time": "2013-09-17T05:59:00+01:00",
+    "modified_time": "2013-09-16T19:08:47+01:00",
+    "articleSection":"Sección del artículo",
+    "tag": "Etiqueta del artículo",
+    "authorTwitter": "@gamalielSaracho"
   },
   {
     "id":2,
@@ -21,31 +28,45 @@
     "namefolder":"reactjs",
     "description":"En este post aprenderas reactjs para ",
     "cover_icon":"./api/icons/maxresdefault.jpg",
-      "author": {
-        "name":"Fabio Gamaliel Saracho",
-        "email":"fabiogamaliel@gmail.com"
-      },
-      "tags":["javascript", "reactjs"],
-      "date":"21-08-2016",
-      "image_facebook":"reactjs.jpg",
-      "image_twitter":"reactjs.jpg",
-      "image_google":"reactjs.jpg"
+    "author": {
+      "name":"Fabio Gamaliel Saracho",
+      "email":"fabiogamaliel@gmail.com"
+    },
+    "tags":["javascript", "reactjs"],
+    "date":"21-08-2016",
+    "update": false,
+    "image_facebook":"reactjs.jpg",
+    "image_twitter":"reactjs.jpg",
+    "image_google":"reactjs.jpg",
+    "urlContent": "https://landingama.herokuapp.com/blog/graphql",
+    "published_time": "2013-09-17T05:59:00+01:00",
+    "modified_time": "2013-09-16T19:08:47+01:00",
+    "articleSection":"Sección del artículo",
+    "tag": "Etiqueta del artículo",
+    "authorTwitter": "@gamalielSaracho"
   },
   {
     "id":3,
-    "title":"Creando una api json con rails",
+    "title":"Creando una api json con rails 87",
     "namefolder":"creando-una-api-con-rails",
-    "description":"En este post aprenderas reactjs para ",
+    "description":"En este post aprenderas reactjs para crear aplicaciones",
     "cover_icon":"./api/icons/react-webpack-babel-1.jpg",
-      "author": {
-        "name":"Fabio Gamaliel Saracho",
-        "email":"fabiogamaliel@gmail.com"
-      },
-      "tags":["javascript", "reactjs"],
-      "date":"21-08-2016",
-      "image_facebook":"reactjs.jpg",
-      "image_twitter":"reactjs.jpg",
-      "image_google":"reactjs.jpg"
+    "author": {
+      "name":"Fabio Gamaliel Saracho",
+      "email":"fabiogamaliel@gmail.com"
+    },
+    "tags":["javascript", "reactjs"],
+    "date":"21-08-2016",
+    "update": false,
+    "image_facebook":"reactjs.jpg",
+    "image_twitter":"reactjs.jpg",
+    "image_google":"reactjs.jpg",
+    "urlContent": "https://landingama.herokuapp.com/blog/creando-una-api-con-rails",
+    "published_time": "2013-09-17T05:59:00+01:00",
+    "modified_time": "2013-09-16T19:08:47+01:00",
+    "articleSection":"Sección del artículo",
+    "tag": "Etiqueta del artículo",
+    "authorTwitter": "@gamalielSaracho"
   },
   {
     "id":4,
@@ -53,14 +74,21 @@
     "namefolder":"autenticacion-jwt-api-listo-para-el-frontend",
     "description":"En este post aprenderas como autenticar usuario por medio de jwt en tu api rest",
     "cover_icon":"./api/icons/logo-nodejs.jpg",
-      "author": {
-        "name":"Fabio Gamaliel Saracho",
-        "email":"fabiogamaliel@gmail.com"
-      },
-      "tags":["javascript", "nodejs", "login", "jwt"],
-      "date":"21-08-2016",
-      "image_facebook":"nodejs.jpg",
-      "image_twitter":"nodejs.jpg",
-      "image_google":"nodejs.jpg"
+    "author": {
+      "name":"Fabio Gamaliel Saracho",
+      "email":"fabiogamaliel@gmail.com"
+    },
+    "tags":["javascript", "nodejs", "login", "jwt"],
+    "date":"21-08-2016",
+    "update": false,
+    "image_facebook":"nodejs.jpg",
+    "image_twitter":"nodejs.jpg",
+    "image_google":"nodejs.jpg",
+    "urlContent": "https://landingama.herokuapp.com/blog/autenticacion-jwt-api-listo-para-el-frontend",
+    "published_time": "2013-09-17T05:59:00+01:00",
+    "modified_time": "2013-09-16T19:08:47+01:00",
+    "articleSection":"Sección del artículo",
+    "tag": "Etiqueta del artículo",
+    "authorTwitter": "@gamalielSaracho"
   }
 ]

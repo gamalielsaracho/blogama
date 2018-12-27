@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 var filePath = './index.html'
 
-import { urlApi } from './././public/src/js/middleware'
+import { urlApi, metaTags } from './././public/src/js/middleware'
 
 app.get('/', function(req, res, next) {
 
@@ -25,11 +25,27 @@ app.get('/', function(req, res, next) {
       return console.log(err);
     }
     
-    // replace the special strings with server generated strings
-    data = data.replace(/\$OG_TITLE/g, 'Home Page');
-    data = data.replace(/\$OG_DESCRIPTION/g, "Home page description");
-    var result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
-    res.send(result);
+    var content = {
+      STRD_DESCRIPTION: '--------',
+
+      ITEMPROP_DESCRIPTION: '--------',
+
+      TW_TITLE: '--------',
+      TW_DESCRIPTION: '--------',
+      TW_AUTHOR: '--------',
+      TW_IMAGE: '--------',
+
+      OG_TITLE: 'Test Home Page',
+      OG_URL: '--------',
+      OG_IMAGE: 'https://i.imgur.com/V7irMl8.png',
+      OG_DESCRIPTION: 'Testing 54 Home page description',
+      OG_PUBLISHED_TIME: '--------',
+      OG_MODIFIED_TIME: '--------',
+      OG_ARTICLE_SECTION: '--------',
+      OG_TAG: '-------'
+    }
+
+    res.send(metaTags(data, content));
   });
 });
 
@@ -40,12 +56,28 @@ app.get('/blog', function(req, res, next) {
     if (err) {
       return console.log(err);
     }
+
+    var content = {
+      STRD_DESCRIPTION: '--------',
+
+      ITEMPROP_DESCRIPTION: '--------',
+
+      TW_TITLE: '--------',
+      TW_DESCRIPTION: '--------',
+      TW_AUTHOR: '--------',
+      TW_IMAGE: '--------',
+
+      OG_TITLE: 'el blog rural test.!',
+      OG_URL: '--------',
+      OG_IMAGE: 'https://www.djangoproject.com/s/img/logos/django-logo-negative.png',
+      OG_DESCRIPTION: ':) Haso este blog, pero ya da.',
+      OG_PUBLISHED_TIME: '--------',
+      OG_MODIFIED_TIME: '--------',
+      OG_ARTICLE_SECTION: '--------',
+      OG_TAG: '-------'
+    }
     
-    // replace the special strings with server generated strings
-    data = data.replace(/\$OG_TITLE/g, 'el blog rural.!');
-    data = data.replace(/\$OG_DESCRIPTION/g, "haso este blog, pero ya da.");
-    var result = data.replace(/\$OG_IMAGE/g, 'https://www.djangoproject.com/s/img/logos/django-logo-negative.png');
-    res.send(result);
+    res.send(metaTags(data, content));
   });
 });
 
@@ -58,23 +90,39 @@ app.get('/blog/:nameFolder', function(req, res, next) {
     }
 
     axios.get(`${urlApi}/publications/publications.json`)
-    .then((content) => {
-      var publications = eval(content.data)
+    .then((publicationsList) => {
+      var publications = eval(publicationsList.data)
 
       publications.map((i) => {
         if(i.namefolder == req.params.nameFolder) {
           axios.get(`${urlApi}/publications/${req.params.nameFolder}/post.md`)
-          .then((content) => {
+          .then((post) => {
 
-            i.content = content.data
+            i.content = post.data
 
             // console.log(i)
 
-            // replace the special strings with server generated strings
-            data = data.replace(/\$OG_TITLE/g, i.title);
-            data = data.replace(/\$OG_DESCRIPTION/g, i.description);
-            var result = data.replace(/\$OG_IMAGE/g, i.image_facebook);
-            res.send(result);
+            var content = {
+              STRD_DESCRIPTION: i.description,
+
+              ITEMPROP_DESCRIPTION: i.description,
+
+              TW_TITLE: i.title,
+              TW_DESCRIPTION: i.description,
+              TW_AUTHOR: i.authorTwitter,
+              TW_IMAGE: i.image_twitter,
+
+              OG_TITLE: i.title,
+              OG_URL: i.urlContent,
+              OG_IMAGE: i.image_facebook,
+              OG_DESCRIPTION: i.description,
+              OG_PUBLISHED_TIME: i.published_time,
+              OG_MODIFIED_TIME: i.modified_time,
+              OG_ARTICLE_SECTION: i.articleSection,
+              OG_TAG: i.tag
+            }
+
+            res.send(metaTags(data, content));
           })
           .catch((err) => {
             console.log(err)

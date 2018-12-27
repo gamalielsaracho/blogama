@@ -29,7 +29,7 @@
 	height: 190px;
 	margin: 0 auto;
 	border-radius: 50%;
-	background-image: url('./src/images/gama2.jpg');
+	background-image: url('/src/images/gama2.jpg');
 	background-size: cover;
 	background-position: center;
 }
