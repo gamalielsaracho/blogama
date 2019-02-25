@@ -1,6 +1,7 @@
 ---
 layout: post
 title: You're up and running COOL!
+imagenMeta: https://cdn-images-1.medium.com/max/1200/1*H8j-yzyKCMjqzn2dRNBAVQ.png
 permalink: /blog/hola-mundo
 ---
 
