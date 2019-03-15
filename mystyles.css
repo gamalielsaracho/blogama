@@ -200,7 +200,7 @@
     height: 190px;
     margin: 0 auto;
     border-radius: 50%;
-    background-image: url('http://landingama.herokuapp.com/src/images/gama2.jpg');
+    background-image: url('./src/images/fabio-gamaliel-saracho-franco.jpg');
     background-size: cover;
     background-position: center;
 }
