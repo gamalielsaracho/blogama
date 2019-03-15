@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/src/css/icons/style.css" />
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/src/css/libs/code.css" />
+    <link rel="stylesheet" type="text/css" href="../src/css/libs/code.css" />
 
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
@@ -85,9 +85,9 @@
 
     {% include analytics.html %}
 
-    <script src="./src/app.js"></script>
+    <script src="{{ site.baseurl }}/src/app.js"></script>
 
-    <script src="./src/libs/highlight.min.js"></script>
+    <script src="{{ site.baseurl }}/src/libs/highlight.min.js"></script>
 
     <script>
         hljs.initHighlightingOnLoad();
