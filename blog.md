@@ -11,7 +11,7 @@ permalink: /blog/
 	  {% for post in site.posts %}
         <div class='posts-list__post-container'>
             <div class='posts-list__container-image'>
-                <img class='posts-list__image' src='{{ site.baseurl }}/images/{{ post.imagenIcono }}'/>
+                <img class='posts-list__image' src='{{ post.imagenIcono }}'/>
             </div>
             <a href="{{ site.baseurl }}{{ post.url }}">
                 <h1>{{ post.title }}</h1>
