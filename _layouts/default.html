@@ -89,7 +89,18 @@
 
     <script src="{{ site.baseurl }}/src/libs/highlight.min.js"></script>
 
+    <script src="{{ site.baseurl }}/src/libs/markdown-it.min.js"></script>
+    <script src="{{ site.baseurl }}/src/libs/markdown-it-classy.min.js"></script>
+
+
     <script>
+      var classy = window.markdownItClassy;
+      // var MarkdownIt =  window.markdownIt;
+      // var md = new MarkdownIt();
+      var md = window.markdownit()
+
+        md.use(classy);
+
         hljs.initHighlightingOnLoad();
     </script>
 
