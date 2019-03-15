@@ -10,13 +10,77 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/mystyles.css" />
+
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    <nav class="menu">
+      <ul class="menu-items-links">
+          <li class="item-link"><a href="{{ site.baseurl }}/">Inicio</a></li>
+          <!-- <li class="item-link"><a href="">Habilidades</a></li> -->
+          <li class="item-link"><a href="{{ site.baseurl }}/blog">Blog</a></li>
+          <!-- <li class="item-link"><a href="">Portafolio</a></li> -->
+      </ul>
+    </nav>
+
+    <div class="contenedor-gral">
+
+      <div id="main" role="main" class="contenedor-contenido">
+        {{ content }}
+      </div>
+
+
+
+      <!-- Footer -->
+      <footer class='container-footer'>
+          <div class='container-footer__max'>
+              <div class='container-footer__max__content'>
+                  <div class='container-footer__max__content__description'>
+                      <p>Una web hecha con Mucho <span class="icon-heart"></span> y <span class='icon-alarm'></span></p> 
+                  </div>
+
+                  <div class='container-footer__max__content__socials__buttons'>
+                      <div class='container-footer__max__content__socials__buttons__button'>
+                          <a href='#' target='_blank'>
+                              <span class="icon-github"></span>
+                          </a>
+                      </div>
+                      <div class='container-footer__max__content__socials__buttons__button'>
+                          <a href='#' target='_blank'>
+                              <span class="icon-facebook"></span>
+                          </a>
+                      </div>
+                      <div class='container-footer__max__content__socials__buttons__button'>
+                          <a href='#' target='_blank'>
+                              <span class="icon-instagram"></span>
+                          </a>
+                      </div>
+                      <div class='container-footer__max__content__socials__buttons__button'>
+                          <a href='#' target='_blank'>
+                              <span class="icon-twitter"></span>
+                          </a>
+                      </div>
+                      <div class='container-footer__max__content__socials__buttons__button'>
+                          <a href='#' target='_blank'>
+                              <span class="icon-youtube2"></span>
+                          </a>
+                      </div>
+
+                  </div>
+              </div>
+              
+          </div>
+      </footer>
+      <!-- End Footer -->
+
+    </div>
+
+
+
+    <!-- <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
@@ -32,9 +96,9 @@
           </nav>
         </header>
       </div>
-    </div>
+    </div> -->
 
-    <div id="main" role="main" class="container">
+    <!-- <div id="main" role="main" class="container">
       {{ content }}
     </div>
 
@@ -44,7 +108,7 @@
           {% include svg-icons.html %}
         </footer>
       </div>
-    </div>
+    </div> -->
 
     {% include analytics.html %}
 
