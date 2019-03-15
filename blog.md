@@ -5,11 +5,25 @@ imagenMeta: https://www.djangoproject.com/s/img/logos/django-logo-negative.png
 permalink: /blog/
 ---
 
-### Bienvenido al blog rural :)
 
-A place to include any other types of information that you'd like to include about yourself.
+<div class='posts-list'>
+    <div class='posts-list__container-max'>
+	  {% for post in site.posts %}
+        <div class='posts-list__post-container'>
+            <div class='posts-list__container-image'>
+                <img class='posts-list__image' src='{{ site.baseurl }}/images/{{ post.imagenIcono }}'/>
+            </div>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                <h1>{{ post.title }}</h1>
+            </a>
+        
+            <p>{{ post.fechaPost }}</p>
+        </div>
+	  {% endfor %}
+    </div>
+</div>
 
-<div class="posts">
+<!-- <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
@@ -19,9 +33,7 @@ A place to include any other types of information that you'd like to include abo
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-</div>
+</div> -->
 
-[email@domain.com](mailto:email@domain.com)
