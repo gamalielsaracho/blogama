@@ -7,13 +7,13 @@ imagenMeta: https://cdn-images-1.medium.com/max/1200/1*H8j-yzyKCMjqzn2dRNBAVQ.pn
 permalink: /blog/programacion-en-python
 ---
 
-# Creando una Api json con ruby on rails 5 {title-ph center}
+# Creando una Api json con ruby on rails 5 {:.title-ph :.center}
 
 > En este post te estare mostrando de como crear una api que responda
-a json , para que usar los datos de tus aplicacion ya sea web o movile, de una manera más facil.{article-ph}
+a json , para que usar los datos de tus aplicacion ya sea web o movile, de una manera más facil. {:.article-ph}
 
-### Controladores {sub-title-ph}
-> Vamos a crear 2 controladores para manejar las vistas de nuestra api, creamos el archivo publications_controller.rb y controller2.rb como se muestra aquí {article-ph}
+### Controladores {:.sub-title-ph}
+> Vamos a crear 2 controladores para manejar las vistas de nuestra api, creamos el archivo publications_controller.rb y controller2.rb como se muestra aquí {:.article-ph}
 
 
 ![GitHub Logo](https://hosting.3bro.info/wp-content/uploads/2018/06/nodejs-34c5f8cc37f0756108c490a903d80176.png)
@@ -40,10 +40,10 @@ a json , para que usar los datos de tus aplicacion ya sea web o movile, de una m
 ```
 
 
-# Modelo vista Controlador {sub-title-ph}
-  1. Stringify the HTML tree being careful not to wreck whitespace where whitespace is important (surrounding inline elements for example). {article-ph}
+# Modelo vista Controlador {:.sub-title-ph}
+  1. Stringify the HTML tree being careful not to wreck whitespace where whitespace is important (surrounding inline elements for example). {:.article-ph}
   
-  2. Parse the markdown into a JsonML tree. Any references found in the parsing are stored in the attribute hash of the root node under the key `references`. {article-ph}
+  2. Parse the markdown into a JsonML tree. Any references found in the parsing are stored in the attribute hash of the root node under the key `references`. {:.article-ph}
 
 
 
