@@ -5,11 +5,13 @@ layout: default
 <article class='post-show'>
 	<div class='post-show-container-max'>
 		{{ content }}
+
+		<div class="">
+			Written on {{ page.date | date: "%B %e, %Y" }}
+			Autor: {{ page.autorPost }}
+		</div>
 	</div>
 
-	<div class="date">
-	Written on {{ page.date | date: "%B %e, %Y" }}
-	</div>
 	{% include disqus.html %}
 </article>
 
