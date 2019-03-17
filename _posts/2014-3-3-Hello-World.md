@@ -8,7 +8,7 @@ imagenMeta: https://cdn-images-1.medium.com/max/1200/1*H8j-yzyKCMjqzn2dRNBAVQ.pn
 permalink: /blog/programacion-en-python
 ---
 
-{:.title-ph center}
+{:.title-ph .center}
 # Creando una Api json con ruby on rails 5
 
 {:.article-ph}
