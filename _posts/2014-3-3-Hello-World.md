@@ -16,12 +16,15 @@ a json , para que usar los datos de tus aplicacion ya sea web o movile, de una m
 
 {:.sub-title-ph}
 ### Controladores
-> Vamos a crear 2 controladores para manejar las vistas de nuestra api, creamos el archivo publications_controller.rb y controller2.rb como se muestra aquí {:.article-ph}
+
+{:.article-ph}
+> Vamos a crear 2 controladores para manejar las vistas de nuestra api, creamos el archivo publications_controller.rb y controller2.rb como se muestra aquí
 
 
 ![GitHub Logo](https://hosting.3bro.info/wp-content/uploads/2018/06/nodejs-34c5f8cc37f0756108c490a903d80176.png)
 
-> app/controllers/publications_controller.rb {folder-code}
+{:.folder-code}
+> app/controllers/publications_controller.rb
 
 ```
   before_action :set_publication, except: [:index,:new,:create]
@@ -42,11 +45,13 @@ a json , para que usar los datos de tus aplicacion ya sea web o movile, de una m
   end
 ```
 
+{:.sub-title-ph}
+# Modelo vista Controlador
 
-# Modelo vista Controlador {:.sub-title-ph}
-  1. Stringify the HTML tree being careful not to wreck whitespace where whitespace is important (surrounding inline elements for example). {:.article-ph}
-  
-  2. Parse the markdown into a JsonML tree. Any references found in the parsing are stored in the attribute hash of the root node under the key `references`. {:.article-ph}
+{:.article-ph}
+  1. Stringify the HTML tree being careful not to wreck whitespace where whitespace is important (surrounding inline elements for example). 
+{:.article-ph}
+  2. Parse the markdown into a JsonML tree. Any references found in the parsing are stored in the attribute hash of the root node under the key `references`.
 
 
 
