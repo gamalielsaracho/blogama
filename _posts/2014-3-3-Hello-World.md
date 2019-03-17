@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Programación en python
+description: Cómo programar en python testing
 imagenIcono: ../images/python-logo.png
 fechaPost: 17-03-2019
 autorPost: Gamaliel Saracho
