@@ -31,17 +31,14 @@
 
     <meta name="author" content="{{ site.name }}" />
 
-    <!-- {% if page.title %} -->
-    <!-- <meta property="og:title" content="{{ page.title }}" /> -->
-    <!-- <meta property="og:image" content="{{ page.imagenMeta }}"/> -->
-    <!-- <meta property="twitter:title" content="{{ page.title }}" /> -->
+    {% if page.title %}
 
     <!-- Open Graph -->
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:url" content="{{ page.baseurl }}{{ page.url }}" />
     <meta property="og:image" content="{{ page.imagenMeta }}" />
-    <meta property="og:description" content="$page.description" />
+    <meta property="og:description" content="{{ page.description }}" />
     <meta property="og:site_name" content="gamalielsaracho.github.io" />
     <meta property="fb:admins" content="ID numérico de Facebook" />
 
@@ -54,5 +51,5 @@
     <meta name="twitter:creator" content="@gamalielSaracho"><!-- @autor -->
     <meta name="twitter:image:src" content="{{ page.imagenMeta }}">
     <meta name="twitter:domain" content="gamalielsaracho.github.io" />
-    <!-- {% endif %} -->
+    {% endif %}
 

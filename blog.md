@@ -1,7 +1,10 @@
 ---
 layout: default
-title: Blog
-imagenMeta: https://www.djangoproject.com/s/img/logos/django-logo-negative.png
+title: El Blog rural
+description: Una descripción sobre el blog rural :)
+
+imagenMeta: https://hosting.3bro.info/wp-content/uploads/2018/06/nodejs-34c5f8cc37f0756108c490a903d80176.png
+
 permalink: /blog/
 ---
 
