@@ -2,7 +2,7 @@
 layout: post
 title: Programación en python
 imagenIcono: ../images/python-logo.png
-fechaPost: 15-03-19
+fechaPost: 17-03-2019
 autorPost: Gamaliel Saracho
 imagenMeta: https://cdn-images-1.medium.com/max/1200/1*H8j-yzyKCMjqzn2dRNBAVQ.png
 permalink: /blog/programacion-en-python
