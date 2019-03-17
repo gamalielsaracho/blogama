@@ -50,6 +50,7 @@ a json , para que usar los datos de tus aplicacion ya sea web o movile, de una m
 
 {:.article-ph}
   1. Stringify the HTML tree being careful not to wreck whitespace where whitespace is important (surrounding inline elements for example). 
+
 {:.article-ph}
   2. Parse the markdown into a JsonML tree. Any references found in the parsing are stored in the attribute hash of the root node under the key `references`.
 
