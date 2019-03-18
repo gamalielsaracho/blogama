@@ -1,0 +1,16 @@
+{
+  "name": "Gamaliel Saracho",
+  "short_name": "Gamaliel",
+  "start_url": "/?home=true",
+  "icons": [
+    {
+      "src": "/images/iconos/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2f4e5d",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}

@@ -5,8 +5,9 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     <meta name="theme-color" content="#2f4e5d">
-    <link rel="manifest" href="/src/js/manifest.json">
-    <link rel="shortcut icon" href="/src/images/icons/favicon3.ico">
+    <link rel="manifest" href="{{ site.baseurl }}/src/manifest.json">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/iconos/icon512.png">
+    <link rel="icon" href="{{ site.baseurl }}/images/iconos/icon512.png">
 
     {% include meta.html %}
 
