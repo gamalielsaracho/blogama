@@ -5,6 +5,7 @@
         position: relative;
         padding: 0px;
         margin: 0px;
+        overflow-y:visible;
     }
 
     .menu {
@@ -56,6 +57,8 @@
         position: relative;
         padding: 0px;
         margin: 0px;
+        overflow-y:visible;
+        
     }
 
     .menu {

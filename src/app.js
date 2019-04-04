@@ -1,3 +1,5 @@
+var bodyElement = document.getElementsByTagName('body')
+
 var modalProyecto1 = document.getElementById('modal-proyecto1')
 var modalProyecto2 = document.getElementById('modal-proyecto2')
 
@@ -10,6 +12,8 @@ var slideIndex = 1;
 
 
 function cerrarModalProyecto() {
+  bodyElement[0].style.overflowY = 'visible'
+
 	modalProyecto1.style.display = 'none'
 	modalProyecto2.style.display = 'none'
 
@@ -29,6 +33,8 @@ function currentSlide(n, nombreClase) {
 
 
 function showSlides(n, nombreClase) {
+  bodyElement[0].style.overflowY = 'hidden'
+
   var i;
   var slides = document.getElementsByClassName(nombreClase);
   
@@ -39,6 +45,7 @@ function showSlides(n, nombreClase) {
   }
   
   slides[slideIndex-1].style.display = "block"; 
+
 }
 	
 
