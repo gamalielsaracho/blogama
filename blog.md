@@ -10,20 +10,20 @@ permalink: /blog/
 
 
 <div class='posts-list'>
-    <div class='posts-list__container-max'>
-	  {% for post in site.posts %}
-        <div class='posts-list__post-container'>
-            <div class='posts-list__container-image'>
-                <img class='posts-list__image' src='{{ post.imagenIcono }}'/>
-            </div>
-            <a href="{{ site.baseurl }}{{ post.url }}">
-                <h1>{{ post.title }}</h1>
-            </a>
-        
-            <p>{{ post.fechaPost }}</p>
+  <div class='posts-list__container-max'>
+    {% for post in site.posts %}
+      <div class='posts-list__post-container'>
+        <div class='posts-list__container-image'>
+            <img class='posts-list__image' src='{{ post.imagenIcono }}'/>
         </div>
-	  {% endfor %}
-    </div>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            <h1>{{ post.title }}</h1>
+        </a>
+    
+        <p>{{ post.fechaPost }}</p>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 <!-- <div class="posts">
