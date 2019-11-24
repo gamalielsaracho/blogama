@@ -1,53 +1,53 @@
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    {% if page.title %}
-    <meta name="description" content="{{ page.description }}">
+{% if page.title %}
+<meta name="description" content="{{ page.description }}">
 
-        <!-- Open Graph -->
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:image" content="{{ page.imagenMeta }}" />
-    <meta property="og:description" content="{{ page.description }}" />
-    <meta property="og:site_name" content="gamalielsaracho.github.io" />
-    <meta property="fb:admins" content="ID numérico de Facebook" />
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:image" content="{{ page.imagenMeta }}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:site_name" content="gamalielsaracho.github.io" />
+<meta property="fb:admins" content="ID numérico de Facebook" />
 
-    <!-- Twitter Card -->
-    <meta property="twitter:account_id" content="ID numérico de Twitter"/>
-    <meta name="twitter:card" content="{{ page.imagenMeta }}" />
-    <meta name="twitter:site" content="@gamalielSaracho"> <!-- @anunciante -->
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:creator" content="@gamalielSaracho"><!-- @autor -->
-    <meta name="twitter:image:src" content="{{ page.imagenMeta }}">
-    <meta name="twitter:domain" content="gamalielsaracho.github.io" />
-    <!-- <meta name="description" content="{{ page.excerpt| strip_html }}" /> -->
-    <!-- <meta property="og:description" content="{{ page.excerpt| strip_html }}" /> -->
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
+<!-- Twitter Card -->
+<meta property="twitter:account_id" content="ID numérico de Twitter"/>
+<meta name="twitter:card" content="{{ page.imagenMeta }}" />
+<meta name="twitter:site" content="@gamalielSaracho"> <!-- @anunciante -->
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:creator" content="@gamalielSaracho"><!-- @autor -->
+<meta name="twitter:image:src" content="{{ page.imagenMeta }}">
+<meta name="twitter:domain" content="gamalielsaracho.github.io" />
+<!-- <meta name="description" content="{{ page.excerpt| strip_html }}" /> -->
+<!-- <meta property="og:description" content="{{ page.excerpt| strip_html }}" /> -->
+{% else %}
+<meta name="description" content="{{ site.description }}">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="{{ site.name }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ site.url }}" />
-    <meta property="og:image" content="{{ site.imagenMeta }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:site_name" content="gamalielsaracho.github.io" />
-    <meta property="fb:admins" content="ID numérico de Facebook" />
+<!-- Open Graph -->
+<meta property="og:title" content="{{ site.name }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:image" content="{{ site.imagenMeta }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:site_name" content="gamalielsaracho.github.io" />
+<meta property="fb:admins" content="ID numérico de Facebook" />
 
-    <!-- Twitter Card -->
-    <meta property="twitter:account_id" content="ID numérico de Twitter"/>
-    <meta name="twitter:card" content="{{ site.imagenMeta }}" />
-    <meta name="twitter:site" content="@gamalielSaracho"> <!-- @anunciante -->
-    <meta name="twitter:title" content="{{ site.name }}">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:creator" content="@gamalielSaracho"><!-- @autor -->
-    <meta name="twitter:image:src" content="{{ site.imagenMeta }}">
-    <meta name="twitter:domain" content="gamalielsaracho.github.io" />
-    {% endif %}
+<!-- Twitter Card -->
+<meta property="twitter:account_id" content="ID numérico de Twitter"/>
+<meta name="twitter:card" content="{{ site.imagenMeta }}" />
+<meta name="twitter:site" content="@gamalielSaracho"> <!-- @anunciante -->
+<meta name="twitter:title" content="{{ site.name }}">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:creator" content="@gamalielSaracho"><!-- @autor -->
+<meta name="twitter:image:src" content="{{ site.imagenMeta }}">
+<meta name="twitter:domain" content="gamalielsaracho.github.io" />
+{% endif %}
 
-    <meta name="author" content="{{ site.name }}" />
+<meta name="author" content="{{ site.name }}" />
 

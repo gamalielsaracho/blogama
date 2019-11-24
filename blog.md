@@ -1,13 +1,12 @@
 ---
 layout: default
-title: El Blog rural
-description: Una descripción sobre el blog rural :)
+title: Programming tutorials, software development process, opinion articles, lived experiences and much more.
+description: Programming tutorials, software development process, opinion articles, lived experiences and much more.
 
-imagenMeta: https://hosting.3bro.info/wp-content/uploads/2018/06/nodejs-34c5f8cc37f0756108c490a903d80176.png
+imagenMeta: ../images/Software-Engineering.jpg
 
 permalink: /blog/
 ---
-
 
 <div class='posts-list'>
   <div class='posts-list__container-max'>

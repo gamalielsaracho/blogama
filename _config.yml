@@ -3,12 +3,12 @@
 #
 
 # Name of your site (displayed in the header)
-name: Gamaliel Saracho
+name: Gamaliel Saracho - Software Developer
 
 # Short bio or description (displayed in the header)
-description: Desarrollador web
+description: I think that all people can learn to build software and share with the world, you should try one more time and never give up.
 
-imagenMeta: https://gamalielsaracho.github.io/images/python-logo.png
+imagenMeta: ../images/web-developers-coding-gamaliel-saracho-portfolio.jpg
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars0.githubusercontent.com/u/8278014?s=460&v=4

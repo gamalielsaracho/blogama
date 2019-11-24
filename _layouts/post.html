@@ -3,24 +3,15 @@ layout: default
 ---
 
 <article class='post-show'>
-	<div class='post-show-container-max'>
-		{{ content }}
+  <div class='post-show-container-max'>
+    {{ content }}
 
-		<div class="">
-			<strong>Fecha</strong> {{ page.fechaPost }}
-			<br>
-			<strong>Autor:</strong> {{ page.autorPost }}
-		</div>
-	</div>
-
-	{% include disqus.html %}
-</article>
-
-<!-- <article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
+    <div class="">
+      <strong>Dale</strong> {{ page.fechaPost }}
+      <br>
+      <strong>Author:</strong> {{ page.autorPost }}
+    </div>
   </div>
 
-
-</article> -->
+  {% include disqus.html %}
+</article>
