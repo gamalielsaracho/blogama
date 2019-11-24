@@ -3,7 +3,7 @@ layout: default
 title: Programming tutorials, software development process, opinion articles, lived experiences and much more.
 description: Programming tutorials, software development process, opinion articles, lived experiences and much more.
 
-imagenMeta: https://gamalielsaracho.github.io/images/web-developers-coding-gamaliel-saracho-portfolio-skills-blog
+imagenMeta: https://gamalielsaracho.github.io/images/web-developers-coding-gamaliel-saracho-portfolio-skills-blog.jpg
 
 permalink: /blog/
 ---
