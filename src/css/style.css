@@ -424,6 +424,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: 82vh;
 }
 
 .show-project-modal__images-slider-container {
