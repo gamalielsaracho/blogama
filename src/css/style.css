@@ -437,6 +437,7 @@
 .show-project-modal__desciption-container {
     /*border: 1px solid green;*/
     width: 389px;
+    padding-bottom: 2em;
 }
 
 .show-project-modal__desciption-container a {
