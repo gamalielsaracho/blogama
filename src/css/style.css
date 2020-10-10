@@ -380,8 +380,10 @@
     padding: 0.5em;
 
 
-    margin-top: 3em;
-    margin-bottom: 1em;
+    /* poner */
+    /*margin-top: 3em;
+    margin-bottom: 1em;*/
+
     /*padding: 1em;*/
     /*width: auto;*/
     /*height: auto;*/
@@ -442,6 +444,20 @@
     font-weight: 400;
     color: #03a9f4;
     font-size: 1.3em;
+}
+
+.image-screem-mobile {
+  max-width: 100% !important;
+  /*height: auto;*/
+  height: 100vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.image-screem-web {
+  max-width: 100% !important;
+  height: auto;
+  display: block;
 }
 
 
