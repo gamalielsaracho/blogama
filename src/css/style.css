@@ -224,6 +224,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 2.5em;
+    text-decoration: underline;
 }
 
 .container-max__activities {
@@ -325,7 +326,9 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 
-    background-color: #6fd073;
+    background-color: #537ffc;
+    /*background-color: #6fd073;*/
+
     padding: 0.8em;
     cursor: pointer;
     color: #fff;
