@@ -545,7 +545,7 @@ img {vertical-align: middle;}
 .numbertext {
   color: #0a0a0a;
   font-size: 12px;
-  padding: 8px 12px;
+  padding: 1em;
   position: absolute;
   top: 0;
 }
