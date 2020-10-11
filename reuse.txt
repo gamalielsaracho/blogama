@@ -1,0 +1,54 @@
+<!-- Proyecto 2 -->
+<div id="modal-proyecto2" class="show-project-modal">
+  <div class="show-project-modal__content">
+    <div class="show-project-modal__container-max">
+      <div class="show-project-modal__btn-close-container">
+        <span onClick='cerrarModalProyecto()' class="close">&times;</span>
+      </div>
+
+      <div class="show-project-modal__images-description-container">
+        <div class="show-project-modal__images-slider-container">
+          <div class="slideshow-container">
+            <div class="slides-2 fade">
+              <div class="numbertext"><strong>1/3</strong></div>
+              <img src="https://gamalielsaracho.github.io/api/v1/demos/app1/images-screem/app1-web.PNG" class="image-screem-web">
+            </div>
+
+            <div class="slides-2 fade">
+              <div class="numbertext"><strong>2/3</strong></div>
+              <img src="https://gamalielsaracho.github.io/api/v1/demos/app1/images-screem/app1-web.PNG" class="image-screem-web">
+            </div>
+
+            <div class="slides-2 fade">
+              <div class="numbertext"><strong>3/3</strong></div>
+              <img src="https://gamalielsaracho.github.io/api/v1/demos/app1/images-screem/app1-web.PNG" class="image-screem-web">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 'slides-2')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slides-2')">&#10095;</a>
+          </div>
+          <br>
+        </div>
+
+        <div class="show-project-modal__desciption-container">
+          <h1>Nombre proyecto</h1>
+
+          <h2>Technologies</h2>
+          <div class="show-project-modal__tecnologies-container">
+            <ul>
+              <li>Node</li>
+              <li>Mysql</li>
+              <li>React</li>
+              <li>Redux</li>
+            </ul>   
+          </div>
+
+          <strong>Demo:</strong><a href='/' target='_blank'>
+            <span class='icon-new-tab'></span> gamalielsaracho.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Proyecto 2 -->
