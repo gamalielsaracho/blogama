@@ -326,13 +326,14 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 
-    background-color: #537ffc;
+    /*background-color: #537ffc;*/
     /*background-color: #6fd073;*/
+    border: 2px solid #2f4e5d;
 
     padding: 0.8em;
     cursor: pointer;
-    color: #fff;
-    border-bottom: 3px solid #4e2320;
+    color: #2f4e5d;
+    border-bottom: 3px solid #2f4e5d;
     border-radius: 0.5em;
 }
 
